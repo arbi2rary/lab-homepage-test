@@ -1,5 +1,3 @@
-
-<style>
 /* ------------------------------------------------------------
    디자인 토큰
    팔레트 근거: 실리콘 웨이퍼의 차가운 회색 바탕 + 칩 배선(interconnect)에
@@ -224,4 +222,3 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
  
 footer{padding:28px 0;font-size:13.5px;color:var(--ink-soft);border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-</style>
