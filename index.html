@@ -1,34 +1,388 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computer Systems & Relicable SoC Lab.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Systems &amp; Reliable SoC Lab — Yonsei University</title>
+<meta name="description" content="연세대학교 컴퓨터시스템 및 고신뢰성 SoC 연구실">
+
+<!--
+  ============================================================
+  SoC Lab 홈페이지 뼈대
+  ------------------------------------------------------------
+  사용법
+  · [[ ]] 로 감싼 부분은 실제 내용으로 바꾸세요.
+  · 각 섹션 위에 "채울 것" 주석이 있습니다.
+  · 이미지는 images/ 폴더에 넣고 경로만 맞추면 됩니다.
+  · 색·글꼴은 맨 위 :root 에서 한 번에 바꿀 수 있습니다.
+  ============================================================
+-->
+
+<!--
+  글꼴 바꾸는 법
+  1) 구글 폰트(fonts.google.com)에서 원하는 글꼴을 고르고 "Get embed code"의 <link> 줄을 아래 줄과 바꿉니다.
+  2) 아래 :root 의 --font-sans 첫 번째 이름을 그 글꼴 이름으로 바꿉니다.
+  한글 글꼴 후보: Noto Sans KR(무난), Pretendard(현대적), IBM Plex Sans KR(공학적), Gothic A1(단정)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+<!-- ================= 메뉴 ================= -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Computer Systems &amp; Reliable SoC Lab<small>연세대학교 전기전자공학과</small></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">메뉴</button>
+    <ul id="menu">
+      <li><a href="#research">연구</a></li>
+      <li><a href="#projects">과제</a></li>
+      <li><a href="#publications">논문</a></li>
+      <li><a href="#members">구성원</a></li>
+      <li><a href="#news">소식</a></li>
+      <li><a href="#contact">연락처</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= 히어로 =================
+     채울 것: 제목 한 줄, 소개 두 문장.
+     오른쪽 플로어플랜의 블록 이름(data-area)은 아래 연구 분야 카드의 id와 같아야 합니다.
+-->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>신뢰할 수 있는 칩을<br>설계하고, 검증합니다</h1>
+      <!-- 위 제목은 예시입니다. 연구실의 한 줄 정체성으로 바꾸세요. -->
+      <p>[[컴퓨터시스템 및 고신뢰성 SoC 연구실은 프로세서 아키텍처부터 3차원 집적회로 테스트까지, 반도체 시스템이 오래도록 정확하게 동작하도록 만드는 기술을 연구합니다.]]</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#research">연구 분야 보기</a>
+        <a class="btn btn-ghost" href="#contact">연구실 지원 문의</a>
+      </div>
+    </div>
+
+    <!-- 다이 플로어플랜: 각 rect가 연구 분야 하나 -->
+    <svg class="die" viewBox="0 0 400 400" role="img" aria-label="연구 분야를 칩 플로어플랜 형태로 표현한 그림">
+      <defs>
+        <pattern id="cells" width="6" height="8" patternUnits="userSpaceOnUse">
+          <rect width="6" height="8" fill="none"/>
+          <rect y="6" width="6" height="1" fill="#79a3c8"/>
+        </pattern>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <rect x="20" y="20" width="360" height="360" rx="4" fill="#3a6389" stroke="#2d4f6e"/>
+      <g class="pads">
+        <rect class="pad" x="20" y="60" width="8" height="14"/><rect class="pad" x="20" y="120" width="8" height="14"/><rect class="pad" x="20" y="180" width="8" height="14"/><rect class="pad" x="20" y="240" width="8" height="14"/><rect class="pad" x="20" y="300" width="8" height="14"/>
+        <rect class="pad" x="372" y="60" width="8" height="14"/><rect class="pad" x="372" y="120" width="8" height="14"/><rect class="pad" x="372" y="180" width="8" height="14"/><rect class="pad" x="372" y="240" width="8" height="14"/><rect class="pad" x="372" y="300" width="8" height="14"/>
+        <rect class="pad" x="60" y="20" width="14" height="8"/><rect class="pad" x="140" y="20" width="14" height="8"/><rect class="pad" x="220" y="20" width="14" height="8"/><rect class="pad" x="300" y="20" width="14" height="8"/>
+        <rect class="pad" x="60" y="372" width="14" height="8"/><rect class="pad" x="140" y="372" width="14" height="8"/><rect class="pad" x="220" y="372" width="14" height="8"/><rect class="pad" x="300" y="372" width="14" height="8"/>
+      </g>
+      <!-- 블록: 바탕 + 표준셀 패턴 + 라벨 -->
+      <g class="blkg" data-area="arch">
+        <rect class="blk" x="44" y="44" width="180" height="150" rx="2"/>
+        <rect x="52" y="76" width="164" height="110" fill="url(#cells)" opacity=".9" pointer-events="none"/>
+        <rect x="140" y="100" width="60" height="40" fill="#4a7aa6" stroke="#9fc0dc" stroke-width=".8" pointer-events="none"/>
+        <text class="blk-label" x="56" y="64">PROCESSOR</text>
+        <text class="blk-sub" x="146" y="124">SRAM</text>
+      </g>
+      <g class="blkg" data-area="test">
+        <rect class="blk" x="236" y="44" width="120" height="150" rx="2"/>
+        <rect x="244" y="76" width="104" height="110" fill="url(#cells)" opacity=".9" pointer-events="none"/>
+        <g stroke="#9fc0dc" stroke-width=".8" pointer-events="none"><line x1="250" y1="90" x2="340" y2="90"/><line x1="250" y1="110" x2="340" y2="110"/><line x1="250" y1="130" x2="340" y2="130"/><line x1="250" y1="150" x2="340" y2="150"/></g>
+        <text class="blk-label" x="248" y="64">DFT / TEST</text>
+        <text class="blk-sub" x="248" y="176">SCAN CHAIN</text>
+      </g>
+      <g class="blkg" data-area="3dic">
+        <rect class="blk" x="44" y="206" width="120" height="150" rx="2"/>
+        <g fill="#9fc0dc" pointer-events="none">
+          <circle cx="70" cy="250" r="4"/><circle cx="104" cy="250" r="4"/><circle cx="138" cy="250" r="4"/>
+          <circle cx="70" cy="285" r="4"/><circle cx="104" cy="285" r="4"/><circle cx="138" cy="285" r="4"/>
+          <circle cx="70" cy="320" r="4"/><circle cx="104" cy="320" r="4"/><circle cx="138" cy="320" r="4"/>
+        </g>
+        <text class="blk-label" x="56" y="226">3D-IC</text>
+        <text class="blk-sub" x="56" y="344">TSV ARRAY</text>
+      </g>
+      <g class="blkg" data-area="rel">
+        <rect class="blk" x="176" y="206" width="180" height="150" rx="2"/>
+        <rect x="184" y="238" width="164" height="110" fill="url(#cells)" opacity=".9" pointer-events="none"/>
+        <g fill="none" stroke="#9fc0dc" stroke-width=".8" pointer-events="none">
+          <rect x="196" y="250" width="40" height="30"/><rect x="246" y="250" width="40" height="30"/><rect x="296" y="250" width="40" height="30"/>
+          <rect x="196" y="300" width="40" height="30"/><rect x="246" y="300" width="40" height="30"/><rect x="296" y="300" width="40" height="30"/>
+        </g>
+        <text class="blk-label" x="188" y="226">RELIABILITY</text>
+        <text class="blk-sub" x="188" y="346">TMR / ECC</text>
+      </g>
+      <!-- 배선: 블록 간 + 패드 연결 -->
+      <g class="traces">
+        <path class="trace cu" d="M134 194 V206"/>
+        <path class="trace cu" d="M100 194 V206"/>
+        <path class="trace" d="M224 100 H236"/>
+        <path class="trace" d="M224 140 H236"/>
+        <path class="trace cu" d="M296 194 V206"/>
+        <path class="trace cu" d="M320 194 V206"/>
+        <path class="trace" d="M164 260 H176"/>
+        <path class="trace" d="M164 300 H176"/>
+        <path class="trace cu" d="M28 67 H44"/>
+        <path class="trace" d="M28 127 H44"/>
+        <path class="trace cu" d="M28 187 H44 V206" />
+        <path class="trace" d="M28 247 H44"/>
+        <path class="trace cu" d="M28 307 H44"/>
+        <path class="trace" d="M356 67 H372"/>
+        <path class="trace cu" d="M356 127 H372"/>
+        <path class="trace" d="M356 187 H372"/>
+        <path class="trace cu" d="M356 247 H372"/>
+        <path class="trace" d="M356 307 H372"/>
+        <path class="trace cu" d="M67 28 V44"/>
+        <path class="trace" d="M147 28 V44"/>
+        <path class="trace cu" d="M227 28 V44"/>
+        <path class="trace" d="M307 28 V44"/>
+        <path class="trace cu" d="M67 356 V372"/>
+        <path class="trace" d="M147 356 V372"/>
+        <path class="trace cu" d="M227 356 V372"/>
+        <path class="trace" d="M307 356 V372"/>
+        <!-- 클럭 트리: 중앙에서 네 블록으로 -->
+        <path class="trace clk" d="M200 200 H134 V180 M200 200 H296 V194 M200 200 H100 V220 M200 200 H266 V220"/>
+      </g>
+      <circle cx="200" cy="200" r="3.5" fill="#fff" filter="url(#glow)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ================= 연구 분야 =================
+     채울 것: 카드 4개. 각 카드는 "문제 한 줄 → 접근 두세 문장 → 키워드"
+     이 글은 교수님·선배와 상의해서 쓰는 게 좋습니다.
+-->
+<section id="research">
+  <div class="wrap">
+    <h2>연구 분야</h2>
+    <p class="lead">[[칩 하나가 설계되어 검증되고, 실제 환경에서 오래 동작하기까지의 전 과정을 다룹니다.]]</p>
+    <div class="areas">
+      <article class="area" id="arch">
+        <h3>프로세서 아키텍처</h3>
+        <p class="q">[[범용 프로세서는 신호처리 워크로드에서 성능과 전력이 낭비됩니다.]]</p>
+        <p>[[SMT 기반 DSP 프로세서, 응용 특화 명령어 집합 등 특정 워크로드에 최적화된 아키텍처를 설계하고 검증합니다.]]</p>
+        <div class="tags"><span>DSP</span><span>SMT</span><span>ISA 설계</span></div>
+      </article>
+      <article class="area" id="test">
+        <h3>설계 검증과 테스트</h3>
+        <p class="q">[[미세 공정으로 갈수록 테스트 비용이 설계 비용을 넘어섭니다.]]</p>
+        <p>[[테스트 용이화 설계(DFT), 테스트 압축, 진단 기법으로 검증 시간과 비용을 줄입니다.]]</p>
+        <div class="tags"><span>DFT</span><span>ATPG</span><span>Test compression</span></div>
+      </article>
+      <article class="area" id="3dic">
+        <h3>3차원 집적회로</h3>
+        <p class="q">[[TSV로 쌓아올린 3D-IC는 기존 테스트 방법으로 접근할 수 없는 층이 생깁니다.]]</p>
+        <p>[[적층 전·후 테스트, TSV 결함 모델링, 3D 설계 비용 절감 기법을 연구합니다.]]</p>
+        <div class="tags"><span>TSV</span><span>Pre/post-bond test</span><span>초미세폭</span></div>
+      </article>
+      <article class="area" id="rel">
+        <h3>고신뢰성 시스템</h3>
+        <p class="q">[[자동차·우주·의료용 칩은 한 번의 오류가 사고로 이어집니다.]]</p>
+        <p>[[소프트 에러 대응, 결함 허용 설계, 노화 진단으로 칩 수명 전체에 걸친 신뢰성을 확보합니다.]]</p>
+        <div class="tags"><span>Soft error</span><span>Fault tolerance</span><span>Aging</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 숫자 요약 =================
+     채울 것: 실제 숫자. 백업 데이터로 세면 됩니다.
+-->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>[[20]]+</b><span>년의 연구 이력</span></div>
+    <div class="stat"><b>[[50]]+</b><span>수행 연구과제</span></div>
+    <div class="stat"><b>[[90]]+</b><span>배출한 졸업생</span></div>
+    <div class="stat"><b>[[200]]+</b><span>논문</span></div>
+  </div>
+</div>
+
+<!-- ================= 연구 과제 =================
+     채울 것: legacy 폴더의 기수행과제 목록에서 최근 것 5~6개.
+     전체 목록은 별도 페이지(projects.html)로 빼는 것을 권합니다.
+-->
+<section id="projects" class="band">
+  <div class="wrap">
+    <h2>연구 과제</h2>
+    <p class="lead">정부 부처와 산업체가 지원한 과제를 수행해 왔습니다. 최근 과제부터 보여드립니다.</p>
+    <div class="timeline">
+      <div class="tl">
+        <div class="yr">2015 – 2018</div>
+        <h3>초미세폭 3차원 반도체 제조비용 절감을 위한 설계 및 테스트 기술 연구</h3>
+        <div class="src">미래창조과학부</div>
+      </div>
+      <div class="tl">
+        <div class="yr">[[2013 – 2016]]</div>
+        <h3>[[과제명]]</h3>
+        <div class="src">[[지원기관]]</div>
+      </div>
+      <div class="tl">
+        <div class="yr">[[2009 – 2012]]</div>
+        <h3>[[과제명]]</h3>
+        <div class="src">[[지원기관]]</div>
+      </div>
+      <div class="tl">
+        <div class="yr">2003 – 2005</div>
+        <h3>선행핵심 IP 및 플랫폼 연구개발</h3>
+        <div class="src">산업자원부</div>
+      </div>
+    </div>
+    <a class="more" href="projects.html">전체 과제 목록 보기</a>
+  </div>
+</section>
+
+<!-- ================= 논문 =================
+     채울 것: 대표 논문 5~8편. 전체 목록은 publications.html 또는 Google Scholar 링크.
+-->
+<section id="publications">
+  <div class="wrap">
+    <h2>대표 논문</h2>
+    <p class="lead">[[국제 학술지와 학회에 발표한 연구 중 대표작을 골랐습니다.]]</p>
+    <ul class="pubs">
+      <li class="pub">
+        <div class="yr">[[2024]]</div>
+        <div>
+          <h3>[[논문 제목]]</h3>
+          <div class="meta">[[저자]], <em>[[학술지/학회명]]</em>, [[권(호)]]</div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="yr">[[2023]]</div>
+        <div>
+          <h3>[[논문 제목]]</h3>
+          <div class="meta">[[저자]], <em>[[학술지/학회명]]</em>, [[권(호)]]</div>
+        </div>
+      </li>
+      <li class="pub">
+        <div class="yr">[[2022]]</div>
+        <div>
+          <h3>[[논문 제목]]</h3>
+          <div class="meta">[[저자]], <em>[[학술지/학회명]]</em>, [[권(호)]]</div>
+        </div>
+      </li>
+    </ul>
+    <a class="more" href="publications.html">전체 논문 목록 보기</a>
+  </div>
+</section>
+
+<!-- ================= 구성원 =================
+     채울 것: 사진은 images/members/ 에. 졸업생은 이름·학위·졸업연도·현 소속만.
+-->
+<section id="members">
+  <div class="wrap">
+    <h2>구성원</h2>
+    <p class="lead">[[한 줄 소개]]</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-prof">지도교수</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-students">재학생</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-alumni">졸업생</button>
+    </div>
+
+    <div class="panel on" id="p-prof" role="tabpanel">
+      <div class="people">
+        <div class="person">
+          <img src="images/members/prof.jpg" alt="[[교수님 성함]] 교수">
+          <b>[[강성호]]</b>
+          <span>교수 · 전기전자공학과</span>
+          <span>[[학위/경력 한 줄]]</span>
+          <span>[[이메일]]</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-students" role="tabpanel">
+      <div class="people">
+        <div class="person">
+          <img src="images/members/s1.jpg" alt="">
+          <b>[[이름]]</b><span>박사과정</span><span>[[연구 주제]]</span>
+        </div>
+        <div class="person">
+          <img src="images/members/s2.jpg" alt="">
+          <b>[[이름]]</b><span>석사과정</span><span>[[연구 주제]]</span>
+        </div>
+        <div class="person">
+          <img src="images/members/s3.jpg" alt="">
+          <b>[[이름]]</b><span>석사과정</span><span>[[연구 주제]]</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-alumni" role="tabpanel">
+      <ul class="alumni">
+        <li>임현찬 <span>박사 · [[졸업연도]] · [[현 소속]]</span></li>
+        <li>배성일 <span>박사 · 2006 · Rebellions</span></li>
+        <li>[[이름]] <span>석사 · [[졸업연도]] · [[현 소속]]</span></li>
+        <li>[[이름]] <span>석사 · [[졸업연도]] · [[현 소속]]</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 소식 =================
+     채울 것: data-cat 값은 publication / award / event / notice 중 하나.
+     새 소식은 li 하나 복사해서 맨 앞에 붙이면 됩니다.
+-->
+<section id="news">
+  <div class="wrap">
+    <h2>소식</h2>
+    <p class="lead">논문 게재, 수상, 연구실 행사와 공지를 전합니다.</p>
+    <div class="filters">
+      <button aria-pressed="true" data-filter="all">전체</button>
+      <button aria-pressed="false" data-filter="publication">논문</button>
+      <button aria-pressed="false" data-filter="award">수상</button>
+      <button aria-pressed="false" data-filter="event">행사</button>
+      <button aria-pressed="false" data-filter="notice">공지</button>
+    </div>
+    <ul class="news">
+      <li data-cat="notice">
+        <span class="cat">공지</span><time datetime="2026-09-01">2026.09.01</time>
+        <h3>연구실 홈페이지를 새로 열었습니다</h3>
+        <p>[[한두 문장]]</p>
+      </li>
+      <li data-cat="publication">
+        <span class="cat">논문</span><time datetime="[[2026-08-01]]">[[2026.08.01]]</time>
+        <h3>[[논문 제목 요약]]</h3>
+        <p>[[한두 문장]]</p>
+      </li>
+      <li data-cat="award">
+        <span class="cat">수상</span><time datetime="[[2026-06-01]]">[[2026.06.01]]</time>
+        <h3>[[수상 내용]]</h3>
+        <p>[[한두 문장]]</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 연락처 =================
+     채울 것: 주소, 대표 이메일(개인 아닌 연구실 대표 주소 권장), 전화, 지도 좌표.
+-->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>연구실 지원과 문의</h2>
+      <p>[[대학원 진학과 학부 인턴에 관심 있는 학생을 기다립니다. 아래 대표 메일로 관심 분야와 이력을 보내주세요.]]</p>
+      <dl>
+        <dt>주소</dt><dd>[[제N공학관 000호]]<br>연세대학교, 서울 03722</dd>
+        <dt>이메일</dt><dd><a href="mailto:[[comsys@soc.yonsei.ac.kr]]">[[comsys@soc.yonsei.ac.kr]]</a></dd>
+        <dt>전화</dt><dd>[[02-2123-0000]]</dd>
+        <dt>소속</dt><dd>전기전자공학과</dd>
+      </dl>
+    </div>
+    <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90+%EC%A0%9C3%EA%B3%B5%ED%95%99%EA%B4%80&t=m&z=17&output=embed&hl=ko"
+      title="연구실 위치 지도"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Computer Systems &amp; Reliable SoC Lab, Yonsei University</span>
+    <span><a href="fun/minesweeper.html">지뢰찾기</a></span>
+  </div>
+</footer>
   
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="people.html">People</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="courses.html">Courses</a>
-    <a href="news.html">News</a>
-    <a href="resources.html">Resources</a>
-  </nav>
-  
-  <h1>Computer Systems & Relicable SoC Lab.</h1>
-
-  <p>
-    Welcome to our research laboratory.
-  </p>
-
-  <h2>About Us</h2>
-
-  <p>
-    This is a test website for our research lab.
-  </p>
-
+<script src="script.js"></script>
 </body>
 </html>
