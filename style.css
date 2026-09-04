@@ -788,7 +788,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   margin-top:32px;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
-  background:#fff;
+  background:transparent;
 }
 
 .more-panel summary{
@@ -888,7 +888,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   padding:22px;
   border:1px solid var(--line);
   border-radius:6px;
-  background:#fff;
+  background:transparent;
   transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease;
 }
 
@@ -1063,6 +1063,37 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   font-weight:600;
 }
 
+.member-bilingual-name span{
+  display:block;
+}
+
+.member-name-korean{
+  line-height:1.4;
+}
+
+.member-name-english{
+  margin-top:3px;
+  color:var(--ink-soft);
+  font-family:"IBM Plex Sans KR",var(--font-sans);
+  font-size:12px;
+  font-weight:400;
+  line-height:1.35;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+}
+
+html[lang="en"] .member-name-korean{
+  display:none;
+}
+
+html[lang="en"] .member-name-english{
+  margin-top:0;
+  color:var(--ink);
+  font-size:inherit;
+  font-weight:600;
+  line-height:1.4;
+}
+
 .member-card-research{
   max-width:240px;
   margin:7px auto 0;
@@ -1094,11 +1125,19 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   border-radius:7px;
 }
 
-.member-detail-content h4,
+.member-detail-name,
 .alumni-profile-content h3{
   margin-bottom:16px;
   color:var(--ink);
   font-size:20px;
+}
+
+.member-detail-name .member-name-english{
+  font-size:13px;
+}
+
+html[lang="en"] .member-detail-name .member-name-english{
+  font-size:inherit;
 }
 
 .member-profile-fields{
@@ -1114,11 +1153,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 .member-profile-field dt{
   color:var(--ink-soft);
-  font-family:var(--font-mono);
-  font-size:11px;
+  font-family:"IBM Plex Sans KR",var(--font-sans);
+  font-size:13px;
   font-weight:500;
-  letter-spacing:.06em;
-  text-transform:uppercase;
+  letter-spacing:-.01em;
 }
 
 .member-profile-field dd{

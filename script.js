@@ -361,6 +361,29 @@ function createProfileField(
   return wrapper;
 }
 
+function createCurrentMemberName(member, className) {
+  const name = document.createElement("h4");
+  name.className = className + " member-bilingual-name";
+  const koreanName = String(member.name_kr || "").trim();
+  const englishName = String(member.name_en || "").trim();
+
+  if (koreanName) {
+    const korean = document.createElement("span");
+    korean.className = "member-name-korean";
+    korean.textContent = koreanName;
+    name.append(korean);
+  }
+
+  if (englishName) {
+    const english = document.createElement("span");
+    english.className = "member-name-english";
+    english.textContent = englishName;
+    name.append(english);
+  }
+
+  return name;
+}
+
 function createCurrentMemberDetail(member, detailId) {
   const names = getMemberDisplayNames(member);
   const category = getMemberCategoryLabels(member.category);
@@ -372,8 +395,7 @@ function createCurrentMemberDetail(member, detailId) {
   const photo = createMemberPhoto(member, "member-detail-photo");
   const content = document.createElement("div");
   content.className = "member-detail-content";
-  const name = document.createElement("h4");
-  setLocalizedContent(name, names.kr, names.en);
+  const name = createCurrentMemberName(member, "member-detail-name");
   const fields = document.createElement("dl");
   fields.className = "member-profile-fields";
 
@@ -403,6 +425,46 @@ function closeCurrentMemberDetails(exceptButton = null) {
   });
 }
 
+function placeMemberDetailAfterCardRow(card, detail) {
+  const container = card.parentElement;
+  if (!container) {
+    return;
+  }
+
+  const wasHidden = detail.hidden;
+  detail.hidden = true;
+  const cardTop = card.offsetTop;
+  const rowCards = [...container.children].filter(
+    (element) =>
+      element.classList.contains("member-card") &&
+      Math.abs(element.offsetTop - cardTop) <= 1
+  );
+  const lastCardInRow = rowCards[rowCards.length - 1] || card;
+  lastCardInRow.after(detail);
+  detail.hidden = wasHidden;
+}
+
+function repositionOpenMemberDetails() {
+  document
+    .querySelectorAll('.member-photo-button[aria-expanded="true"]')
+    .forEach((button) => {
+      const card = button.closest(".member-card");
+      const detail = document.getElementById(button.getAttribute("aria-controls"));
+
+      if (card && detail) {
+        placeMemberDetailAfterCardRow(card, detail);
+      }
+    });
+}
+
+let memberDetailResizeFrame = 0;
+window.addEventListener("resize", () => {
+  window.cancelAnimationFrame(memberDetailResizeFrame);
+  memberDetailResizeFrame = window.requestAnimationFrame(
+    repositionOpenMemberDetails
+  );
+});
+
 function createCurrentMemberElements(member, index) {
   const names = getMemberDisplayNames(member);
   const detailId = "member-detail-" + String(member.post_id || index);
@@ -423,9 +485,7 @@ function createCurrentMemberElements(member, index) {
   );
   photoButton.append(createMemberPhoto(member, "member-card-photo"));
 
-  const name = document.createElement("h4");
-  name.className = "member-card-name";
-  setLocalizedContent(name, names.kr, names.en);
+  const name = createCurrentMemberName(member, "member-card-name");
   const research = document.createElement("p");
   research.className = "member-card-research";
   research.textContent = String(member.research_interests || "").trim();
@@ -438,6 +498,11 @@ function createCurrentMemberElements(member, index) {
   photoButton.addEventListener("click", () => {
     const willOpen = detail.hidden;
     closeCurrentMemberDetails(photoButton);
+
+    if (willOpen) {
+      placeMemberDetailAfterCardRow(card, detail);
+    }
+
     detail.hidden = !willOpen;
     photoButton.setAttribute("aria-expanded", String(willOpen));
   });
