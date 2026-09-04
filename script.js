@@ -479,6 +479,37 @@ function createPublicationMeta(publication, publicationUrl) {
   return meta;
 }
 
+function normalizePublicationAuthorName(authorName) {
+  return String(authorName)
+    .trim()
+    .toLocaleLowerCase("en-US")
+    .replace(/\s+/g, " ");
+}
+
+function isHighlightedPublicationAuthor(authorName, authorIndex) {
+  return (
+    authorIndex === 0 ||
+    normalizePublicationAuthorName(authorName) === "sungho kang"
+  );
+}
+
+function appendPublicationAuthors(container, authorNames) {
+  authorNames.forEach((authorName, authorIndex) => {
+    if (authorIndex > 0) {
+      container.append(document.createTextNode(", "));
+    }
+
+    if (isHighlightedPublicationAuthor(authorName, authorIndex)) {
+      const highlightedAuthor = document.createElement("strong");
+      highlightedAuthor.textContent = authorName;
+      container.append(highlightedAuthor);
+      return;
+    }
+
+    container.append(document.createTextNode(authorName));
+  });
+}
+
 function createPublicationItem(publication) {
   const item = document.createElement("li");
   item.className = "publication-item";
@@ -505,9 +536,9 @@ function createPublicationItem(publication) {
 
   const authors = document.createElement("p");
   authors.className = "publication-authors";
-  authors.textContent = Array.isArray(publication.authors)
-    ? publication.authors.join(", ")
-    : "";
+  if (Array.isArray(publication.authors)) {
+    appendPublicationAuthors(authors, publication.authors);
+  }
 
   content.append(
     title,
