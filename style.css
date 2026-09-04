@@ -435,7 +435,11 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .tl .src{font-size:14px;color:var(--ink-soft)}
 .more{margin-top:12px;display:inline-block;font-weight:500;color:var(--copper);border-bottom:1px solid var(--line-mid)}
 .area .more{align-self:flex-start}
-.scholar-link{margin-top:18px}
+.scholar-link-wrap{
+  margin-top:22px;
+  text-align:center;
+}
+.scholar-link{margin-top:0}
  
 /* ------------------------------------------------------------
    국제 논문 — JSON 기반 연도별 접이식 목록
@@ -633,21 +637,9 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 }
  
 /* ------------------------------------------------------------
-   구성원 — 탭으로 지도교수/재학생/졸업생 전환
-   졸업생 이메일은 넣지 마세요 (스팸 수집 원인이었음).
+   구성원 — JSON 기반 카드와 상세 프로필
    ------------------------------------------------------------ */
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:32px}
-.tab{background:none;border:0;font:inherit;font-size:15px;color:var(--ink-soft);padding:10px 16px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
-.tab[aria-selected="true"]{color:var(--ink);border-color:var(--copper);font-weight:500}
-.panel{display:none}.panel.on{display:block}
-.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px}
-.person img{width:100%;aspect-ratio:1/1.15;object-fit:cover;border-radius:6px;background:linear-gradient(160deg,#e6edf3,#cfdce8);margin-bottom:10px}
-.person b{display:block;font-weight:500}
-.person span{display:block;font-size:14px;color:var(--ink-soft)}
-.alumni{columns:2;column-gap:40px;font-size:15px}
-@media (max-width:720px){.alumni{columns:1}}
-.alumni li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);break-inside:avoid}
-.alumni li span{color:var(--ink-soft);font-size:13.5px;display:block}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:28px 24px}
  
 /* ------------------------------------------------------------
    소식 — 카테고리 필터
@@ -869,6 +861,103 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   font-size:14px;
 }
 
+.achievement-panel + .achievement-panel{
+  margin-top:16px;
+}
+
+.achievement-link-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+
+.achievement-link-card{
+  min-height:168px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#fff;
+  transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease;
+}
+
+.achievement-link-card:hover,
+.achievement-link-card:focus-visible{
+  border-color:var(--line-mid);
+  box-shadow:0 8px 24px rgba(58,99,137,.1);
+  transform:translateY(-2px);
+}
+
+.achievement-link-card h3{
+  margin:12px 0 8px;
+  color:var(--ink);
+  font-size:17px;
+}
+
+.achievement-link-card p{
+  color:var(--ink-soft);
+  font-size:14px;
+}
+
+.archive-page-nav{
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+
+.archive-page-nav .wrap{
+  display:flex;
+  min-height:72px;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.archive-page-actions{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.archive-back-link{
+  color:var(--copper);
+  font-size:14px;
+  font-weight:500;
+}
+
+.archive-page-section{
+  min-height:calc(100vh - 72px);
+  background:var(--bg-soft);
+}
+
+.archive-page-section .wrap{
+  padding-top:8px;
+}
+
+.archive-page-title{
+  margin-bottom:14px;
+  color:var(--copper);
+  font-size:clamp(32px,4vw,48px);
+}
+
+@media (max-width:980px){
+  .achievement-link-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:600px){
+  .achievement-link-grid{
+    grid-template-columns:1fr;
+  }
+
+  .archive-page-nav .brand-logo{
+    width:min(160px,44vw);
+  }
+
+  .archive-back-link{
+    display:none;
+  }
+}
+
 .member-group{
   margin-top:52px;
   scroll-margin-top:96px;
@@ -889,6 +978,164 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 .person{
   min-width:0;
+}
+
+.member-card{
+  text-align:center;
+}
+
+.member-photo-button{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  border-radius:7px;
+  background:none;
+  font:inherit;
+  cursor:pointer;
+}
+
+.member-photo-frame{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,#edf3f8,#d7e3ee);
+}
+
+.member-photo-frame img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.member-photo-placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#6f91ae;
+  font-family:var(--font-mono);
+  font-size:clamp(22px,4vw,38px);
+  letter-spacing:.06em;
+}
+
+.member-photo-frame:not(.is-missing) .member-photo-placeholder{
+  display:none;
+}
+
+.member-photo-frame.is-missing img{
+  display:none;
+}
+
+.member-card-photo{
+  width:100%;
+  aspect-ratio:1;
+  border-radius:7px;
+  transition:box-shadow .18s ease,transform .18s ease;
+}
+
+.member-photo-button:hover .member-card-photo,
+.member-photo-button:focus-visible .member-card-photo,
+.member-photo-button[aria-expanded="true"] .member-card-photo{
+  box-shadow:0 10px 26px rgba(58,99,137,.18);
+  transform:translateY(-2px);
+}
+
+.member-card-name{
+  margin-top:13px;
+  color:var(--ink);
+  font-size:16px;
+  font-weight:600;
+}
+
+.member-card-research{
+  max-width:240px;
+  margin:7px auto 0;
+  color:var(--ink-soft);
+  font-size:13.5px;
+  line-height:1.65;
+}
+
+.member-detail-panel{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  gap:28px;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 8px 26px rgba(58,99,137,.08);
+  text-align:left;
+}
+
+.member-detail-panel[hidden]{
+  display:none;
+}
+
+.member-detail-photo{
+  width:150px;
+  aspect-ratio:1;
+  border-radius:7px;
+}
+
+.member-detail-content h4,
+.alumni-profile-content h3{
+  margin-bottom:16px;
+  color:var(--ink);
+  font-size:20px;
+}
+
+.member-profile-fields{
+  display:grid;
+  gap:10px;
+}
+
+.member-profile-field{
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr);
+  gap:16px;
+}
+
+.member-profile-field dt{
+  color:var(--ink-soft);
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.member-profile-field dd{
+  min-width:0;
+  color:var(--ink);
+  font-size:14px;
+  overflow-wrap:anywhere;
+}
+
+.member-profile-field a{
+  color:var(--copper);
+  border-bottom:1px solid var(--line-mid);
+}
+
+.member-loading,
+.member-empty,
+.member-error{
+  grid-column:1/-1;
+  padding:18px 0;
+  color:var(--ink-soft);
+  font-size:14px;
+}
+
+.member-error{
+  color:#8a3434;
+}
+
+.member-page-link{
+  margin-top:58px;
+  text-align:center;
 }
 
 .person-placeholder{
@@ -917,9 +1164,120 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   font-size:13.5px;
 }
 
-.alumni-panel{
-  margin-top:58px;
-  scroll-margin-top:96px;
+.alumni-page-section{
+  min-height:calc(100vh - 72px);
+  background:var(--bg-soft);
+}
+
+.alumni-page-heading{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:28px;
+}
+
+.alumni-page-heading .lead{
+  margin-bottom:0;
+}
+
+.alumni-degree-groups{
+  display:grid;
+  gap:52px;
+  margin-top:52px;
+}
+
+.alumni-degree-section{
+  padding:0;
+}
+
+.alumni-degree-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:16px;
+}
+
+.alumni-degree-heading h2{
+  margin:0;
+  color:var(--ink);
+  font-size:23px;
+}
+
+.alumni-degree-heading h2::after{
+  display:none;
+}
+
+.alumni-entry-list{
+  border-top:1px solid var(--line);
+}
+
+.alumni-entry{
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+
+.alumni-entry > summary{
+  display:grid;
+  grid-template-columns:minmax(210px,1.2fr) minmax(130px,.6fr) minmax(180px,1fr) 14px;
+  gap:18px;
+  align-items:center;
+  min-height:68px;
+  padding:14px 18px;
+  cursor:pointer;
+  list-style:none;
+}
+
+.alumni-entry > summary::-webkit-details-marker{
+  display:none;
+}
+
+.alumni-entry > summary::after{
+  content:"";
+  grid-column:4;
+  width:8px;
+  height:8px;
+  border-right:1.5px solid var(--copper);
+  border-bottom:1.5px solid var(--copper);
+  transform:rotate(45deg) translate(-2px,-2px);
+  transition:transform .18s ease;
+}
+
+.alumni-entry[open] > summary::after{
+  transform:rotate(225deg) translate(-2px,-2px);
+}
+
+.alumni-entry > summary strong{
+  grid-column:1;
+  color:var(--ink);
+  font-size:15.5px;
+  font-weight:600;
+}
+
+.alumni-degree-meta{
+  grid-column:2;
+  color:var(--copper);
+  font-size:13.5px;
+}
+
+.alumni-affiliation{
+  grid-column:3;
+  color:var(--ink-soft);
+  font-size:13.5px;
+}
+
+.alumni-profile{
+  display:grid;
+  grid-template-columns:170px minmax(0,1fr);
+  gap:30px;
+  padding:28px 30px 34px;
+  border-top:1px solid rgba(213,225,236,.72);
+}
+
+.alumni-profile-photo{
+  width:170px;
+  aspect-ratio:1;
+  border-radius:7px;
 }
 
 .compact-section{
@@ -945,6 +1303,70 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
   .feature-card{
     min-height:0;
+  }
+}
+
+@media (max-width:720px){
+  .member-detail-panel,
+  .alumni-profile{
+    grid-template-columns:1fr;
+  }
+
+  .member-detail-photo,
+  .alumni-profile-photo{
+    width:min(180px,55vw);
+  }
+
+  .alumni-page-heading{
+    display:block;
+  }
+
+  .alumni-page-heading .publication-total{
+    margin-top:18px;
+  }
+
+  .alumni-entry > summary{
+    grid-template-columns:minmax(0,1fr) 14px;
+    gap:4px 14px;
+  }
+
+  .alumni-entry > summary strong,
+  .alumni-degree-meta,
+  .alumni-affiliation{
+    grid-column:1;
+  }
+
+  .alumni-entry > summary::after{
+    grid-column:2;
+    grid-row:1/4;
+  }
+
+  .alumni-profile{
+    padding:24px 18px 30px;
+  }
+}
+
+@media (max-width:480px){
+  .people{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px 14px;
+  }
+
+  .member-card-name{
+    font-size:14px;
+  }
+
+  .member-card-research{
+    font-size:12.5px;
+  }
+
+  .member-detail-panel{
+    padding:20px;
+  }
+
+  .member-profile-field{
+    grid-template-columns:1fr;
+    gap:3px;
   }
 }
 

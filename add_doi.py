@@ -4,7 +4,7 @@
 ---------------
 1. 제목 유사도 0.95 이상
 2. 첫 저자 성 완전 일치
-3. 논문지명 유사도 0.90 이상
+3. 논문지명 정규화 후 완전 일치
 4. Crossref 자료 유형이 journal-article
 5. 연도가 일치하거나 1년 이내
 6. https://doi.org/<DOI>가 정상적으로 해석됨
@@ -57,7 +57,7 @@ MAILTO = "arbitrary@yonsei.ac.kr"
 USER_AGENT = f"soclab-publications/2.0 (mailto:{MAILTO})"
 
 TITLE_MATCH_MIN = 0.95
-JOURNAL_MATCH_MIN = 0.90
+JOURNAL_MATCH_MIN = 1.00
 YEAR_TOLERANCE = 1
 SEARCH_RESULT_COUNT = 5
 DEFAULT_DELAY_SECONDS = 0.35

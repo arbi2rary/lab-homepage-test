@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동문 — Computer Systems &amp; Reliable SoC Lab</title>
+  <meta name="description" content="연세대학교 컴퓨터시스템 및 고신뢰성 SoC 연구실 동문 목록">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260904-10">
+</head>
+<body>
+  <header class="archive-page-nav">
+    <div class="wrap">
+      <a class="brand" href="index.html#members"><img class="brand-logo" src="images/logo.png" width="296" height="72" alt="Computer Systems &amp; Reliable SoC Lab"></a>
+      <div class="archive-page-actions">
+        <a class="archive-back-link" href="index.html#members" data-kr="구성원으로 돌아가기" data-en="Back to members">구성원으로 돌아가기</a>
+        <div class="language-switcher" aria-label="언어 선택"><button class="language-option active" type="button" data-lang="kr" aria-pressed="true">KR</button><span aria-hidden="true">/</span><button class="language-option" type="button" data-lang="en" aria-pressed="false">EN</button></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="alumni-page-section" data-members-source="members.json?v=20260904-2">
+      <div class="wrap">
+        <p class="eyebrow">ALUMNI</p>
+        <div class="alumni-page-heading">
+          <div>
+            <h1 class="archive-page-title" data-kr="동문" data-en="Alumni">동문</h1>
+            <p class="lead" data-kr="이름을 선택하면 사진과 상세 정보를 확인할 수 있습니다." data-en="Select a name to view the photo and profile details.">이름을 선택하면 사진과 상세 정보를 확인할 수 있습니다.</p>
+          </div>
+          <span class="publication-total" id="alumni-total" aria-live="polite"></span>
+        </div>
+        <div class="alumni-degree-groups" id="alumni-list" aria-live="polite">
+          <p class="member-loading" data-kr="동문 정보를 불러오는 중입니다." data-en="Loading alumni.">동문 정보를 불러오는 중입니다.</p>
+        </div>
+        <noscript><p class="publication-error">동문 목록을 보려면 브라우저에서 JavaScript를 활성화해 주세요.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <script src="script.js?v=20260904-8"></script>
+</body>
+</html>

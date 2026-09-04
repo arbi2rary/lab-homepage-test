@@ -37,6 +37,10 @@ function toggleSubmenu(button) {
 }
 
 function initializeNavigation() {
+  if (!navigationToggle || !siteNavigation || !menu) {
+    return;
+  }
+
   navigationToggle.addEventListener("click", () => {
     const willOpen = !siteNavigation.classList.contains("open");
     setMobileMenuState(willOpen);
@@ -103,6 +107,10 @@ function setLanguage(language) {
     element.setAttribute("aria-label", element.dataset["aria" + selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)]);
   });
 
+  document.querySelectorAll("[data-alt-kr][data-alt-en]").forEach((element) => {
+    element.setAttribute("alt", element.dataset["alt" + selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)]);
+  });
+
   languageOptions.forEach((button) => {
     const isActive = button.dataset.lang === selectedLanguage;
     button.classList.toggle("active", isActive);
@@ -124,6 +132,10 @@ function initializeLanguageSwitcher() {
 }
 
 function initializeSectionHighlighting() {
+  if (!menu) {
+    return;
+  }
+
   const sectionLinks = [...menu.querySelectorAll('a[href^="#"]:not([href="#"])')];
   const sections = [...document.querySelectorAll("section[id]")];
 
@@ -197,77 +209,329 @@ function initializeImageSlots() {
   });
 }
 
-function activateMemberPanel(panelId) {
-  const selectedTab = document.querySelector(
-    '.tab[aria-controls="' + panelId + '"]'
-  );
-  const selectedPanel = document.getElementById(panelId);
+function getMemberDisplayNames(member) {
+  const englishName = String(member.name_en || "").trim();
+  const koreanName = String(member.name_kr || "").trim();
 
-  if (!selectedTab || !selectedPanel) {
+  return {
+    kr: koreanName ? koreanName + " (" + englishName + ")" : englishName,
+    en: englishName || koreanName,
+  };
+}
+
+function getMemberInitials(member) {
+  const sourceName = String(member.name_en || member.name_kr || "?").trim();
+  const words = sourceName.split(/\s+/).filter(Boolean);
+
+  if (words.length === 0) {
+    return "?";
+  }
+
+  return words
+    .slice(0, 2)
+    .map((word) => word.charAt(0).toUpperCase())
+    .join("");
+}
+
+function getMemberCategoryLabels(category) {
+  const labels = {
+    "박사후연구원": { kr: "박사후연구원", en: "Postdoctoral Researcher" },
+    "박사/통합과정": { kr: "박사/통합과정", en: "Ph.D. / Integrated Program" },
+    "석사과정": { kr: "석사과정", en: "M.S. Program" },
+    "인턴": { kr: "학부인턴", en: "Undergraduate Intern" },
+    "박사": { kr: "박사", en: "Ph.D." },
+    "석사": { kr: "석사", en: "M.S." },
+  };
+
+  return labels[category] || { kr: category, en: category };
+}
+
+function createMemberPhoto(member, className) {
+  const names = getMemberDisplayNames(member);
+  const frame = document.createElement("figure");
+  frame.className = className + " member-photo-frame";
+
+  const placeholder = document.createElement("span");
+  placeholder.className = "member-photo-placeholder";
+  placeholder.textContent = getMemberInitials(member);
+  placeholder.setAttribute("aria-hidden", "true");
+  frame.append(placeholder);
+
+  const photoPath = String(member.photo_new || "").trim();
+  if (!photoPath) {
+    frame.classList.add("is-missing");
+    return frame;
+  }
+
+  const image = document.createElement("img");
+  image.src = photoPath;
+  image.loading = "lazy";
+  image.decoding = "async";
+  image.dataset.altKr = names.kr + " 사진";
+  image.dataset.altEn = "Photo of " + names.en;
+  image.alt = localStorage.getItem("soclab-language") === "en"
+    ? image.dataset.altEn
+    : image.dataset.altKr;
+
+  const showImage = () => frame.classList.remove("is-missing");
+  const showPlaceholder = () => frame.classList.add("is-missing");
+  image.addEventListener("load", showImage);
+  image.addEventListener("error", showPlaceholder);
+  frame.prepend(image);
+  return frame;
+}
+
+function createProfileField(
+  labelKr,
+  labelEn,
+  value,
+  linkPrefix = "",
+  localizedValueEn = ""
+) {
+  const normalizedValue = String(value || "").trim();
+  if (!normalizedValue) {
+    return null;
+  }
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "member-profile-field";
+  const term = document.createElement("dt");
+  setLocalizedContent(term, labelKr, labelEn);
+  const description = document.createElement("dd");
+
+  if (linkPrefix) {
+    const link = document.createElement("a");
+    link.href = linkPrefix + normalizedValue;
+    link.textContent = normalizedValue;
+    description.append(link);
+  } else if (localizedValueEn) {
+    setLocalizedContent(description, normalizedValue, localizedValueEn);
+  } else {
+    description.textContent = normalizedValue;
+  }
+
+  wrapper.append(term, description);
+  return wrapper;
+}
+
+function createCurrentMemberDetail(member, detailId) {
+  const names = getMemberDisplayNames(member);
+  const category = getMemberCategoryLabels(member.category);
+  const detail = document.createElement("section");
+  detail.className = "member-detail-panel";
+  detail.id = detailId;
+  detail.hidden = true;
+
+  const photo = createMemberPhoto(member, "member-detail-photo");
+  const content = document.createElement("div");
+  content.className = "member-detail-content";
+  const name = document.createElement("h4");
+  setLocalizedContent(name, names.kr, names.en);
+  const fields = document.createElement("dl");
+  fields.className = "member-profile-fields";
+
+  [
+    createProfileField("과정", "Program", category.kr, "", category.en),
+    createProfileField("연구분야", "Research Area", member.research_interests),
+    createProfileField("메일", "Email", member.email, "mailto:"),
+    createProfileField("취미", "Hobby", member.hobby),
+  ].filter(Boolean).forEach((field) => fields.append(field));
+
+  content.append(name, fields);
+  detail.append(photo, content);
+  return detail;
+}
+
+function closeCurrentMemberDetails(exceptButton = null) {
+  document.querySelectorAll(".member-photo-button[aria-expanded=\"true\"]").forEach((button) => {
+    if (button === exceptButton) {
+      return;
+    }
+
+    button.setAttribute("aria-expanded", "false");
+    const detail = document.getElementById(button.getAttribute("aria-controls"));
+    if (detail) {
+      detail.hidden = true;
+    }
+  });
+}
+
+function createCurrentMemberElements(member, index) {
+  const names = getMemberDisplayNames(member);
+  const detailId = "member-detail-" + String(member.post_id || index);
+  const card = document.createElement("article");
+  card.className = "person member-card";
+  const photoButton = document.createElement("button");
+  photoButton.className = "member-photo-button";
+  photoButton.type = "button";
+  photoButton.setAttribute("aria-expanded", "false");
+  photoButton.setAttribute("aria-controls", detailId);
+  photoButton.dataset.ariaKr = names.kr + " 상세정보 보기";
+  photoButton.dataset.ariaEn = "View profile for " + names.en;
+  photoButton.setAttribute(
+    "aria-label",
+    localStorage.getItem("soclab-language") === "en"
+      ? photoButton.dataset.ariaEn
+      : photoButton.dataset.ariaKr
+  );
+  photoButton.append(createMemberPhoto(member, "member-card-photo"));
+
+  const name = document.createElement("h4");
+  name.className = "member-card-name";
+  setLocalizedContent(name, names.kr, names.en);
+  const research = document.createElement("p");
+  research.className = "member-card-research";
+  research.textContent = String(member.research_interests || "").trim();
+  card.append(photoButton, name);
+  if (research.textContent) {
+    card.append(research);
+  }
+
+  const detail = createCurrentMemberDetail(member, detailId);
+  photoButton.addEventListener("click", () => {
+    const willOpen = detail.hidden;
+    closeCurrentMemberDetails(photoButton);
+    detail.hidden = !willOpen;
+    photoButton.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  return { card, detail };
+}
+
+function renderCurrentMembers(members) {
+  document.querySelectorAll("[data-member-category]").forEach((container) => {
+    const category = container.dataset.memberCategory;
+    const categoryMembers = members.filter(
+      (member) =>
+        member &&
+        member.category === category &&
+        !["faculty", "staff", "alumni"].includes(member.group)
+    );
+    const fragment = document.createDocumentFragment();
+
+    if (categoryMembers.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "member-empty";
+      setLocalizedContent(
+        empty,
+        "현재 해당 과정의 구성원이 없습니다.",
+        "There are currently no members in this group."
+      );
+      fragment.append(empty);
+    } else {
+      categoryMembers.forEach((member, index) => {
+        const elements = createCurrentMemberElements(member, index);
+        fragment.append(elements.card, elements.detail);
+      });
+    }
+
+    container.replaceChildren(fragment);
+  });
+}
+
+function getGraduationYear(graduation) {
+  const match = String(graduation || "").match(/(?:19|20)\d{2}/);
+  return match ? match[0] : "";
+}
+
+function createAlumniEntry(member, index) {
+  const names = getMemberDisplayNames(member);
+  const category = getMemberCategoryLabels(member.category);
+  const graduationYear = getGraduationYear(member.graduation);
+  const entry = document.createElement("details");
+  entry.className = "alumni-entry";
+  entry.dataset.alumniDegree = member.category === "박사" ? "phd" : "ms";
+
+  const summary = document.createElement("summary");
+  const name = document.createElement("strong");
+  setLocalizedContent(name, names.kr, names.en);
+  const degree = document.createElement("span");
+  degree.className = "alumni-degree-meta";
+  setLocalizedContent(
+    degree,
+    [category.kr, graduationYear].filter(Boolean).join(" · "),
+    [category.en, graduationYear].filter(Boolean).join(" · ")
+  );
+  summary.append(name, degree);
+
+  const affiliationValue = String(member.work || "").trim();
+  if (affiliationValue) {
+    const affiliation = document.createElement("span");
+    affiliation.className = "alumni-affiliation";
+    affiliation.textContent = affiliationValue;
+    summary.append(affiliation);
+  }
+
+  const profile = document.createElement("div");
+  profile.className = "alumni-profile";
+  profile.append(createMemberPhoto(member, "alumni-profile-photo"));
+  const information = document.createElement("div");
+  information.className = "alumni-profile-content";
+  const heading = document.createElement("h3");
+  setLocalizedContent(heading, names.kr, names.en);
+  const fields = document.createElement("dl");
+  fields.className = "member-profile-fields";
+
+  [
+    createProfileField("이메일", "Email", member.email, "mailto:"),
+    createProfileField("학위논문", "Thesis", member.thesis),
+    createProfileField("취미", "Hobby", member.hobby),
+  ].filter(Boolean).forEach((field) => fields.append(field));
+
+  information.append(heading, fields);
+  profile.append(information);
+  entry.append(summary, profile);
+  entry.dataset.memberIndex = String(index);
+  return entry;
+}
+
+function createAlumniDegreeSection(category, alumni) {
+  const labels = getMemberCategoryLabels(category);
+  const section = document.createElement("section");
+  section.className = "alumni-degree-section";
+  const heading = document.createElement("div");
+  heading.className = "alumni-degree-heading";
+  const title = document.createElement("h2");
+  setLocalizedContent(title, labels.kr, labels.en);
+  const count = document.createElement("span");
+  count.className = "publication-count";
+  setLocalizedContent(count, alumni.length + "명", alumni.length + " alumni");
+  heading.append(title, count);
+
+  const entries = document.createElement("div");
+  entries.className = "alumni-entry-list";
+  alumni.forEach((member, index) => {
+    entries.append(createAlumniEntry(member, index));
+  });
+  section.append(heading, entries);
+  return section;
+}
+
+function renderAlumni(members) {
+  const container = document.getElementById("alumni-list");
+  const total = document.getElementById("alumni-total");
+
+  if (!container || !total) {
     return;
   }
 
-  document.querySelectorAll(".tab").forEach((tab) => {
-    tab.setAttribute("aria-selected", "false");
-  });
-
-  document.querySelectorAll(".panel").forEach((panel) => {
-    panel.classList.remove("on");
-  });
-
-  selectedTab.setAttribute("aria-selected", "true");
-  selectedPanel.classList.add("on");
-}
-
-function initializeMemberTabs() {
-  document.querySelectorAll(".tab").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      activateMemberPanel(tab.getAttribute("aria-controls"));
-    });
-  });
-}
-
-function initializeExpandableNavigation() {
-  document.querySelectorAll('a[href="#alumni"]').forEach((link) => {
-    link.addEventListener("click", () => {
-      const alumniPanel = document.getElementById("alumni");
-      if (alumniPanel) {
-        alumniPanel.open = true;
-      }
-    });
-  });
-}
-
-function isPlaceholderEntry(element) {
-  return (
-    element.classList.contains("person-empty") ||
-    element.hasAttribute("data-placeholder") ||
-    element.textContent.includes("[[")
+  const alumni = members.filter(
+    (member) =>
+      member &&
+      member.group === "alumni" &&
+      ["박사", "석사"].includes(member.category)
   );
-}
-
-function countRealEntries(selector) {
-  return [...document.querySelectorAll(selector)].filter(
-    (entry) => !isPlaceholderEntry(entry)
-  ).length;
-}
-
-function getAlumniDegree(entry) {
-  if (entry.dataset.alumniDegree) {
-    return entry.dataset.alumniDegree;
-  }
-
-  const description = entry.querySelector("span")?.textContent || "";
-
-  if (description.includes("박사")) {
-    return "phd";
-  }
-
-  if (description.includes("석사")) {
-    return "ms";
-  }
-
-  return "";
+  setLocalizedContent(total, "총 " + alumni.length + "명", alumni.length + " alumni");
+  container.replaceChildren(
+    createAlumniDegreeSection(
+      "박사",
+      alumni.filter((member) => member.category === "박사")
+    ),
+    createAlumniDegreeSection(
+      "석사",
+      alumni.filter((member) => member.category === "석사")
+    )
+  );
 }
 
 function setLabStatistic(name, value) {
@@ -278,7 +542,7 @@ function setLabStatistic(name, value) {
   }
 }
 
-function updateLabStatistics() {
+function updateLabStatisticsFromMembers(members) {
   const statisticsText = document.querySelector("[data-lab-stats]");
 
   if (!statisticsText) {
@@ -292,62 +556,78 @@ function updateLabStatistics() {
     setLabStatistic("years", currentYear - foundedYear);
   }
 
-  const membersSection = document.getElementById("members");
-
-  if (!membersSection) {
-    return;
-  }
-
-  const countableEntries = [
-    ...membersSection.querySelectorAll(
-      "#doctoral .person, #masters .person, #alumni .alumni li"
-    )
-  ];
-  const hasUnresolvedPlaceholders = countableEntries.some(isPlaceholderEntry);
-
-  if (hasUnresolvedPlaceholders) {
-    statisticsText.dataset.countStatus = "fallback";
-    return;
-  }
-
-  const alumniEntries = [
-    ...membersSection.querySelectorAll("#alumni .alumni li")
-  ];
-  const doctoralAlumni = alumniEntries.filter(
-    (entry) => getAlumniDegree(entry) === "phd"
-  ).length;
-  const mastersAlumni = alumniEntries.filter(
-    (entry) => getAlumniDegree(entry) === "ms"
-  ).length;
-
-  setLabStatistic("phd-alumni", doctoralAlumni);
-  setLabStatistic("ms-alumni", mastersAlumni);
+  setLabStatistic(
+    "phd-alumni",
+    members.filter((member) => member.group === "alumni" && member.category === "박사").length
+  );
+  setLabStatistic(
+    "ms-alumni",
+    members.filter((member) => member.group === "alumni" && member.category === "석사").length
+  );
   setLabStatistic(
     "doctoral-members",
-    countRealEntries("#doctoral .person")
+    members.filter((member) => member.group === "student" && member.category === "박사/통합과정").length
   );
   setLabStatistic(
     "masters-members",
-    countRealEntries("#masters .person")
+    members.filter((member) => member.group === "student" && member.category === "석사과정").length
   );
 
   statisticsText.dataset.countStatus = "live";
 }
 
-function initializeLabStatistics() {
-  updateLabStatistics();
+function renderMemberLoadError() {
+  document.querySelectorAll("[data-member-category]").forEach((container) => {
+    const message = document.createElement("p");
+    message.className = "member-error";
+    setLocalizedContent(
+      message,
+      "구성원 정보를 불러오지 못했습니다.",
+      "The member list could not be loaded."
+    );
+    container.replaceChildren(message);
+  });
 
-  const membersSection = document.getElementById("members");
+  const alumniContainer = document.getElementById("alumni-list");
+  if (alumniContainer) {
+    const message = document.createElement("p");
+    message.className = "member-error";
+    setLocalizedContent(
+      message,
+      "동문 정보를 불러오지 못했습니다.",
+      "The alumni list could not be loaded."
+    );
+    alumniContainer.replaceChildren(message);
+  }
+}
 
-  if (!membersSection) {
+async function initializeMembers() {
+  const sourceElement = document.querySelector("[data-members-source]");
+  if (!sourceElement) {
     return;
   }
 
-  const statisticsObserver = new MutationObserver(updateLabStatistics);
-  statisticsObserver.observe(membersSection, {
-    childList: true,
-    subtree: true
-  });
+  try {
+    const response = await fetch(sourceElement.dataset.membersSource, {
+      cache: "no-cache",
+    });
+
+    if (!response.ok) {
+      throw new Error("Member data request failed: " + response.status);
+    }
+
+    const members = await response.json();
+    if (!Array.isArray(members)) {
+      throw new TypeError("Member data must be an array.");
+    }
+
+    renderCurrentMembers(members);
+    renderAlumni(members);
+    updateLabStatisticsFromMembers(members);
+  } catch (error) {
+    renderMemberLoadError();
+    console.error(error);
+  }
 }
 
 function initializeNewsFilters() {
@@ -550,7 +830,7 @@ function createPublicationItem(publication) {
   return item;
 }
 
-function createPublicationYear(year, publications, shouldOpen) {
+function createPublicationYear(yearLabelText, publications, shouldOpen, units) {
   const panel = document.createElement("details");
   panel.className = "publication-year";
   panel.open = shouldOpen;
@@ -558,14 +838,14 @@ function createPublicationYear(year, publications, shouldOpen) {
   const summary = document.createElement("summary");
   const yearLabel = document.createElement("span");
   yearLabel.className = "publication-year-label";
-  yearLabel.textContent = String(year);
+  yearLabel.textContent = yearLabelText;
 
   const count = document.createElement("span");
   count.className = "publication-count";
   setLocalizedContent(
     count,
-    publications.length + "편",
-    publications.length + " papers"
+    publications.length + units.kr,
+    publications.length + " " + units.en
   );
 
   const chevron = document.createElement("span");
@@ -583,6 +863,26 @@ function createPublicationYear(year, publications, shouldOpen) {
   return panel;
 }
 
+function getPublicationYearGroup(year) {
+  if (year >= 2020) {
+    return { key: String(year), label: String(year), sortValue: year };
+  }
+
+  if (year >= 2010) {
+    return { key: "2010-2019", label: "2010–2019", sortValue: 2019 };
+  }
+
+  if (year >= 2000) {
+    return { key: "2000-2009", label: "2000–2009", sortValue: 2009 };
+  }
+
+  if (year >= 1989) {
+    return { key: "1989-1999", label: "1989–1999", sortValue: 1999 };
+  }
+
+  return { key: "before-1989", label: "~1988", sortValue: 1988 };
+}
+
 function groupPublicationsByYear(publications) {
   return publications.reduce((groups, publication) => {
     const year = Number(publication.year);
@@ -591,11 +891,17 @@ function groupPublicationsByYear(publications) {
       return groups;
     }
 
-    if (!groups.has(year)) {
-      groups.set(year, []);
+    const groupDefinition = getPublicationYearGroup(year);
+
+    if (!groups.has(groupDefinition.key)) {
+      groups.set(groupDefinition.key, {
+        label: groupDefinition.label,
+        sortValue: groupDefinition.sortValue,
+        publications: [],
+      });
     }
 
-    groups.get(year).push(publication);
+    groups.get(groupDefinition.key).publications.push(publication);
     return groups;
   }, new Map());
 }
@@ -608,48 +914,54 @@ function renderPublications(publications) {
     return;
   }
 
-  const internationalJournals = publications
+  const category = container.dataset.category || "international-journal";
+  const units = {
+    kr: container.dataset.unitKr || "편",
+    en: container.dataset.unitEn || "papers",
+  };
+  const categoryEntries = publications
     .filter(
       (publication) =>
-        publication && publication.type === "international-journal"
+        publication && publication.type === category
     )
     .sort((first, second) => Number(second.id) - Number(first.id));
 
   setLocalizedContent(
     total,
-    "총 " + internationalJournals.length + "편",
-    internationalJournals.length + " papers"
+    "총 " + categoryEntries.length + units.kr,
+    categoryEntries.length + " " + units.en
   );
 
   container.replaceChildren();
 
-  const groupedPublications = groupPublicationsByYear(internationalJournals);
-  const years = [...groupedPublications.keys()].sort(
-    (first, second) => second - first
+  const groupedPublications = groupPublicationsByYear(categoryEntries);
+  const yearGroups = [...groupedPublications.values()].sort(
+    (first, second) => second.sortValue - first.sortValue
   );
 
-  if (years.length === 0) {
+  if (yearGroups.length === 0) {
     const emptyMessage = document.createElement("p");
     emptyMessage.className = "publication-empty";
     setLocalizedContent(
       emptyMessage,
-      "표시할 국제 논문이 없습니다.",
-      "No international journal papers are available."
+      container.dataset.emptyKr || "표시할 자료가 없습니다.",
+      container.dataset.emptyEn || "No records are available."
     );
     container.append(emptyMessage);
     return;
   }
 
-  const latestYearPublicationCount = groupedPublications.get(years[0]).length;
+  const latestYearPublicationCount = yearGroups[0].publications.length;
 
-  years.forEach((year, index) => {
+  yearGroups.forEach((yearGroup, index) => {
     const shouldOpen =
       index === 0 || (index === 1 && latestYearPublicationCount <= 3);
     container.append(
       createPublicationYear(
-        year,
-        groupedPublications.get(year),
-        shouldOpen
+        yearGroup.label,
+        yearGroup.publications,
+        shouldOpen,
+        units
       )
     );
   });
@@ -694,9 +1006,7 @@ function initializePage() {
   initializeLanguageSwitcher();
   initializeSectionHighlighting();
   initializeImageSlots();
-  initializeMemberTabs();
-  initializeExpandableNavigation();
-  initializeLabStatistics();
+  initializeMembers();
   initializeNewsFilters();
   initializePublications();
 }
