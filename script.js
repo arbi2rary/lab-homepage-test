@@ -369,6 +369,295 @@ function initializeNewsFilters() {
   });
 }
 
+const publicationMonthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+
+function setLocalizedContent(element, koreanText, englishText) {
+  element.dataset.kr = koreanText;
+  element.dataset.en = englishText;
+  element.textContent =
+    document.documentElement.lang === "en" ? englishText : koreanText;
+}
+
+function getPublicationUrl(publication) {
+  if (typeof publication.url !== "string" || publication.url.trim() === "") {
+    return "";
+  }
+
+  try {
+    const url = new URL(publication.url);
+    return url.protocol === "https:" || url.protocol === "http:"
+      ? url.href
+      : "";
+  } catch (error) {
+    return "";
+  }
+}
+
+function formatPublicationDate(publication) {
+  const year = Number(publication.year);
+  const month = Number(publication.month);
+
+  if (
+    !Number.isInteger(year) ||
+    !Number.isInteger(month) ||
+    month < 1 ||
+    month > 12
+  ) {
+    return "";
+  }
+
+  return publicationMonthNames[month - 1] + " " + year;
+}
+
+function createPublicationMeta(publication, publicationUrl) {
+  const meta = document.createElement("div");
+  meta.className = "publication-meta";
+
+  const journal = document.createElement("em");
+  journal.className = "publication-journal";
+  journal.textContent = publication.journal || "Journal information pending";
+  meta.append(journal);
+
+  if (publication.status === "accepted") {
+    const status = document.createElement("span");
+    status.className = "publication-status";
+    status.textContent = "· To be Published";
+    meta.append(status);
+  } else {
+    const bibliographicParts = [];
+
+    if (publication.volume) {
+      bibliographicParts.push("vol. " + publication.volume);
+    }
+
+    if (publication.issue) {
+      bibliographicParts.push("no. " + publication.issue);
+    }
+
+    if (publication.pages) {
+      bibliographicParts.push("pp. " + publication.pages);
+    }
+
+    if (bibliographicParts.length > 0) {
+      const bibliographicInfo = document.createElement("span");
+      bibliographicInfo.textContent = "· " + bibliographicParts.join(", ");
+      meta.append(bibliographicInfo);
+    }
+
+    const publicationDate = formatPublicationDate(publication);
+
+    if (publicationDate) {
+      const date = document.createElement("span");
+      date.textContent = "· " + publicationDate;
+      meta.append(date);
+    }
+  }
+
+  if (publicationUrl) {
+    const link = document.createElement("a");
+    link.className = "publication-link";
+    link.href = publicationUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "View Paper ↗";
+    meta.append(link);
+  }
+
+  return meta;
+}
+
+function createPublicationItem(publication) {
+  const item = document.createElement("li");
+  item.className = "publication-item";
+
+  const number = document.createElement("span");
+  number.className = "publication-number";
+  number.textContent = publication.id + ".";
+
+  const content = document.createElement("article");
+  const title = document.createElement("h4");
+  title.className = "publication-title";
+  const publicationUrl = getPublicationUrl(publication);
+
+  if (publicationUrl) {
+    const titleLink = document.createElement("a");
+    titleLink.href = publicationUrl;
+    titleLink.target = "_blank";
+    titleLink.rel = "noopener noreferrer";
+    titleLink.textContent = publication.title;
+    title.append(titleLink);
+  } else {
+    title.textContent = publication.title;
+  }
+
+  const authors = document.createElement("p");
+  authors.className = "publication-authors";
+  authors.textContent = Array.isArray(publication.authors)
+    ? publication.authors.join(", ")
+    : "";
+
+  content.append(
+    title,
+    authors,
+    createPublicationMeta(publication, publicationUrl)
+  );
+  item.append(number, content);
+
+  return item;
+}
+
+function createPublicationYear(year, publications, shouldOpen) {
+  const panel = document.createElement("details");
+  panel.className = "publication-year";
+  panel.open = shouldOpen;
+
+  const summary = document.createElement("summary");
+  const yearLabel = document.createElement("span");
+  yearLabel.className = "publication-year-label";
+  yearLabel.textContent = String(year);
+
+  const count = document.createElement("span");
+  count.className = "publication-count";
+  setLocalizedContent(
+    count,
+    publications.length + "편",
+    publications.length + " papers"
+  );
+
+  const chevron = document.createElement("span");
+  chevron.className = "publication-chevron";
+  chevron.setAttribute("aria-hidden", "true");
+  summary.append(yearLabel, count, chevron);
+
+  const list = document.createElement("ol");
+  list.className = "publication-list";
+  publications.forEach((publication) => {
+    list.append(createPublicationItem(publication));
+  });
+
+  panel.append(summary, list);
+  return panel;
+}
+
+function groupPublicationsByYear(publications) {
+  return publications.reduce((groups, publication) => {
+    const year = Number(publication.year);
+
+    if (!Number.isInteger(year)) {
+      return groups;
+    }
+
+    if (!groups.has(year)) {
+      groups.set(year, []);
+    }
+
+    groups.get(year).push(publication);
+    return groups;
+  }, new Map());
+}
+
+function renderPublications(publications) {
+  const container = document.getElementById("publication-years");
+  const total = document.getElementById("publication-total");
+
+  if (!container || !total) {
+    return;
+  }
+
+  const internationalJournals = publications
+    .filter(
+      (publication) =>
+        publication && publication.type === "international-journal"
+    )
+    .sort((first, second) => Number(second.id) - Number(first.id));
+
+  setLocalizedContent(
+    total,
+    "총 " + internationalJournals.length + "편",
+    internationalJournals.length + " papers"
+  );
+
+  container.replaceChildren();
+
+  const groupedPublications = groupPublicationsByYear(internationalJournals);
+  const years = [...groupedPublications.keys()].sort(
+    (first, second) => second - first
+  );
+
+  if (years.length === 0) {
+    const emptyMessage = document.createElement("p");
+    emptyMessage.className = "publication-empty";
+    setLocalizedContent(
+      emptyMessage,
+      "표시할 국제 논문이 없습니다.",
+      "No international journal papers are available."
+    );
+    container.append(emptyMessage);
+    return;
+  }
+
+  const latestYearPublicationCount = groupedPublications.get(years[0]).length;
+
+  years.forEach((year, index) => {
+    const shouldOpen =
+      index === 0 || (index === 1 && latestYearPublicationCount <= 3);
+    container.append(
+      createPublicationYear(
+        year,
+        groupedPublications.get(year),
+        shouldOpen
+      )
+    );
+  });
+}
+
+async function initializePublications() {
+  const container = document.getElementById("publication-years");
+
+  if (!container) {
+    return;
+  }
+
+  try {
+    const response = await fetch(container.dataset.source, { cache: "no-cache" });
+
+    if (!response.ok) {
+      throw new Error("Publication data request failed: " + response.status);
+    }
+
+    const publications = await response.json();
+
+    if (!Array.isArray(publications)) {
+      throw new TypeError("Publication data must be an array.");
+    }
+
+    renderPublications(publications);
+  } catch (error) {
+    const errorMessage = document.createElement("p");
+    errorMessage.className = "publication-error";
+    setLocalizedContent(
+      errorMessage,
+      "논문 목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.",
+      "The publication list could not be loaded. Please try again later."
+    );
+    container.replaceChildren(errorMessage);
+    console.error(error);
+  }
+}
+
 function initializePage() {
   initializeNavigation();
   initializeLanguageSwitcher();
@@ -378,6 +667,7 @@ function initializePage() {
   initializeExpandableNavigation();
   initializeLabStatistics();
   initializeNewsFilters();
+  initializePublications();
 }
 
 document.addEventListener("DOMContentLoaded", initializePage);

@@ -26,7 +26,7 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260904-6">
+  <link rel="stylesheet" href="style.css?v=20260904-7">
 </head>
 <body>
 
@@ -372,31 +372,24 @@
 <section id="publications" class="band">
   <div class="wrap">
     <p class="eyebrow">PUBLICATIONS</p>
-    <h2 data-kr="최신 연구업적" data-en="Recent Publications">최신 연구업적</h2>
-    <p class="lead" data-kr="최근 발표한 논문 다섯 편을 우선 보여주고, 저서·특허·기타 업적은 더 보기 영역에 정리합니다." data-en="Five recent papers are shown first, with books, patents, and other achievements organized below.">최근 발표한 논문 다섯 편을 우선 보여주고, 저서·특허·기타 업적은 더 보기 영역에 정리합니다.</p>
+    <h2 data-kr="연구업적" data-en="Publications">연구업적</h2>
+    <p class="lead" data-kr="국제 저널 논문을 연도별로 확인할 수 있습니다." data-en="Browse our international journal papers by year.">국제 저널 논문을 연도별로 확인할 수 있습니다.</p>
 
-    <ol class="pubs">
-      <li class="pub">
-        <div class="yr">[[2026]]</div>
-        <div><h3>[[최신 논문 제목 1]]</h3><div class="meta">[[저자]], <em>[[학술지/학회명]]</em></div></div>
-      </li>
-      <li class="pub">
-        <div class="yr">[[2026]]</div>
-        <div><h3>[[최신 논문 제목 2]]</h3><div class="meta">[[저자]], <em>[[학술지/학회명]]</em></div></div>
-      </li>
-      <li class="pub">
-        <div class="yr">[[2025]]</div>
-        <div><h3>[[최신 논문 제목 3]]</h3><div class="meta">[[저자]], <em>[[학술지/학회명]]</em></div></div>
-      </li>
-      <li class="pub">
-        <div class="yr">[[2025]]</div>
-        <div><h3>[[최신 논문 제목 4]]</h3><div class="meta">[[저자]], <em>[[학술지/학회명]]</em></div></div>
-      </li>
-      <li class="pub">
-        <div class="yr">[[2025]]</div>
-        <div><h3>[[최신 논문 제목 5]]</h3><div class="meta">[[저자]], <em>[[학술지/학회명]]</em></div></div>
-      </li>
-    </ol>
+    <div class="publication-heading">
+      <h3 data-kr="국제 논문" data-en="International Journal Papers">국제 논문</h3>
+      <span class="publication-total" id="publication-total" aria-live="polite"></span>
+    </div>
+
+    <div
+      class="publication-years"
+      id="publication-years"
+      data-source="publications.json?v=20260904-1"
+    >
+      <p class="publication-loading" data-kr="논문 목록을 불러오는 중입니다." data-en="Loading publications.">논문 목록을 불러오는 중입니다.</p>
+    </div>
+    <noscript>
+      <p class="publication-error">논문 목록을 보려면 브라우저에서 JavaScript를 활성화해 주세요.</p>
+    </noscript>
 
     <details class="more-panel">
       <summary>
@@ -569,6 +562,6 @@
   </div>
 </footer>
   
-<script src="script.js?v=20260904-4"></script>
+<script src="script.js?v=20260904-5"></script>
 </body>
 </html>

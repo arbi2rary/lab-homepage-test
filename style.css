@@ -438,14 +438,195 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .scholar-link{margin-top:18px}
  
 /* ------------------------------------------------------------
-   논문
+   국제 논문 — JSON 기반 연도별 접이식 목록
    ------------------------------------------------------------ */
-.pubs{list-style:none}
-.pub{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:72px 1fr;gap:16px}
-.pub .yr{font-family:var(--font-mono);font-size:14px;color:var(--ink-soft);padding-top:2px}
-.pub h3{font-size:17px;font-weight:500;margin-bottom:2px}
-.pub .meta{font-size:14.5px;color:var(--ink-soft)}
-.pub .meta em{font-style:italic}
+.publication-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:16px;
+}
+
+.publication-heading h3{
+  color:var(--ink);
+  font-size:22px;
+}
+
+.publication-total,
+.publication-count{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:4px 11px;
+  border-radius:999px;
+  background:#e4edf5;
+  color:var(--copper);
+  font-family:var(--font-mono);
+  font-size:12px;
+  white-space:nowrap;
+}
+
+.publication-years{
+  border-top:1px solid var(--line);
+}
+
+.publication-year{
+  border-bottom:1px solid var(--line);
+}
+
+.publication-year > summary{
+  display:flex;
+  min-height:72px;
+  align-items:center;
+  gap:12px;
+  padding:16px 4px;
+  color:var(--copper);
+  cursor:pointer;
+  list-style:none;
+}
+
+.publication-year > summary::-webkit-details-marker{
+  display:none;
+}
+
+.publication-year > summary:hover .publication-year-label,
+.publication-year > summary:focus-visible .publication-year-label{
+  color:#234866;
+}
+
+.publication-year-label{
+  font-size:18px;
+  font-weight:600;
+}
+
+.publication-chevron{
+  width:9px;
+  height:9px;
+  margin-left:auto;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translate(-2px,-2px);
+  transition:transform .18s ease;
+}
+
+.publication-year[open] .publication-chevron{
+  transform:rotate(225deg) translate(-2px,-2px);
+}
+
+.publication-list{
+  list-style:none;
+  padding:0 4px 8px;
+}
+
+.publication-item{
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr);
+  gap:18px;
+  padding:24px 0;
+  border-top:1px solid rgba(213,225,236,.72);
+}
+
+.publication-number{
+  padding-top:2px;
+  color:var(--ink-soft);
+  font-family:var(--font-mono);
+  font-size:13px;
+  text-align:right;
+}
+
+.publication-title{
+  margin-bottom:8px;
+  color:var(--ink);
+  font-size:17px;
+  font-weight:600;
+  line-height:1.45;
+}
+
+.publication-title a{
+  text-decoration-color:transparent;
+  text-underline-offset:4px;
+  transition:color .15s ease,text-decoration-color .15s ease;
+}
+
+.publication-title a:hover,
+.publication-title a:focus-visible{
+  color:var(--copper);
+  text-decoration:underline;
+  text-decoration-color:var(--line-mid);
+}
+
+.publication-authors{
+  margin-bottom:6px;
+  color:var(--ink);
+  font-size:14.5px;
+}
+
+.publication-meta{
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:4px 8px;
+  color:var(--ink-soft);
+  font-size:14px;
+}
+
+.publication-journal{
+  color:var(--copper);
+  font-weight:500;
+}
+
+.publication-status{
+  font-style:italic;
+}
+
+.publication-link{
+  color:var(--copper);
+  font-size:13px;
+  font-weight:500;
+  border-bottom:1px solid var(--line-mid);
+}
+
+.publication-loading,
+.publication-error,
+.publication-empty{
+  padding:24px 4px;
+  color:var(--ink-soft);
+  font-size:14px;
+}
+
+.publication-error{
+  color:#8a3434;
+}
+
+@media (max-width:600px){
+  .publication-heading{
+    align-items:flex-start;
+  }
+
+  .publication-year > summary{
+    min-height:64px;
+  }
+
+  .publication-item{
+    grid-template-columns:38px minmax(0,1fr);
+    gap:12px;
+    padding:20px 0;
+  }
+
+  .publication-number{
+    font-size:12px;
+  }
+
+  .publication-title{
+    font-size:15.5px;
+  }
+
+  .publication-authors,
+  .publication-meta{
+    font-size:13px;
+  }
+}
  
 /* ------------------------------------------------------------
    구성원 — 탭으로 지도교수/재학생/졸업생 전환
