@@ -168,27 +168,32 @@ function initializeSectionHighlighting() {
   });
 }
 
-function initializeFloorplanInteraction() {
-  document.querySelectorAll(".die .blkg").forEach((block) => {
-    const card = document.getElementById(block.dataset.area);
+function initializeImageSlots() {
+  document.querySelectorAll("[data-image-slot]").forEach((slot) => {
+    const image = slot.querySelector("img");
 
-    block.addEventListener("mouseenter", () => {
-      if (card) {
-        card.classList.add("on");
-      }
-    });
+    if (!image) {
+      return;
+    }
 
-    block.addEventListener("mouseleave", () => {
-      if (card) {
-        card.classList.remove("on");
-      }
-    });
+    const showImage = () => {
+      slot.classList.remove("is-missing");
+    };
 
-    block.addEventListener("click", () => {
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
+    const showPlaceholder = () => {
+      slot.classList.add("is-missing");
+    };
+
+    image.addEventListener("load", showImage);
+    image.addEventListener("error", showPlaceholder);
+
+    if (image.complete) {
+      if (image.naturalWidth > 0) {
+        showImage();
+      } else {
+        showPlaceholder();
       }
-    });
+    }
   });
 }
 
@@ -256,7 +261,7 @@ function initializePage() {
   initializeNavigation();
   initializeLanguageSwitcher();
   initializeSectionHighlighting();
-  initializeFloorplanInteraction();
+  initializeImageSlots();
   initializeMemberTabs();
   initializeExpandableNavigation();
   initializeNewsFilters();

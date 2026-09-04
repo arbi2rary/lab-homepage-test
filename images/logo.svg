@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="190" viewBox="0 0 760 190" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Computer Systems &amp; Reliable SoC Lab</title>
+  <desc id="logo-desc">Blue and black wordmark with a circuit magnifier symbol.</desc>
+
+  <rect x="0" y="18" width="545" height="66" rx="1" fill="#6f9dc7"/>
+  <text x="14" y="67" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="400" letter-spacing=".2">COMPUTER SYSTEMS</text>
+
+  <text x="0" y="157" fill="#121212" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="400">&amp; RELIABLE SoC Lab.</text>
+
+  <g transform="translate(593 12)">
+    <circle cx="52" cy="52" r="43" fill="#ffffff" stroke="#171717" stroke-width="7"/>
+    <path d="M73 88 L91 150 L64 150 L69 92 Z" fill="#171717"/>
+
+    <g fill="none" stroke="#6f9dc7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M25 34 H43 V25"/>
+      <path d="M43 25 H56"/>
+      <path d="M56 25 V42 H72"/>
+      <path d="M28 54 H43 V70 H57"/>
+      <path d="M57 70 V52 H76"/>
+      <path d="M37 78 V88"/>
+      <path d="M67 24 V14"/>
+    </g>
+
+    <g fill="#6f9dc7">
+      <circle cx="24" cy="34" r="4"/>
+      <circle cx="57" cy="25" r="4"/>
+      <circle cx="73" cy="42" r="4"/>
+      <circle cx="28" cy="54" r="4"/>
+      <circle cx="58" cy="70" r="4"/>
+      <circle cx="77" cy="52" r="4"/>
+    </g>
+  </g>
+</svg>
