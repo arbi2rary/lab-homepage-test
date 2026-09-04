@@ -45,7 +45,7 @@ section{padding:var(--section-gap) 0}
 h1,h2,h3{font-weight:600;line-height:1.2;letter-spacing:-0.01em}
 h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px;color:var(--copper)}
 h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-mid);margin-top:14px}
-.lead{color:var(--ink-soft);font-size:18px;max-width:58ch;margin-bottom:48px}
+.lead{color:var(--ink-soft);font-size:18px;max-width:none;margin-bottom:48px}
  
 /* ------------------------------------------------------------
    상단 메뉴 + 하위 메뉴 + 언어 전환
@@ -392,7 +392,7 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 @media (max-width:600px){.areas{grid-template-columns:1fr}}
 .area{
   padding:32px 26px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-  position:relative;scroll-margin-top:96px;transition:background .2s
+  position:relative;display:flex;flex-direction:column;scroll-margin-top:96px;transition:background .2s
 }
 .area::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--line);transition:background .2s}
 .area.on,.area:hover,.area:target{background:#f5f8fb}
@@ -410,7 +410,7 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
   line-height:1.65;
 }
 .research-details strong{color:var(--ink);font-weight:500}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:24px}
 .tags span{font-size:12.5px;color:var(--copper);background:#eef3f8;border:1px solid var(--line);border-radius:3px;padding:3px 8px}
  
 /* ------------------------------------------------------------
@@ -434,6 +434,8 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .tl h3{font-size:17px;font-weight:500}
 .tl .src{font-size:14px;color:var(--ink-soft)}
 .more{margin-top:12px;display:inline-block;font-weight:500;color:var(--copper);border-bottom:1px solid var(--line-mid)}
+.area .more{align-self:flex-start}
+.scholar-link{margin-top:18px}
  
 /* ------------------------------------------------------------
    논문
