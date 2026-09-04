@@ -607,6 +607,10 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
   color:#8a3434;
 }
 
+.main-publication-archive{
+  margin:34px 0 28px;
+}
+
 @media (max-width:600px){
   .publication-heading{
     align-items:flex-start;
@@ -869,6 +873,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   gap:16px;
+}
+
+.achievement-link-grid-three{
+  grid-template-columns:repeat(3,minmax(0,1fr));
 }
 
 .achievement-link-card{
