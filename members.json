@@ -414,7 +414,7 @@
  },
  {
   "group": "student",
-  "category": "박사/통합과정",
+  "category": "박사후연구원",
   "name_en": "Hyojun Yun",
   "name_kr": "윤효준",
   "email": "yoyo6878@yonsei.ac.kr",
@@ -516,7 +516,7 @@
  },
  {
   "group": "student",
-  "category": "석사과정",
+  "category": "박사/통합과정",
   "name_en": "Dahoon Kim",
   "name_kr": "김다훈",
   "email": "dahoony51@yonsei.ac.kr",
@@ -601,7 +601,7 @@
  },
  {
   "group": "student",
-  "category": "석사과정",
+  "category": "박사/통합과정",
   "name_en": "Mihye Lee",
   "name_kr": "이미혜",
   "email": "arbitrary@yonsei.ac.kr",
@@ -652,7 +652,7 @@
  },
  {
   "group": "student",
-  "category": "인턴",
+  "category": "석사과정",
   "name_en": "Ina Gwon",
   "name_kr": "권인아",
   "email": "gwonina00@gmail.com",
@@ -686,7 +686,7 @@
  },
  {
   "group": "student",
-  "category": "인턴",
+  "category": "석사과정",
   "name_en": "Jaewoo Shin",
   "name_kr": "신재우",
   "email": "tlswodn7@yonsei.ac.kr",

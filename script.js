@@ -246,6 +246,53 @@ function getMemberCategoryLabels(category) {
   return labels[category] || { kr: category, en: category };
 }
 
+const currentMemberOrderByCategory = {
+  "박사후연구원": [
+    "윤효준",
+  ],
+  "박사/통합과정": [
+    "박종호",
+    "이수령",
+    "김성훈",
+    "유연우",
+    "신승호",
+    "문영기",
+    "이주용",
+    "원두연",
+    "김원준",
+    "김재현",
+    "윤두현",
+    "김나연",
+    "김다영",
+    "정유진",
+    "김다훈",
+    "김승태",
+    "박경규",
+    "이미혜",
+    "임수민",
+    "김강현",
+  ],
+  "석사과정": [
+    "손누리",
+    "최연호",
+    "손정현",
+    "위호연",
+    "김준거",
+    "조준희",
+    "신재우",
+    "권인아",
+  ],
+  "인턴": [
+    "김준혁",
+  ],
+};
+
+function getCurrentMemberDisplayOrder(member) {
+  const categoryOrder = currentMemberOrderByCategory[member.category] || [];
+  const memberIndex = categoryOrder.indexOf(member.name_kr);
+  return memberIndex === -1 ? Number.MAX_SAFE_INTEGER : memberIndex;
+}
+
 function createMemberPhoto(member, className) {
   const names = getMemberDisplayNames(member);
   const frame = document.createElement("figure");
@@ -401,12 +448,18 @@ function createCurrentMemberElements(member, index) {
 function renderCurrentMembers(members) {
   document.querySelectorAll("[data-member-category]").forEach((container) => {
     const category = container.dataset.memberCategory;
-    const categoryMembers = members.filter(
-      (member) =>
-        member &&
-        member.category === category &&
-        !["faculty", "staff", "alumni"].includes(member.group)
-    );
+    const categoryMembers = members
+      .filter(
+        (member) =>
+          member &&
+          member.category === category &&
+          !["faculty", "staff", "alumni"].includes(member.group)
+      )
+      .sort(
+        (first, second) =>
+          getCurrentMemberDisplayOrder(first) -
+          getCurrentMemberDisplayOrder(second)
+      );
     const fragment = document.createDocumentFragment();
 
     if (categoryMembers.length === 0) {
@@ -419,10 +472,16 @@ function renderCurrentMembers(members) {
       );
       fragment.append(empty);
     } else {
+      const cards = document.createDocumentFragment();
+      const details = document.createDocumentFragment();
+
       categoryMembers.forEach((member, index) => {
         const elements = createCurrentMemberElements(member, index);
-        fragment.append(elements.card, elements.detail);
+        cards.append(elements.card);
+        details.append(elements.detail);
       });
+
+      fragment.append(cards, details);
     }
 
     container.replaceChildren(fragment);
