@@ -220,10 +220,15 @@ function initializeMemberTabs() {
       activateMemberPanel(tab.getAttribute("aria-controls"));
     });
   });
+}
 
-  document.querySelectorAll("[data-member-panel]").forEach((link) => {
+function initializeExpandableNavigation() {
+  document.querySelectorAll('a[href="#alumni"]').forEach((link) => {
     link.addEventListener("click", () => {
-      activateMemberPanel(link.dataset.memberPanel);
+      const alumniPanel = document.getElementById("alumni");
+      if (alumniPanel) {
+        alumniPanel.open = true;
+      }
     });
   });
 }
@@ -253,8 +258,8 @@ function initializePage() {
   initializeSectionHighlighting();
   initializeFloorplanInteraction();
   initializeMemberTabs();
+  initializeExpandableNavigation();
   initializeNewsFilters();
 }
 
 document.addEventListener("DOMContentLoaded", initializePage);
-

@@ -523,46 +523,310 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
  
 footer{padding:28px 0;font-size:13.5px;color:var(--ink-soft);border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.font-demo {
-  background: #f7f8fa;
+
+/* ------------------------------------------------------------
+   홈페이지 핵심 섹션과 접이식 보조 정보
+   ------------------------------------------------------------ */
+.eyebrow{
+  margin-bottom:10px;
+  color:var(--copper-lt);
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.12em;
 }
 
-.font-sample {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  padding: 28px;
-  margin: 20px 0;
-  border-radius: 8px;
+.about-overview{
+  padding-bottom:clamp(56px,8vw,92px);
 }
 
-.font-sample strong {
-  display: block;
-  margin-bottom: 12px;
-  color: #3a6389;
+.about-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+  gap:clamp(28px,5vw,64px);
+  align-items:start;
 }
 
-.font-sample h3 {
-  font-size: 26px;
-  margin-bottom: 10px;
+.about-copy{
+  padding-left:24px;
+  border-left:3px solid var(--line-mid);
 }
 
-.font-sample p {
-  color: #5f6b78;
+.about-copy h3{
+  margin-bottom:16px;
+  font-size:clamp(22px,2.7vw,30px);
 }
 
-.noto {
-  font-family: "Noto Sans KR", sans-serif;
+.about-copy p{
+  color:var(--ink-soft);
+  font-size:17px;
 }
 
-.pretendard {
-  font-family: "Pretendard", sans-serif;
+.about-focus{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
 }
 
-.plex {
-  font-family: "IBM Plex Sans KR", sans-serif;
+.about-focus span{
+  display:flex;
+  min-height:78px;
+  align-items:flex-end;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#fff;
+  color:var(--copper);
+  font-family:var(--font-mono);
+  font-size:12px;
 }
 
-.gothic {
-  font-family: "Gothic A1", sans-serif;
+.area-index,
+.item-label{
+  display:block;
+  margin-bottom:14px;
+  color:var(--copper-lt);
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.08em;
+}
+
+.featured-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.feature-card,
+.course-card{
+  min-height:180px;
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:#fff;
+}
+
+.feature-card h3,
+.course-card h3{
+  margin-bottom:14px;
+  font-size:18px;
+}
+
+.feature-card p,
+.course-card p{
+  color:var(--ink-soft);
+  font-size:14.5px;
+}
+
+.more-panel{
+  margin-top:32px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+
+.more-panel summary{
+  display:flex;
+  min-height:62px;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:0 4px;
+  color:var(--copper);
+  font-size:15px;
+  font-weight:500;
+  cursor:pointer;
+  list-style:none;
+}
+
+.more-panel summary::-webkit-details-marker{
+  display:none;
+}
+
+.summary-icon{
+  position:relative;
+  width:18px;
+  height:18px;
+  flex:none;
+}
+
+.summary-icon::before,
+.summary-icon::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:14px;
+  height:1.5px;
+  background:currentColor;
+  transform:translate(-50%,-50%);
+  transition:transform .2s ease;
+}
+
+.summary-icon::after{
+  transform:translate(-50%,-50%) rotate(90deg);
+}
+
+.more-panel[open] .summary-icon::after{
+  transform:translate(-50%,-50%) rotate(0);
+}
+
+.more-panel-body{
+  padding:8px 4px 30px;
+  color:var(--ink-soft);
+}
+
+.migration-note{
+  margin-top:20px;
+  font-size:13px;
+}
+
+.archive-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.archive-grid article{
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:6px;
+}
+
+.archive-grid h3{
+  margin-bottom:8px;
+  color:var(--ink);
+  font-size:17px;
+}
+
+.archive-grid p{
+  font-size:14px;
+}
+
+.member-group{
+  margin-top:52px;
+  scroll-margin-top:96px;
+}
+
+.member-group-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:20px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+
+.member-group-heading h3{
+  font-size:21px;
+}
+
+.person{
+  min-width:0;
+}
+
+.person-placeholder{
+  display:flex;
+  width:100%;
+  aspect-ratio:1/1.08;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+  border-radius:6px;
+  background:linear-gradient(145deg,#edf3f8,#d7e3ee);
+  color:#6f91ae;
+  font-family:var(--font-mono);
+  font-size:clamp(22px,4vw,38px);
+  letter-spacing:.06em;
+}
+
+.person-featured{
+  max-width:300px;
+}
+
+.person a{
+  display:inline-block;
+  margin-top:4px;
+  color:var(--copper);
+  font-size:13.5px;
+}
+
+.alumni-panel{
+  margin-top:58px;
+  scroll-margin-top:96px;
+}
+
+.compact-section{
+  padding-top:clamp(64px,8vw,92px);
+  padding-bottom:clamp(64px,8vw,92px);
+}
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+@media (max-width:820px){
+  .about-grid,
+  .archive-grid{
+    grid-template-columns:1fr;
+  }
+
+  .featured-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feature-card{
+    min-height:0;
+  }
+}
+
+@media (max-width:600px){
+  .about-focus,
+  .course-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-copy{
+    padding-left:18px;
+  }
+}
+
+/* 캐시가 섞여도 하위 메뉴가 상단 가로 목록으로 펼쳐지지 않도록 선택자를 강화합니다. */
+.nav .site-nav .menu{
+  display:flex;
+}
+
+.nav .site-nav .submenu{
+  position:absolute;
+  display:block;
+  opacity:0;
+  visibility:hidden;
+}
+
+.nav .site-nav .menu-item:hover > .submenu,
+.nav .site-nav .menu-item:focus-within > .submenu,
+.nav .site-nav .menu-item.open > .submenu{
+  opacity:1;
+  visibility:visible;
+}
+
+@media (max-width:1060px){
+  .nav .site-nav .menu{
+    display:block;
+  }
+
+  .nav .site-nav .submenu{
+    position:static;
+    display:none;
+    opacity:1;
+    visibility:visible;
+  }
+
+  .nav .site-nav .menu-item.open > .submenu{
+    display:block;
+  }
 }
 
