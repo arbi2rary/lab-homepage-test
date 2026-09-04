@@ -1,21 +1,16 @@
 html,
 body{
   width:100%;
-  min-height:100%;
   margin:0;
   background:#fff;
 }
 
 body{
-  display:grid;
-  place-items:center;
+  min-height:100vh;
 }
 
 img{
   display:block;
-  width:auto;
+  width:100%;
   height:auto;
-  max-width:100vw;
-  max-height:100vh;
-  object-fit:contain;
 }
