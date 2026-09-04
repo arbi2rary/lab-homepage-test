@@ -54,30 +54,321 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .lead{color:var(--ink-soft);font-size:18px;max-width:58ch;margin-bottom:48px}
  
 /* ------------------------------------------------------------
-   상단 메뉴 (한 페이지 내 이동)
+   상단 메뉴 + 하위 메뉴 + 언어 전환
    ------------------------------------------------------------ */
 .nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-weight:700;font-size:15px;letter-spacing:0.01em;color:var(--copper);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;margin-right:12px}
-.brand small{display:block;font-weight:400;color:var(--ink-soft);font-size:12px;letter-spacing:0}
-.nav ul{display:flex;gap:28px;list-style:none}
-.nav ul a{font-size:15px;color:var(--ink-soft);padding:6px 0;border-bottom:2px solid transparent}
-.nav ul a:hover,.nav ul a[aria-current]{color:var(--copper);border-color:var(--copper)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer;white-space:nowrap;flex:none}
-@media (max-width:820px){
-  .nav ul{display:none;position:absolute;left:0;right:0;top:64px;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px var(--gutter) 16px}
-  .nav ul.open{display:flex}
-  .nav ul a{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
-  .nav-toggle{display:block}
-  .brand{font-size:14px}
-  .brand small{display:none}
+
+.nav .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:72px;
 }
- 
+
+.brand{
+  min-width:0;
+  margin-right:28px;
+  overflow:hidden;
+  color:var(--copper);
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.01em;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.brand small{
+  display:block;
+  color:var(--ink-soft);
+  font-size:12px;
+  font-weight:400;
+  letter-spacing:0;
+}
+
+.nav-controls{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  min-width:0;
+}
+
+.site-nav{
+  align-self:stretch;
+}
+
+.menu{
+  display:flex;
+  align-items:stretch;
+  height:100%;
+  list-style:none;
+}
+
+.menu-item{
+  position:relative;
+  display:flex;
+  align-items:stretch;
+}
+
+.menu-link{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:0 14px;
+  border:0;
+  border-bottom:2px solid transparent;
+  background:none;
+  color:var(--ink-soft);
+  font:inherit;
+  font-size:14px;
+  white-space:nowrap;
+  cursor:pointer;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible,
+.menu-link[aria-current="true"],
+.menu-item.open > .menu-link{
+  color:var(--copper);
+  border-bottom-color:var(--copper);
+}
+
+.chevron{
+  width:7px;
+  height:7px;
+  margin-top:-4px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);
+  transition:transform .2s ease;
+}
+
+.menu-item.open > .menu-link .chevron,
+.menu-item:hover > .menu-link .chevron,
+.menu-item:focus-within > .menu-link .chevron{
+  margin-top:4px;
+  transform:rotate(225deg);
+}
+
+.submenu{
+  position:absolute;
+  top:calc(100% - 1px);
+  left:0;
+  z-index:60;
+  min-width:210px;
+  padding:9px;
+  list-style:none;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:0 0 8px 8px;
+  box-shadow:0 16px 36px rgba(29,53,75,.13);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-7px);
+  transition:opacity .16s ease,transform .16s ease,visibility .16s;
+}
+
+.submenu-right{
+  right:0;
+  left:auto;
+}
+
+.menu-item:hover > .submenu,
+.menu-item:focus-within > .submenu,
+.menu-item.open > .submenu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.submenu a{
+  display:block;
+  padding:10px 12px;
+  border-radius:5px;
+  color:var(--ink-soft);
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.submenu a:hover,
+.submenu a:focus-visible,
+.submenu a[aria-current="true"]{
+  background:#eef3f8;
+  color:var(--copper);
+}
+
+.submenu a.is-placeholder{
+  cursor:default;
+}
+
+.language-switcher{
+  display:flex;
+  align-items:center;
+  flex:none;
+  gap:6px;
+  margin-left:17px;
+  color:#a2abb4;
+  font-family:var(--font-mono);
+  font-size:12px;
+}
+
+.language-option{
+  padding:6px 2px;
+  border:0;
+  background:none;
+  color:#929ca6;
+  font:inherit;
+  font-weight:500;
+  cursor:pointer;
+}
+
+.language-option:hover,
+.language-option.active{
+  color:var(--copper);
+}
+
+.nav-toggle{
+  display:none;
+  flex:none;
+  padding:8px 13px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#fff;
+  font:inherit;
+  font-size:14px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+@media (max-width:1060px){
+  .nav .wrap{
+    min-height:64px;
+  }
+
+  .brand{
+    margin-right:12px;
+    font-size:14px;
+  }
+
+  .brand small{
+    display:none;
+  }
+
+  .nav-controls{
+    gap:10px;
+  }
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .site-nav{
+    position:absolute;
+    top:64px;
+    right:0;
+    left:0;
+    display:none;
+    max-height:calc(100vh - 64px);
+    overflow-y:auto;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 16px 30px rgba(29,53,75,.10);
+  }
+
+  .site-nav.open{
+    display:block;
+  }
+
+  .menu{
+    display:block;
+    height:auto;
+    padding:10px var(--gutter) 18px;
+  }
+
+  .menu-item{
+    display:block;
+    border-bottom:1px solid var(--line);
+  }
+
+  .menu-link{
+    justify-content:space-between;
+    width:100%;
+    min-height:48px;
+    padding:0;
+    border-bottom:0;
+    font-size:15px;
+    text-align:left;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus-visible,
+  .menu-link[aria-current="true"],
+  .menu-item.open > .menu-link{
+    border-bottom-color:transparent;
+  }
+
+  .menu-item:hover > .submenu,
+  .menu-item:focus-within > .submenu{
+    opacity:0;
+    visibility:hidden;
+  }
+
+  .menu-item.open > .submenu{
+    display:block;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+  }
+
+  .submenu,
+  .submenu-right{
+    position:static;
+    display:none;
+    min-width:0;
+    padding:0 0 10px 14px;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    transition:none;
+  }
+
+  .submenu a{
+    padding:9px 12px;
+  }
+
+  .language-switcher{
+    margin-left:0;
+  }
+}
+
+@media (max-width:520px){
+  .brand{
+    max-width:52vw;
+  }
+
+  .nav-controls{
+    gap:7px;
+  }
+
+  .language-switcher{
+    gap:4px;
+    font-size:11px;
+  }
+
+  .nav-toggle{
+    padding:7px 10px;
+  }
+}
+
 /* ------------------------------------------------------------
    히어로: 왼쪽 글, 오른쪽 "다이 플로어플랜"
    플로어플랜의 블록은 연구 분야와 1:1 대응. 블록에 마우스를 올리면
@@ -274,3 +565,4 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .gothic {
   font-family: "Gothic A1", sans-serif;
 }
+
