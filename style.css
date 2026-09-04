@@ -109,7 +109,9 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .btn-ghost{border-color:var(--copper);color:var(--copper);background:#fff}
 .btn-ghost:hover{background:#eef3f8}
 @media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{white-space:normal}}
- 
+@media (max-width:820px){
+  .die{max-width:320px;margin:0 auto}
+}
 .die{width:100%;height:auto;display:block}
 .die .blkg{cursor:pointer}
 .die .blk{fill:#5b88b2;stroke:#7da9cd;stroke-width:1;transition:fill .2s,stroke .2s}
