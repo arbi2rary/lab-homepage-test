@@ -238,6 +238,118 @@ function initializeExpandableNavigation() {
   });
 }
 
+function isPlaceholderEntry(element) {
+  return (
+    element.classList.contains("person-empty") ||
+    element.hasAttribute("data-placeholder") ||
+    element.textContent.includes("[[")
+  );
+}
+
+function countRealEntries(selector) {
+  return [...document.querySelectorAll(selector)].filter(
+    (entry) => !isPlaceholderEntry(entry)
+  ).length;
+}
+
+function getAlumniDegree(entry) {
+  if (entry.dataset.alumniDegree) {
+    return entry.dataset.alumniDegree;
+  }
+
+  const description = entry.querySelector("span")?.textContent || "";
+
+  if (description.includes("박사")) {
+    return "phd";
+  }
+
+  if (description.includes("석사")) {
+    return "ms";
+  }
+
+  return "";
+}
+
+function setLabStatistic(name, value) {
+  const statistic = document.querySelector('[data-lab-stat="' + name + '"]');
+
+  if (statistic) {
+    statistic.textContent = String(value);
+  }
+}
+
+function updateLabStatistics() {
+  const statisticsText = document.querySelector("[data-lab-stats]");
+
+  if (!statisticsText) {
+    return;
+  }
+
+  const foundedYear = Number(statisticsText.dataset.foundedYear);
+  const currentYear = new Date().getFullYear();
+
+  if (Number.isFinite(foundedYear) && foundedYear <= currentYear) {
+    setLabStatistic("years", currentYear - foundedYear);
+  }
+
+  const membersSection = document.getElementById("members");
+
+  if (!membersSection) {
+    return;
+  }
+
+  const countableEntries = [
+    ...membersSection.querySelectorAll(
+      "#doctoral .person, #masters .person, #alumni .alumni li"
+    )
+  ];
+  const hasUnresolvedPlaceholders = countableEntries.some(isPlaceholderEntry);
+
+  if (hasUnresolvedPlaceholders) {
+    statisticsText.dataset.countStatus = "fallback";
+    return;
+  }
+
+  const alumniEntries = [
+    ...membersSection.querySelectorAll("#alumni .alumni li")
+  ];
+  const doctoralAlumni = alumniEntries.filter(
+    (entry) => getAlumniDegree(entry) === "phd"
+  ).length;
+  const mastersAlumni = alumniEntries.filter(
+    (entry) => getAlumniDegree(entry) === "ms"
+  ).length;
+
+  setLabStatistic("phd-alumni", doctoralAlumni);
+  setLabStatistic("ms-alumni", mastersAlumni);
+  setLabStatistic(
+    "doctoral-members",
+    countRealEntries("#doctoral .person")
+  );
+  setLabStatistic(
+    "masters-members",
+    countRealEntries("#masters .person")
+  );
+
+  statisticsText.dataset.countStatus = "live";
+}
+
+function initializeLabStatistics() {
+  updateLabStatistics();
+
+  const membersSection = document.getElementById("members");
+
+  if (!membersSection) {
+    return;
+  }
+
+  const statisticsObserver = new MutationObserver(updateLabStatistics);
+  statisticsObserver.observe(membersSection, {
+    childList: true,
+    subtree: true
+  });
+}
+
 function initializeNewsFilters() {
   document.querySelectorAll(".filters button").forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
@@ -264,6 +376,7 @@ function initializePage() {
   initializeImageSlots();
   initializeMemberTabs();
   initializeExpandableNavigation();
+  initializeLabStatistics();
   initializeNewsFilters();
 }
 
