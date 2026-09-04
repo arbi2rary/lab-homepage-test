@@ -230,3 +230,45 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
  
 footer{padding:28px 0;font-size:13.5px;color:var(--ink-soft);border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.font-demo {
+  background: #f7f8fa;
+}
+
+.font-sample {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 28px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.font-sample strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #3a6389;
+}
+
+.font-sample h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.font-sample p {
+  color: #5f6b78;
+}
+
+.noto {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.pretendard {
+  font-family: "Pretendard", sans-serif;
+}
+
+.plex {
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.gothic {
+  font-family: "Gothic A1", sans-serif;
+}
