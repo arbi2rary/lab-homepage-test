@@ -26,23 +26,117 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-</head>
   <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
 <!-- ================= 메뉴 ================= -->
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">Computer Systems &amp; Reliable SoC Lab<small>연세대학교 전기전자공학과</small></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">메뉴</button>
-    <ul id="menu">
-      <li><a href="#research">연구</a></li>
-      <li><a href="#projects">과제</a></li>
-      <li><a href="#publications">논문</a></li>
-      <li><a href="#members">구성원</a></li>
-      <li><a href="#news">소식</a></li>
-      <li><a href="#contact">연락처</a></li>
-    </ul>
+    <a class="brand" href="#top">
+      Computer Systems &amp; Reliable SoC Lab
+      <small>연세대학교 전기전자공학과</small>
+    </a>
+
+    <div class="nav-controls">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        data-aria-kr="전체 메뉴 열기"
+        data-aria-en="Open navigation"
+      >
+        <span data-kr="메뉴" data-en="Menu">메뉴</span>
+      </button>
+
+      <nav
+        class="site-nav"
+        id="site-menu"
+        aria-label="주요 메뉴"
+        data-aria-kr="주요 메뉴"
+        data-aria-en="Primary navigation"
+      >
+        <ul id="menu" class="menu">
+          <li class="menu-item has-submenu">
+            <button class="menu-link submenu-toggle" type="button" aria-expanded="false">
+              <span data-kr="연구실소개" data-en="About">연구실소개</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#top" data-kr="연구실 소개" data-en="About the Lab">연구실 소개</a></li>
+              <li><a href="#research" data-kr="연구 분야" data-en="Research Areas">연구 분야</a></li>
+              <li><a href="#contact" data-kr="오시는 길" data-en="Location">오시는 길</a></li>
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="links.html" data-kr="관련 사이트" data-en="Related Sites">관련 사이트</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item has-submenu">
+            <button class="menu-link submenu-toggle" type="button" aria-expanded="false">
+              <span data-kr="연구과제" data-en="Projects">연구과제</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#projects" data-kr="현재 수행 과제" data-en="Current Projects">현재 수행 과제</a></li>
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="projects-completed.html" data-kr="기수행 과제" data-en="Completed Projects">기수행 과제</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item has-submenu">
+            <button class="menu-link submenu-toggle" type="button" aria-expanded="false">
+              <span data-kr="연구업적" data-en="Publications">연구업적</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#publications" data-kr="논문" data-en="Papers">논문</a></li>
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="books.html" data-kr="저서" data-en="Books">저서</a></li>
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="patents.html" data-kr="특허" data-en="Patents">특허</a></li>
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="other-publications.html" data-kr="기타" data-en="Other">기타</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item has-submenu">
+            <button class="menu-link submenu-toggle" type="button" aria-expanded="false">
+              <span data-kr="구성원" data-en="Members">구성원</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#members" data-member-panel="p-prof" data-kr="지도교수" data-en="Professor">지도교수</a></li>
+              <li><a href="#members" data-member-panel="p-students" data-kr="재학생" data-en="Students">재학생</a></li>
+              <li><a href="#members" data-member-panel="p-alumni" data-kr="동문" data-en="Alumni">동문</a></li>
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="staff.html" data-kr="사무원" data-en="Staff">사무원</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item has-submenu">
+            <button class="menu-link submenu-toggle" type="button" aria-expanded="false">
+              <span data-kr="강의" data-en="Courses">강의</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="courses.html" data-kr="현재 진행 강의" data-en="Current Courses">현재 진행 강의</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item has-submenu">
+            <button class="menu-link submenu-toggle" type="button" aria-expanded="false">
+              <span data-kr="소식" data-en="News">소식</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="submenu submenu-right">
+              <li><a href="#news" data-kr="공지사항" data-en="Notices">공지사항</a></li>
+              <li><a href="#news" data-kr="연구성과" data-en="Research Highlights">연구성과</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="language-switcher" role="group" aria-label="언어 선택">
+        <button class="language-option active" type="button" data-lang="kr" aria-pressed="true">KR</button>
+        <span aria-hidden="true">|</span>
+        <button class="language-option" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -415,3 +509,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
