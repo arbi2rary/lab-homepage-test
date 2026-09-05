@@ -1386,6 +1386,27 @@ function initializeNewsFilters() {
   });
 }
 
+function initializeLinkedDetailsPanels() {
+  const openLinkedPanel = (hash) => {
+    if (!hash || !hash.startsWith("#")) {
+      return;
+    }
+
+    const target = document.getElementById(hash.slice(1));
+    if (target instanceof HTMLDetailsElement) {
+      target.open = true;
+    }
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      openLinkedPanel(link.getAttribute("href"));
+    });
+  });
+
+  openLinkedPanel(window.location.hash);
+}
+
 const publicationMonthNames = [
   "January",
   "February",
@@ -1738,6 +1759,182 @@ async function initializePublications() {
   }
 }
 
+function createPatentField(labelKr, labelEn, value) {
+  const normalizedValue = String(value || "").trim();
+  if (!normalizedValue) {
+    return null;
+  }
+
+  const field = document.createElement("div");
+  field.className = "patent-field";
+  const label = document.createElement("dt");
+  setLocalizedContent(label, labelKr, labelEn);
+  const content = document.createElement("dd");
+  content.textContent = normalizedValue;
+  field.append(label, content);
+  return field;
+}
+
+function getPatentNumberLabels(status) {
+  if (status === "granted") {
+    return {
+      kr: "등록번호",
+      en: "Registration No.",
+    };
+  }
+
+  return {
+    kr: "출원번호",
+    en: "Application No.",
+  };
+}
+
+function createPatentItem(patent, status) {
+  const item = document.createElement("li");
+  item.className = "patent-item";
+
+  const id = document.createElement("span");
+  id.className = "patent-id";
+  setLocalizedContent(id, "특허 " + patent.id, "Patent " + patent.id);
+
+  const content = document.createElement("article");
+  content.className = "patent-content";
+  const title = document.createElement("h3");
+  title.className = "patent-title";
+  title.textContent = String(patent.title || "").trim();
+
+  const details = document.createElement("dl");
+  details.className = "patent-fields";
+  const numberLabels = getPatentNumberLabels(status);
+  const inventors = Array.isArray(patent.inventors)
+    ? patent.inventors.map((inventor) => String(inventor).trim()).filter(Boolean)
+    : [];
+  [
+    createPatentField(
+      "발명자",
+      "Inventors",
+      inventors.join(", ")
+    ),
+    createPatentField(
+      numberLabels.kr,
+      numberLabels.en,
+      patent.number
+    ),
+    createPatentField(
+      "출원지정국",
+      "Designated Country",
+      patent.country
+    ),
+  ].filter(Boolean).forEach((field) => details.append(field));
+
+  content.append(title, details);
+  item.append(id, content);
+  return item;
+}
+
+function createPatentYear(yearGroup, shouldOpen, status) {
+  const panel = document.createElement("details");
+  panel.className = "publication-year patent-year";
+  panel.open = shouldOpen;
+
+  const summary = document.createElement("summary");
+  const yearLabel = document.createElement("span");
+  yearLabel.className = "publication-year-label";
+  yearLabel.textContent = yearGroup.label;
+  const count = document.createElement("span");
+  count.className = "publication-count";
+  setLocalizedContent(
+    count,
+    yearGroup.publications.length + "건",
+    yearGroup.publications.length + " patents"
+  );
+  const chevron = document.createElement("span");
+  chevron.className = "publication-chevron";
+  chevron.setAttribute("aria-hidden", "true");
+  summary.append(yearLabel, count, chevron);
+
+  const list = document.createElement("ol");
+  list.className = "patent-list";
+  yearGroup.publications.forEach((patent) => {
+    list.append(createPatentItem(patent, status));
+  });
+
+  panel.append(summary, list);
+  return panel;
+}
+
+function renderPatents(patents) {
+  const container = document.getElementById("patent-years");
+  const total = document.getElementById("patent-total");
+
+  if (!container || !total) {
+    return;
+  }
+
+  const status = container.dataset.status === "granted" ? "granted" : "filed";
+  const entries = patents
+    .filter((patent) => patent && patent.type === "patent")
+    .sort((first, second) => Number(second.id) - Number(first.id));
+
+  setLocalizedContent(
+    total,
+    "총 " + entries.length + "건",
+    entries.length + " patents"
+  );
+  container.replaceChildren();
+
+  const yearGroups = [...groupPublicationsByYear(entries).values()].sort(
+    (first, second) => second.sortValue - first.sortValue
+  );
+
+  if (yearGroups.length === 0) {
+    const emptyMessage = document.createElement("p");
+    emptyMessage.className = "publication-empty";
+    setLocalizedContent(
+      emptyMessage,
+      container.dataset.emptyKr || "표시할 특허가 없습니다.",
+      container.dataset.emptyEn || "No patents are available."
+    );
+    container.append(emptyMessage);
+    return;
+  }
+
+  yearGroups.forEach((yearGroup, index) => {
+    container.append(createPatentYear(yearGroup, index === 0, status));
+  });
+}
+
+async function initializePatents() {
+  const container = document.getElementById("patent-years");
+  if (!container) {
+    return;
+  }
+
+  try {
+    const response = await fetch(container.dataset.source, { cache: "no-cache" });
+    if (!response.ok) {
+      throw new Error("Patent data request failed: " + response.status);
+    }
+
+    const patents = await response.json();
+    if (!Array.isArray(patents)) {
+      throw new TypeError("Patent data must be an array.");
+    }
+
+    renderPatents(patents);
+  } catch (error) {
+    const errorMessage = document.createElement("p");
+    errorMessage.className = "publication-error";
+    setLocalizedContent(
+      errorMessage,
+      "특허 목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.",
+      "The patent list could not be loaded. Please try again later."
+    );
+    container.replaceChildren(errorMessage);
+    console.error(error);
+  }
+}
+
 function initializePage() {
   initializeNavigation();
   initializeLanguageSwitcher();
@@ -1746,7 +1943,9 @@ function initializePage() {
   initializeMembers();
   initializeProjects();
   initializeNewsFilters();
+  initializeLinkedDetailsPanels();
   initializePublications();
+  initializePatents();
 }
 
 document.addEventListener("DOMContentLoaded", initializePage);

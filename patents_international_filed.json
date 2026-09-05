@@ -1,0 +1,747 @@
+[
+ {
+  "id": 46,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "패턴 브로드캐스팅 기반으로 병렬 테스트를 수행하는 PIM 장치 및 그 동작 방법",
+  "inventors": [
+   "강성호",
+   "문영기"
+  ],
+  "date": "2026.08.27",
+  "year": 2026,
+  "number": "PCT/KR2026/012550",
+  "country": "PCT출원",
+  "note": "PCT출원"
+ },
+ {
+  "id": 45,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "MEMORY FAULT DATA TRANSMISSION APPARATUS AND METHOD BASED ON REPAIRABILITY CROSS-REFERENCE TO RELATED APPLICATIONS",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "date": "2026.07.10",
+  "year": 2026,
+  "number": "19/737,448",
+  "country": "미국",
+  "note": "아주대산단 협력 5:5"
+ },
+ {
+  "id": 44,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "PROCESSOR INCLUDING BUILT-IN SELF-TEST CIRCUIT, METHOD OF OPERATING THE PROCESSOR, AND METHOD OF MANUFACTURING THE SAME",
+  "inventors": [
+   "강성호",
+   "박종호"
+  ],
+  "date": "2026.04.14",
+  "year": 2026,
+  "number": "19/647,095",
+  "country": "미국",
+  "note": "사외특허"
+ },
+ {
+  "id": 43,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "PROCESSOR INCLUDING BUILT-IN SELF-TEST CIRCUIT, METHOD OF OPERATING THE PROCESSOR, AND METHOD OF MANUFACTURING THE SAME",
+  "inventors": [
+   "강성호",
+   "김혜민"
+  ],
+  "date": "2026.04.10",
+  "year": 2026,
+  "number": "19/644,433",
+  "country": "미국",
+  "note": "사외특허"
+ },
+ {
+  "id": 42,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "DIE, DEVICE AND METHOD FOR TESTING THROUGH SILICON VIA",
+  "inventors": [
+   "강성호",
+   "김성훈"
+  ],
+  "date": "2026.02.10",
+  "year": 2026,
+  "number": "19/535,396",
+  "country": "미국",
+  "note": "사외특허"
+ },
+ {
+  "id": 41,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SYSTEM AND METHOD FOR CORRECTING ERROR OF HIGH BANDWIDTH MEMORY",
+  "inventors": [
+   "강성호",
+   "신승호"
+  ],
+  "date": "2025.12.04",
+  "year": 2025,
+  "number": "19/408,931",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 40,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SEMICONDUCTOR INTEGRATED CIRCUIT FOR PERFORMING REPAIR OPERATION ON THROUGH SILICON VIA (TSV)",
+  "inventors": [
+   "강성호",
+   "장석준",
+   "한동현"
+  ],
+  "date": "2025.01.14",
+  "year": 2025,
+  "number": "19/020,197",
+  "country": "미국",
+  "note": "사외특허"
+ },
+ {
+  "id": 39,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "CIRCUIT SELF TEST APPARATUS AND OPERATING METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "박종호"
+  ],
+  "date": "2024.12.10",
+  "year": 2024,
+  "number": "18/975,781",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 38,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "APPARATUS AND METHOD FOR PRE-ANALYZING MEMORY FAULT INFORMATION",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "date": "2024.08.06",
+  "year": 2024,
+  "number": "18/795,537",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 37,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "NON-LINEAR MEMORY FAILURE ANALYSIS METHOD AND MEMORY TEST APPARATUS",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "date": "2024.06.27",
+  "year": 2024,
+  "number": "18/757,178",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 36,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SCAN CHAIN SECURITY CIRCUIT AND DRIVING METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "장석준"
+  ],
+  "date": "2023.12.26",
+  "year": 2023,
+  "number": "18/395,745",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 35,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "METHOD FOR STORING MEMORY FAULT DATA, APPARATUS AND COMPUTER PROGRAM FOR PERFORMING THE METHOD",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "date": "2023.10.20",
+  "year": 2023,
+  "number": "2023-180907",
+  "country": "일본",
+  "note": ""
+ },
+ {
+  "id": 34,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "METHOD FOR STORING MEMORY FAULT DATA, APPARATUS AND COMPUTER PROGRAM FOR PERFORMING THE METHOD",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "date": "2023.10.19",
+  "year": 2023,
+  "number": "18/490,671",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 33,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SCAN CELL PLACING METHOD AND SCAN CELL PLACING APPARATUS",
+  "inventors": [
+   "강성호",
+   "이상준"
+  ],
+  "date": "2022.11.28",
+  "year": 2022,
+  "number": "17/994,866",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 32,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SCAN CORRELATION‐AWARE SCAN CLUSTER REORDERING METHOD AND APPARATUS FOR LOW‐POWER TESTING",
+  "inventors": [
+   "강성호",
+   "이상준"
+  ],
+  "date": "2022.09.09",
+  "year": 2022,
+  "number": "17/931,044",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 31,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SEMICONDUCTOR DEVICE INCLUDING THROUGH-SILICON VIA (TSV) TEST DEVICE AND OPERATING METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "이영광"
+  ],
+  "date": "2022.09.01",
+  "year": 2022,
+  "number": "202211063563.6",
+  "country": "중국",
+  "note": "사외특허"
+ },
+ {
+  "id": 30,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SEMICONDUCTOR DEVICE INCLUDING THROUGH-SILICON VIA (TSV) TEST DEVICE AND OPERATING METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "이영광"
+  ],
+  "date": "2022.07.28",
+  "year": 2022,
+  "number": "17/875,889",
+  "country": "미국",
+  "note": "사외특허"
+ },
+ {
+  "id": 29,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "METHOD OF REPAIRING THROUGH-ELECTRODES, REPAIR DEVICE AND SEMICONDUCTOR DEVICE",
+  "inventors": [
+   "강성호",
+   "이영광"
+  ],
+  "date": "2022.07.11",
+  "year": 2022,
+  "number": "202210792232.X",
+  "country": "중국",
+  "note": "사외특허"
+ },
+ {
+  "id": 28,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "METHOD OF REPAIRING THROUGH-ELECTRODES, REPAIR DEVICE PERFORMING THE SAME AND SEMICONDUCTOR DEVICE INCLUDING THE SAME",
+  "inventors": [
+   "강성호",
+   "이영광"
+  ],
+  "date": "2022.04.07",
+  "year": 2022,
+  "number": "17/660,920",
+  "country": "미국",
+  "note": "사외특허"
+ },
+ {
+  "id": 27,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SCAN APPARATUS CAPABLE OF FAULT DIAGNOSIS AND SCAN CHAIN FAULT DIAGNOSIS METHOD",
+  "inventors": [
+   "강성호",
+   "장석준"
+  ],
+  "date": "2022.02.16",
+  "year": 2022,
+  "number": "17/673.075",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 26,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "REDUDANCY ANALYSIS METHOD AND REDUDANCY ANALYSIS APPARATUS",
+  "inventors": [
+   "강성호",
+   "김태현"
+  ],
+  "date": "2021.10.22",
+  "year": 2021,
+  "number": "17/508910",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 25,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "ON-CHIP SECURITY CIRCUIT FOR DETECTING AND PROTECTING AGAINST INVASIVE ATTACKS",
+  "inventors": [
+   "강성호",
+   "이영우"
+  ],
+  "date": "2020.05.18",
+  "year": 2020,
+  "number": "16/877100",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 24,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "METHOD AND APPARATUS FOR BUILT IN REDUNDANCY ANALYSIS WITH DYNAMIC FAULT RECONFIGURATION",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "date": "2020.05.18",
+  "year": 2020,
+  "number": "16/877109",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 23,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "STACKED MEMORY APPARATUS USING ERROR CORRECTION CODE AND REPAIR METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "한동현",
+   "이하영"
+  ],
+  "date": "2020.01.23",
+  "year": 2020,
+  "number": "16/750,923",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 22,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "STACKED MEMORY DEVICE USING BASE DIE SPARE CELL AND METHOD OF REPAIRING THE SAME",
+  "inventors": [
+   "강성호",
+   "한동현"
+  ],
+  "date": "2018.05.24",
+  "year": 2018,
+  "number": "15/988,970",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 21,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "THREE DIMENTIONAL INTEGRATED CIRCUIT HAVING REDUNDANT THROUGH SILICON VIA BASED ON ROTATABLE CUBE",
+  "inventors": [
+   "강성호",
+   "정민호"
+  ],
+  "date": "2018.02.12",
+  "year": 2018,
+  "number": "15/894,787",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 20,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "CIRCUIT FOR TESTING AND ANALYZING TSV AND METHOD OF TESTING THE SAME",
+  "inventors": [
+   "강성호",
+   "이영우"
+  ],
+  "date": "2017.03.16",
+  "year": 2017,
+  "number": "15/460,488",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 19,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "THREE-DIMENSIONAL INTEGRATED CIRCUIT",
+  "inventors": [
+   "강성호",
+   "강동호",
+   "이인걸"
+  ],
+  "date": "2017.02.02",
+  "year": 2017,
+  "number": "15/422,578",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 18,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "TEST CIRCUIT FOR 3D SEMICONDUCTOR DEVICE AND METHOD FOR TESTING THEREOF",
+  "inventors": [
+   "강성호",
+   "이인걸"
+  ],
+  "date": "2016.10.12",
+  "year": 2016,
+  "number": "15/291,172",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 17,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SEMICONDUCTOR DEVICE AND METHOD FOR TESTING THE SAME",
+  "inventors": [
+   "강성호",
+   "박재석"
+  ],
+  "date": "2015.10.16",
+  "year": 2015,
+  "number": "14/785,042",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 16,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Method of Generating Voltage Island for 3D Many-core Chip Multiprocessor",
+  "inventors": [
+   "강성호",
+   "홍혜정"
+  ],
+  "date": "2014.12.22",
+  "year": 2014,
+  "number": "14/579023",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 15,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "METHOD AND DEVICE FOR REPAIRING MEMORY (메모리 수리 방법 및 메모리 수리 장치)",
+  "inventors": [
+   "강성호",
+   "조기원"
+  ],
+  "date": "2014.09.08",
+  "year": 2014,
+  "number": "14/479657",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 14,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "SEMICONDUCTOR DEVICE AND METHOD FOR TESTING THE SAME(반도체 장치 및 이의 테스트 방법)",
+  "inventors": [
+   "강성호",
+   "박재석"
+  ],
+  "date": "2014.02.25",
+  "year": 2014,
+  "number": "PCT/KR2014/001507",
+  "country": "",
+  "note": ""
+ },
+ {
+  "id": 13,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "MULTI-CORE DEVICE, TEST DEVICE AND METHOD FOR DIAGNOSING FAILURE(멀티코어 장치, 테스트 장치 및 고장 진단 방법)",
+  "inventors": [
+   "강성호",
+   "한태우"
+  ],
+  "date": "2014.01.17",
+  "year": 2014,
+  "number": "14/158170",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 12,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Matching method of diagnosing multiple stuck-at faults\n(다중고착 고장 진단을 위한 매칭 방법)",
+  "inventors": [
+   "강성호"
+  ],
+  "date": "2007.06.27",
+  "year": 2007,
+  "number": "PCT/KR2007/003127",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 11,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Method and apparatus for reducing transition number using transition monitoring window",
+  "inventors": [
+   "강성호",
+   "김유빈",
+   "양명훈",
+   "이용"
+  ],
+  "date": "2007.06.18",
+  "year": 2007,
+  "number": "11/159025",
+  "country": "미국",
+  "note": "특허자료와 불일치(자료 없음) 특허관리시스템에 있음"
+ },
+ {
+  "id": 10,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Method for Diagnosing Troubles in Scan Chain via Symbolic Simulation\n(심볼릭 시뮬레이션을 이용한 스캔 체인 고장 진단 방법)",
+  "inventors": [
+   "강성호"
+  ],
+  "date": "2007.02.09",
+  "year": 2007,
+  "number": "PCT/KR2007/000732(333)",
+  "country": "미국",
+  "note": "특허자료와 불일치(자료 없음) 특허관리시스템에 있음"
+ },
+ {
+  "id": 9,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "분할된 LFSR을 이용한 저전력 결정패턴 BIST 방법 및 장치",
+  "inventors": [
+   "강성호",
+   "양명훈",
+   "김유빈"
+  ],
+  "date": "2006.11.17",
+  "year": 2006,
+  "number": "PCT/KR2006/004847",
+  "country": "",
+  "note": "특허자료와 불일치(자료 없음) 특허관리시스템에 있음"
+ },
+ {
+  "id": 8,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Method and Apparatus for Reducing Number of Transitions Generated by Linear Feedback Shift Register",
+  "inventors": [
+   "강성호",
+   "김유빈",
+   "양명훈",
+   "이용"
+  ],
+  "date": "2005.06.22",
+  "year": 2005,
+  "number": "US11/159025",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 7,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Method of Reducing Hardware Overhead Upon Generation of Test Pattern in Built-in Self Test",
+  "inventors": [
+   "강성호",
+   "송동섭"
+  ],
+  "date": "2004.12.24",
+  "year": 2004,
+  "number": "11/022917",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 6,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Apparatus For Implementation of Adaptive Routing In Packet Switched Networks",
+  "inventors": [
+   "강성호",
+   "배성일"
+  ],
+  "date": "2004.09.10",
+  "year": 2004,
+  "number": "10/937369",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 5,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Apparatus For Generating Deterministic Test Pattern Using Phase Shifter",
+  "inventors": [
+   "강성호",
+   "송동섭"
+  ],
+  "date": "2004.07.20",
+  "year": 2004,
+  "number": "10/896197",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 4,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Test Data Compression and Decompression Method Using Zero-Detected Run-length Code (ZDR) in System-on-Chip",
+  "inventors": [
+   "강성호",
+   "이용"
+  ],
+  "date": "2004.06.15",
+  "year": 2004,
+  "number": "10/867588",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 3,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Method of Efficiently Compressing and Decompressing Test Data Using Input Reduction",
+  "inventors": [
+   "강성호",
+   "전성훈",
+   "김용준",
+   "김근배"
+  ],
+  "date": "2004.04.01",
+  "year": 2004,
+  "number": "10/814127",
+  "country": "미국",
+  "note": ""
+ },
+ {
+  "id": 2,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "ABR Service Engine in Packet Switching System",
+  "inventors": [
+   "정송",
+   "강성호",
+   "최영인"
+  ],
+  "date": "2000.10.02",
+  "year": 2000,
+  "number": "PCT/KR 00/01099",
+  "country": "미국, 중국, 캐나다, 일본, 독일, 프랑스, 영국 (01/02/10)",
+  "note": "특허자료와 불일치(자료 없음)"
+ },
+ {
+  "id": 1,
+  "type": "patent",
+  "scope": "international",
+  "status": "filed",
+  "title": "Fair Flow Controlling Method in Packet Switching Network",
+  "inventors": [
+   "정송",
+   "강성호"
+  ],
+  "date": "2000.10.02",
+  "year": 2000,
+  "number": "PCT/KR 00/01098",
+  "country": "미국, 중국, 캐나다, 일본, 독일, 프랑스, 영국 (01/02/10)",
+  "note": "특허자료와 불일치(자료 없음)"
+ }
+]

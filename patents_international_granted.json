@@ -1,0 +1,428 @@
+[
+ {
+  "id": 28,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "APPARATUS AND METHOD FOR PRE-ANALYZING MEMORY FAULT INFORMATION",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "number": "12717672",
+  "date": "2026.08.25",
+  "year": 2026,
+  "note": ""
+ },
+ {
+  "id": 27,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "NON-LINEAR MEMORY FAILURE ANALYSIS METHOD AND MEMORY TEST APPARATUS",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "number": "12670965",
+  "date": "2026.06.30",
+  "year": 2026,
+  "note": ""
+ },
+ {
+  "id": 26,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "SEMICONDUCTOR DEVICE INCLUDING THROUGH-SILICON VIA (TSV) TEST DEVICE AND OPERATING METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "이영광"
+  ],
+  "number": "12622321",
+  "date": "2026.05.05",
+  "year": 2026,
+  "note": "사외특허"
+ },
+ {
+  "id": 25,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "SCAN CELL PLACING METHOD AND SCAN CELL PLACING APPARATUS",
+  "inventors": [
+   "강성호",
+   "이상준"
+  ],
+  "number": "12607979",
+  "date": "2026.04.21",
+  "year": 2026,
+  "note": ""
+ },
+ {
+  "id": 24,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "SCAN CHAIN SECURITY CIRCUIT AND DRIVING METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "장석준"
+  ],
+  "number": "12405303",
+  "date": "2025.09.02",
+  "year": 2025,
+  "note": ""
+ },
+ {
+  "id": 23,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "METHOD OF REPAIRING THROUGH-ELECTRODES, REPAIR DEVICE PERFORMING THE SAME AND SEMICONDUCTOR DEVICE INCLUDING THE SAME",
+  "inventors": [
+   "강성호",
+   "이영광"
+  ],
+  "number": "12283529",
+  "date": "2025.04.22",
+  "year": 2025,
+  "note": ""
+ },
+ {
+  "id": 22,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "메모리 고장 데이터 저장 방법, 이를 수행하는 장치 및 컴퓨터 프로그램 (メモリ故障データの保存方法、これを行う装置、およびコンピュータプログラム)",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "number": "7608560",
+  "date": "2024.12.10",
+  "year": 2024,
+  "note": ""
+ },
+ {
+  "id": 21,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "SCAN CORRELATION-AWARE SCAN CLUSTER REORDERING METHOD AND APPARATUS FOR LOW-POWER TESTING",
+  "inventors": [
+   "강성호",
+   "이상준"
+  ],
+  "number": "12000891",
+  "date": "2024.06.04",
+  "year": 2024,
+  "note": ""
+ },
+ {
+  "id": 20,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "REDUDANCY ANALYSIS METHOD AND REDUDANCY ANALYSIS APPARATUS",
+  "inventors": [
+   "강성호",
+   "김태현"
+  ],
+  "number": "11631474",
+  "date": "2023.04.18",
+  "year": 2023,
+  "note": ""
+ },
+ {
+  "id": 19,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "SCAN APPARATUS CAPABLE OF FAULT DIAGNOSIS AND SCAN CHAIN FAULT DIAGNOSIS METHOD",
+  "inventors": [
+   "강성호",
+   "장석준"
+  ],
+  "number": "11567132",
+  "date": "2023.01.31",
+  "year": 2023,
+  "note": ""
+ },
+ {
+  "id": 18,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "ON-CHIP SECURITY CIRCUIT FOR DETECTING AND PROTECTING AGAINST INVASIVE ATTACKS",
+  "inventors": [
+   "강성호",
+   "이영우"
+  ],
+  "number": "11387196",
+  "date": "2022.07.12",
+  "year": 2022,
+  "note": ""
+ },
+ {
+  "id": 17,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "METHOD AND APPARATUS FOR BUILT IN REDUNDANCY ANALYSIS WITH DYNAMIC FAULT RECONFIGURATION",
+  "inventors": [
+   "강성호",
+   "이하영"
+  ],
+  "number": "11386973",
+  "date": "2022.07.12",
+  "year": 2022,
+  "note": ""
+ },
+ {
+  "id": 16,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "STACKED MEMORY APPARATUS USING ERROR CORRECTION CODE AND REPAIR METHOD THEREOF",
+  "inventors": [
+   "강성호",
+   "한동현",
+   "이하영"
+  ],
+  "number": "11315657",
+  "date": "2022.04.26",
+  "year": 2022,
+  "note": ""
+ },
+ {
+  "id": 15,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "CIRCUIT FOR TESTING AND ANALYZING TSV AND METHOD OF TESTING THE SAME",
+  "inventors": [
+   "강성호",
+   "이영우"
+  ],
+  "number": "10401422",
+  "date": "2019.09.03",
+  "year": 2019,
+  "note": ""
+ },
+ {
+  "id": 14,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "THREE DIMENSIONAL INTEGRATED CIRCUIT HAVING REDUNDANT THROUGH SILICON VIA BASED ON ROTATABLE CUBE",
+  "inventors": [
+   "강성호",
+   "정민호"
+  ],
+  "number": "10403555",
+  "date": "2019.09.03",
+  "year": 2019,
+  "note": ""
+ },
+ {
+  "id": 13,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "STACKED MEMORY DEVICE USING BASE DIE SPARE CELL AND METHOD OF REPAIRING THE SAME",
+  "inventors": [
+   "강성호",
+   "한동현"
+  ],
+  "number": "10395755",
+  "date": "2019.08.27",
+  "year": 2019,
+  "note": ""
+ },
+ {
+  "id": 12,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "THREE-DIMENSIONAL INTEGRATED CIRCUIT",
+  "inventors": [
+   "강성호",
+   "강동호",
+   "이인걸"
+  ],
+  "number": "10170398",
+  "date": "2019.01.01",
+  "year": 2019,
+  "note": ""
+ },
+ {
+  "id": 11,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "TEST CIRCUIT FOR 3D SEMICONDUCTOR DEVICE AND METHOD FOR TESTING THEREOF",
+  "inventors": [
+   "강성호",
+   "이인걸"
+  ],
+  "number": "10/095591",
+  "date": "2018.10.09",
+  "year": 2018,
+  "note": ""
+ },
+ {
+  "id": 10,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "SEMICONDUCTOR DEVICE AND METHOD FOR TESTING THE SAME",
+  "inventors": [
+   "강성호",
+   "박재석"
+  ],
+  "number": "10/001525",
+  "date": "2018.06.19",
+  "year": 2018,
+  "note": ""
+ },
+ {
+  "id": 9,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Multi-core device, test device, and method of diagnosing failure",
+  "inventors": [
+   "강성호",
+   "한태우"
+  ],
+  "number": "9672128",
+  "date": "2017.06.06",
+  "year": 2017,
+  "note": ""
+ },
+ {
+  "id": 8,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Method and device for repairing memory",
+  "inventors": [
+   "강성호",
+   "조기원"
+  ],
+  "number": "9666309",
+  "date": "2017.05.30",
+  "year": 2017,
+  "note": ""
+ },
+ {
+  "id": 7,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Method of Generating Voltage Island for 3D Many-core Chip Multiprocessor",
+  "inventors": [
+   "강성호",
+   "홍혜정"
+  ],
+  "number": "9230051",
+  "date": "2016.01.05",
+  "year": 2016,
+  "note": ""
+ },
+ {
+  "id": 6,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Apparatus for Implementation of Adaptive Routing in Packet Switching Networks",
+  "inventors": [
+   "안진호/배성일/김영용/강성호"
+  ],
+  "number": "7327685",
+  "date": "2008.02.05",
+  "year": 2008,
+  "note": ""
+ },
+ {
+  "id": 5,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Method and Apparatus for Reducing Number of Transitions Generated by Linear Feedback Shift Register",
+  "inventors": [
+   "강성호/김유빈/양명훈/이용"
+  ],
+  "number": "7428681",
+  "date": "2008.09.23",
+  "year": 2008,
+  "note": ""
+ },
+ {
+  "id": 4,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Test Data Compression and Decompression Method Using Zero-Detected Run-length Code(ZDR) in System-on-Chip",
+  "inventors": [
+   "강성호",
+   "이용"
+  ],
+  "number": "7299236",
+  "date": "2007.11.20",
+  "year": 2007,
+  "note": "아직 학교 등록 안 됨\n정상적으로 등록된 특허\n실적으로 사용하기에 문제 없음"
+ },
+ {
+  "id": 3,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Method and data processing system for verifying circuit test vectors",
+  "inventors": [
+   "Sungho Kang",
+   "Underwood",
+   "Law",
+   "H. Konuk"
+  ],
+  "number": "5600787",
+  "date": "1997.02.04",
+  "year": 1997,
+  "note": "특허자료와 불일치(자료 없음)"
+ },
+ {
+  "id": 2,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Method and data processing system for determining electrical circuit path delays",
+  "inventors": [
+   "Sungho Kang",
+   "Underwood",
+   "Law",
+   "H. Konuk"
+  ],
+  "number": "5583787",
+  "date": "1996.12.10",
+  "year": 1996,
+  "note": "특허자료와 불일치(자료 없음)"
+ },
+ {
+  "id": 1,
+  "type": "patent",
+  "scope": "international",
+  "status": "granted",
+  "title": "Method and data processing system for testing circuits using boolean differences",
+  "inventors": [
+   "Sungho Kang",
+   "Underwood",
+   "Law",
+   "H. Konuk"
+  ],
+  "number": "5517506",
+  "date": "1996.05.14",
+  "year": 1996,
+  "note": "특허자료와 불일치(자료 없음)"
+ }
+]

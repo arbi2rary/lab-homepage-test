@@ -26,7 +26,7 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260905-8">
+  <link rel="stylesheet" href="style.css?v=20260905-9">
 </head>
 <body>
 
@@ -88,9 +88,9 @@
             </button>
             <ul class="submenu">
               <li><a href="#publications" data-kr="논문" data-en="Papers">논문</a></li>
-              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="books.html" data-kr="저서" data-en="Books">저서</a></li>
-              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="patents.html" data-kr="특허" data-en="Patents">특허</a></li>
-              <li><a href="#" class="is-placeholder" aria-disabled="true" data-page="other-publications.html" data-kr="기타" data-en="Other">기타</a></li>
+              <li><a href="#books" data-kr="저서" data-en="Books">저서</a></li>
+              <li><a href="#patents" data-kr="특허" data-en="Patents">특허</a></li>
+              <li><a href="#other-research-outputs" data-kr="기타 연구업적" data-en="Other Research Outputs">기타 연구업적</a></li>
             </ul>
           </li>
 
@@ -362,9 +362,9 @@
       <noscript><p class="publication-error">논문 목록을 보려면 브라우저에서 JavaScript를 활성화해 주세요.</p></noscript>
     </div>
 
-    <details class="more-panel achievement-panel">
+    <details class="more-panel achievement-panel" id="more-publications">
       <summary>
-        <span data-kr="기타 논문 보기" data-en="View Other Papers">기타 논문 보기</span>
+        <span data-kr="논문 더보기" data-en="View More Publications">논문 더보기</span>
         <span class="summary-icon" aria-hidden="true"></span>
       </summary>
       <div class="more-panel-body achievement-link-grid achievement-link-grid-three">
@@ -386,9 +386,19 @@
       </div>
     </details>
 
-    <details class="more-panel achievement-panel">
+    <details class="more-panel achievement-panel" id="books">
       <summary>
-        <span data-kr="특허 펼치기" data-en="View Patents">특허 펼치기</span>
+        <span data-kr="저서 보기" data-en="View Books">저서 보기</span>
+        <span class="summary-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="more-panel-body achievement-placeholder">
+        <p data-kr="저서 목록을 준비 중입니다." data-en="The book list is being prepared.">저서 목록을 준비 중입니다.</p>
+      </div>
+    </details>
+
+    <details class="more-panel achievement-panel" id="patents">
+      <summary>
+        <span data-kr="특허 보기" data-en="View Patents">특허 보기</span>
         <span class="summary-icon" aria-hidden="true"></span>
       </summary>
       <div class="more-panel-body achievement-link-grid">
@@ -412,6 +422,16 @@
           <h3 data-kr="국내특허출원" data-en="Domestic Patent Applications">국내특허출원</h3>
           <p data-kr="국내 출원 특허" data-en="Filed domestic patent applications">국내 출원 특허</p>
         </a>
+      </div>
+    </details>
+
+    <details class="more-panel achievement-panel" id="other-research-outputs">
+      <summary>
+        <span data-kr="연구업적 더보기" data-en="View More Research Outputs">연구업적 더보기</span>
+        <span class="summary-icon" aria-hidden="true"></span>
+      </summary>
+      <div class="more-panel-body achievement-placeholder">
+        <p data-kr="기타 연구업적 목록을 준비 중입니다." data-en="The additional research output list is being prepared.">기타 연구업적 목록을 준비 중입니다.</p>
       </div>
     </details>
 
@@ -549,6 +569,6 @@
   </div>
 </footer>
   
-  <script src="script.js?v=20260905-8"></script>
+  <script src="script.js?v=20260905-9"></script>
 </body>
 </html>
