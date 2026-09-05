@@ -805,27 +805,82 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .news time{font-size:13px;color:var(--ink-soft);margin-left:8px}
 .news h3{font-size:16.5px;font-weight:500;margin:8px 0 6px}
 .news p{font-size:14.5px;color:var(--ink-soft)}
-.news li{display:flex;flex-direction:column}
+.news li{display:flex;flex-direction:column;padding:0}
+.news li.news-card>*{padding:22px}
 .news .news-meta{display:flex;align-items:baseline;flex-wrap:wrap}
-.news .news-detail{margin-top:auto;padding-top:10px}
-.news .news-detail>summary{
+.news-card-button{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  width:100%;
+  font:inherit;
+  color:inherit;
+  text-align:left;
+  background:none;
+  border:0;
+  border-radius:6px;
+  cursor:pointer;
+}
+.news-card-button h3{margin:8px 0 6px}
+.news-card-toggle{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:10px;
-  cursor:pointer;
-  list-style:none;
+  margin-top:auto;
+  padding-top:12px;
+  border-top:1px solid var(--line);
   font-size:13.5px;
   font-weight:500;
   color:var(--copper);
-  padding-top:12px;
-  border-top:1px solid var(--line);
 }
-.news .news-detail>summary::-webkit-details-marker{display:none}
-.news .news-detail[open]>summary .summary-icon::after{transform:translate(-50%,-50%) rotate(0)}
-.news-detail-body{padding-top:10px}
-.news-detail-body p{margin:0 0 10px;white-space:normal;word-break:break-word}
+.news-card-static{display:flex;flex-direction:column}
+.news-card-static h3{margin:8px 0 6px}
+.news-card-button:hover,
+.news-card-button[aria-expanded="true"]{background:var(--bg-soft)}
+.news-card-button:hover .news-card-toggle{color:var(--copper-lt)}
+.news-card-button[aria-expanded="true"] .summary-icon::after{
+  transform:translate(-50%,-50%) rotate(0);
+}
+
+.news-detail-panel{
+  grid-column:1/-1;
+  display:block;
+  padding:26px 28px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 8px 26px rgba(58,99,137,.08);
+  text-align:left;
+}
+.news-detail-panel[hidden]{display:none}
+.news-detail-title{font-size:19px;font-weight:500;margin:8px 0 14px;line-height:1.45}
+.news-detail-body{color:var(--ink-soft);font-size:14.5px;line-height:1.75}
+.news-detail-body p{margin:0 0 12px;word-break:break-word}
 .news-detail-body p:last-child{margin-bottom:0}
+.news-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+.news-gallery-single{grid-template-columns:minmax(0,560px)}
+.news-gallery-item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--bg-soft);
+}
+.news-gallery-item img{
+  display:block;
+  max-width:100%;
+  max-height:440px;
+  width:auto;
+  height:auto;
+}
 .news-status{font-size:14.5px;color:var(--ink-soft)}
 .news li.news-status{
   grid-column:1/-1;
@@ -1542,7 +1597,7 @@ html[lang="en"] .member-detail-name .member-name-english{
   padding:18px 20px;
   border:1px solid var(--line);
   border-radius:7px;
-  background:var(--bg-soft);
+  background:#fff;
 }
 
 .professor-awards-section{
@@ -1812,6 +1867,14 @@ html[lang="en"] .alumni-card-name .member-name-english{
 
   .member-detail-panel{
     padding:20px;
+  }
+
+  .news-detail-panel{
+    padding:20px;
+  }
+
+  .news-gallery{
+    grid-template-columns:1fr;
   }
 
   .member-profile-field{

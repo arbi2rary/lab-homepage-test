@@ -426,7 +426,11 @@ function closeCurrentMemberDetails(exceptButton = null) {
   });
 }
 
-function placeDetailAfterCardRow(card, detail) {
+function placeDetailAfterCardRow(
+  card,
+  detail,
+  cardSelector = ".member-card, .alumni-card"
+) {
   const container = card.parentElement;
   if (!container) {
     return;
@@ -437,7 +441,7 @@ function placeDetailAfterCardRow(card, detail) {
   const cardTop = card.offsetTop;
   const rowCards = [...container.children].filter(
     (element) =>
-      element.matches(".member-card, .alumni-card") &&
+      element.matches(cardSelector) &&
       Math.abs(element.offsetTop - cardTop) <= 1
   );
   const lastCardInRow = rowCards[rowCards.length - 1] || card;
@@ -464,9 +468,10 @@ function repositionOpenMemberDetails() {
 let memberDetailResizeFrame = 0;
 window.addEventListener("resize", () => {
   window.cancelAnimationFrame(memberDetailResizeFrame);
-  memberDetailResizeFrame = window.requestAnimationFrame(
-    repositionOpenMemberDetails
-  );
+  memberDetailResizeFrame = window.requestAnimationFrame(() => {
+    repositionOpenMemberDetails();
+    repositionOpenNewsDetail();
+  });
 });
 
 function createCurrentMemberElements(member, index) {
@@ -1355,6 +1360,8 @@ async function initializeProjects() {
 
 const NEWS_PAGE_SIZE = 9;
 
+const NEWS_IMAGE_BASE = "images/notice/";
+
 const NEWS_BOARDS = {
   publication: "achievement",
   patent: "achievement",
@@ -1376,8 +1383,10 @@ const NEWS_CATEGORY_LABELS = {
 
 const newsState = {
   items: [],
+  imagesById: {},
   board: "all",
   visibleCount: NEWS_PAGE_SIZE,
+  openId: null,
 };
 
 function getNewsFilterCategory(category) {
@@ -1413,6 +1422,30 @@ function sortNewsItems(items) {
   });
 }
 
+function getNewsImages(item) {
+  const files = newsState.imagesById[String(item.id)];
+  return Array.isArray(files) ? files : [];
+}
+
+function createNewsMeta(item) {
+  const meta = document.createElement("div");
+  meta.className = "news-meta";
+
+  const label = getNewsCategoryLabel(item.category);
+  const category = document.createElement("span");
+  category.className = "cat";
+  setLocalizedContent(category, label.kr, label.en);
+
+  const date = document.createElement("time");
+  if (typeof item.date === "string") {
+    date.dateTime = item.date;
+  }
+  date.textContent = formatNewsDate(item.date);
+
+  meta.append(category, date);
+  return meta;
+}
+
 function createNewsBody(body) {
   const fragment = document.createDocumentFragment();
 
@@ -1434,54 +1467,151 @@ function createNewsBody(body) {
   return fragment;
 }
 
-function createNewsCard(item) {
+function createNewsGallery(item) {
+  const files = getNewsImages(item);
+  if (!files.length) {
+    return null;
+  }
+
+  const gallery = document.createElement("div");
+  gallery.className = "news-gallery";
+  if (files.length === 1) {
+    gallery.classList.add("news-gallery-single");
+  }
+
+  files.forEach((file, index) => {
+    const source = NEWS_IMAGE_BASE + encodeURIComponent(file);
+    const link = document.createElement("a");
+    link.className = "news-gallery-item";
+    link.href = source;
+    link.target = "_blank";
+    link.rel = "noopener";
+
+    const image = document.createElement("img");
+    image.src = source;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.alt =
+      (typeof item.title === "string" ? item.title : "") +
+      (files.length > 1 ? " (" + (index + 1) + ")" : "");
+
+    link.append(image);
+    gallery.append(link);
+  });
+
+  return gallery;
+}
+
+function createNewsDetailPanel(item, detailId) {
+  const panel = document.createElement("li");
+  panel.className = "news-detail-panel";
+  panel.id = detailId;
+  panel.hidden = true;
+
+  const title = document.createElement("h3");
+  title.className = "news-detail-title";
+  title.textContent = typeof item.title === "string" ? item.title : "";
+
+  panel.append(createNewsMeta(item), title);
+
+  const body = createNewsBody(item.body);
+  if (body.childNodes.length) {
+    const bodyContainer = document.createElement("div");
+    bodyContainer.className = "news-detail-body";
+    bodyContainer.append(body);
+    panel.append(bodyContainer);
+  }
+
+  const gallery = createNewsGallery(item);
+  if (gallery) {
+    panel.append(gallery);
+  }
+
+  return panel;
+}
+
+function closeOpenNewsDetail() {
+  newsState.openId = null;
+
+  document
+    .querySelectorAll('.news-card-button[aria-expanded="true"]')
+    .forEach((button) => {
+      button.setAttribute("aria-expanded", "false");
+      const panel = document.getElementById(button.getAttribute("aria-controls"));
+      if (panel) {
+        panel.hidden = true;
+      }
+    });
+}
+
+function repositionOpenNewsDetail() {
+  document
+    .querySelectorAll('.news-card-button[aria-expanded="true"]')
+    .forEach((button) => {
+      const card = button.closest(".news-card");
+      const panel = document.getElementById(button.getAttribute("aria-controls"));
+
+      if (card && panel) {
+        placeDetailAfterCardRow(card, panel, ".news-card");
+      }
+    });
+}
+
+function createNewsCard(item, index) {
   const card = document.createElement("li");
+  card.className = "news-card";
   card.dataset.cat = typeof item.category === "string" ? item.category : "notice";
   card.dataset.board = getNewsFilterCategory(item.category);
-
-  const label = getNewsCategoryLabel(item.category);
-  const category = document.createElement("span");
-  category.className = "cat";
-  setLocalizedContent(category, label.kr, label.en);
-
-  const date = document.createElement("time");
-  if (typeof item.date === "string") {
-    date.dateTime = item.date;
-  }
-  date.textContent = formatNewsDate(item.date);
-
-  const meta = document.createElement("div");
-  meta.className = "news-meta";
-  meta.append(category, date);
 
   const title = document.createElement("h3");
   title.textContent = typeof item.title === "string" ? item.title : "";
 
-  card.append(meta, title);
+  const hasBody = Boolean(String(item.body ?? "").trim());
+  const hasImages = getNewsImages(item).length > 0;
 
-  const body = createNewsBody(item.body);
-  if (!body.childNodes.length) {
-    return card;
+  if (!hasBody && !hasImages) {
+    const static_ = document.createElement("div");
+    static_.className = "news-card-static";
+    static_.append(createNewsMeta(item), title);
+    card.append(static_);
+    return { card, panel: null };
   }
 
-  const panel = document.createElement("details");
-  panel.className = "news-detail";
+  const detailId = "news-detail-" + String(item.id ?? index);
+  const button = document.createElement("button");
+  button.className = "news-card-button";
+  button.type = "button";
+  button.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-controls", detailId);
 
-  const summary = document.createElement("summary");
-  const summaryText = document.createElement("span");
-  setLocalizedContent(summaryText, "내용 보기", "Read more");
-  const summaryIcon = document.createElement("span");
-  summaryIcon.className = "summary-icon";
-  summaryIcon.setAttribute("aria-hidden", "true");
-  summary.append(summaryText, summaryIcon);
+  const toggle = document.createElement("span");
+  toggle.className = "news-card-toggle";
+  const toggleText = document.createElement("span");
+  setLocalizedContent(toggleText, "내용 보기", "Read more");
+  const toggleIcon = document.createElement("span");
+  toggleIcon.className = "summary-icon";
+  toggleIcon.setAttribute("aria-hidden", "true");
+  toggle.append(toggleText, toggleIcon);
 
-  const bodyContainer = document.createElement("div");
-  bodyContainer.className = "news-detail-body";
-  bodyContainer.append(body);
+  button.append(createNewsMeta(item), title, toggle);
+  card.append(button);
 
-  panel.append(summary, bodyContainer);
-  card.append(panel);
-  return card;
+  const panel = createNewsDetailPanel(item, detailId);
+
+  button.addEventListener("click", () => {
+    const willOpen = panel.hidden;
+    closeOpenNewsDetail();
+
+    if (willOpen) {
+      placeDetailAfterCardRow(card, panel, ".news-card");
+      newsState.openId = item.id;
+    }
+
+    panel.hidden = !willOpen;
+    button.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  return { card, panel };
 }
 
 function getVisibleNewsItems() {
@@ -1500,11 +1630,21 @@ function renderNewsList() {
     return;
   }
 
+  newsState.openId = null;
+
   const items = getVisibleNewsItems();
   const visible = items.slice(0, newsState.visibleCount);
 
   if (visible.length) {
-    list.replaceChildren(...visible.map(createNewsCard));
+    const nodes = [];
+    visible.forEach((item, index) => {
+      const parts = createNewsCard(item, index);
+      nodes.push(parts.card);
+      if (parts.panel) {
+        nodes.push(parts.panel);
+      }
+    });
+    list.replaceChildren(...nodes);
   } else {
     const empty = document.createElement("li");
     empty.className = "news-status";
@@ -1563,9 +1703,44 @@ function initializeNewsFilters() {
   const moreButton = document.getElementById("news-more");
   if (moreButton) {
     moreButton.addEventListener("click", () => {
+      const openButton = document.querySelector(
+        '.news-card-button[aria-expanded="true"]'
+      );
+      const openId = openButton
+        ? openButton.getAttribute("aria-controls")
+        : null;
+
       newsState.visibleCount += NEWS_PAGE_SIZE;
       renderNewsList();
+
+      if (openId) {
+        const restored = document.querySelector(
+          '.news-card-button[aria-controls="' + openId + '"]'
+        );
+        if (restored) {
+          restored.click();
+        }
+      }
     });
+  }
+}
+
+async function loadNewsImageMap(source) {
+  if (!source) {
+    return {};
+  }
+
+  try {
+    const response = await fetch(source, { cache: "no-cache" });
+    if (!response.ok) {
+      throw new Error("News image map request failed: " + response.status);
+    }
+
+    const map = await response.json();
+    return map && typeof map === "object" ? map : {};
+  } catch (error) {
+    console.error(error);
+    return {};
   }
 }
 
@@ -1578,7 +1753,10 @@ async function initializeNews() {
   initializeNewsFilters();
 
   try {
-    const response = await fetch(list.dataset.source, { cache: "no-cache" });
+    const [response, imageMap] = await Promise.all([
+      fetch(list.dataset.source, { cache: "no-cache" }),
+      loadNewsImageMap(list.dataset.imageSource),
+    ]);
 
     if (!response.ok) {
       throw new Error("News data request failed: " + response.status);
@@ -1589,6 +1767,7 @@ async function initializeNews() {
       throw new TypeError("News data must be an array.");
     }
 
+    newsState.imagesById = imageMap;
     newsState.items = sortNewsItems(items);
     renderNewsList();
   } catch (error) {
