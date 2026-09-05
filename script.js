@@ -1614,6 +1614,100 @@ function createNewsCard(item, index) {
   return { card, panel };
 }
 
+const NEWS_HIGHLIGHT_COUNT = 3;
+
+function createHighlightItem(item) {
+  const entry = document.createElement("li");
+
+  const link = document.createElement("a");
+  link.className = "highlight-item";
+  link.href = "#news";
+  link.dataset.newsId = String(item.id);
+
+  const title = document.createElement("span");
+  title.className = "highlight-item-title";
+  title.textContent = typeof item.title === "string" ? item.title : "";
+
+  const date = document.createElement("time");
+  date.className = "highlight-item-date";
+  if (typeof item.date === "string") {
+    date.dateTime = item.date;
+  }
+  date.textContent = formatNewsDate(item.date);
+
+  link.append(title, date);
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openNewsItem(item.id);
+  });
+
+  entry.append(link);
+  return entry;
+}
+
+function renderNewsHighlights() {
+  document.querySelectorAll("[data-highlight-board]").forEach((list) => {
+    const board = list.dataset.highlightBoard;
+    const items = newsState.items
+      .filter((item) => getNewsFilterCategory(item.category) === board)
+      .slice(0, NEWS_HIGHLIGHT_COUNT);
+
+    if (!items.length) {
+      const empty = document.createElement("li");
+      empty.className = "highlight-empty";
+      setLocalizedContent(
+        empty,
+        "표시할 소식이 없습니다.",
+        "There are no news items to display."
+      );
+      list.replaceChildren(empty);
+      return;
+    }
+
+    list.replaceChildren(...items.map(createHighlightItem));
+  });
+}
+
+function openNewsItem(id) {
+  const target = newsState.items.find(
+    (item) => String(item.id) === String(id)
+  );
+
+  if (!target) {
+    return;
+  }
+
+  setNewsBoard(getNewsFilterCategory(target.category));
+
+  const position = getVisibleNewsItems().findIndex(
+    (item) => String(item.id) === String(id)
+  );
+
+  if (position >= newsState.visibleCount) {
+    newsState.visibleCount =
+      Math.ceil((position + 1) / NEWS_PAGE_SIZE) * NEWS_PAGE_SIZE;
+    renderNewsList();
+  }
+
+  const button = document.querySelector(
+    '.news-card-button[aria-controls="news-detail-' + String(id) + '"]'
+  );
+
+  if (!button) {
+    document.getElementById("news")?.scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+
+  if (button.getAttribute("aria-expanded") !== "true") {
+    button.click();
+  }
+
+  button.closest(".news-card").scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+  });
+}
+
 function getVisibleNewsItems() {
   if (newsState.board === "all") {
     return newsState.items;
@@ -1769,6 +1863,7 @@ async function initializeNews() {
 
     newsState.imagesById = imageMap;
     newsState.items = sortNewsItems(items);
+    renderNewsHighlights();
     renderNewsList();
   } catch (error) {
     const message = document.createElement("li");
