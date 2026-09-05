@@ -1942,8 +1942,17 @@ function formatResearchOutputDate(value, monthOnly = false) {
   }
 
   if (monthOnly) {
-    const match = normalizedValue.match(/^((?:19|20)\d{2}\.\d{2})/);
-    return match ? match[1] : normalizedValue;
+    const match = normalizedValue.match(/^((?:19|20)\d{2})\.(\d{2})/);
+    if (!match) {
+      return normalizedValue;
+    }
+
+    const monthIndex = Number(match[2]) - 1;
+    if (monthIndex < 0 || monthIndex >= publicationMonthNames.length) {
+      return normalizedValue;
+    }
+
+    return publicationMonthNames[monthIndex] + " " + match[1];
   }
 
   return normalizedValue;
@@ -1956,66 +1965,61 @@ function formatVolumeAndIssue(record) {
     .join(", ") || "–";
 }
 
-function getResearchOutputTableColumns(layout) {
-  if (layout === "journal-table") {
-    return [
-      { kr: "No.", en: "No.", value: (record) => record.id },
-      { kr: "논문 제목", en: "Paper Title", value: (record) => record.title },
-      { kr: "학술지명", en: "Journal", value: (record) => record.journal },
-      { kr: "권·호", en: "Volume · Issue", value: formatVolumeAndIssue },
-      { kr: "수록면", en: "Pages", value: (record) => record.pages || "–" },
-      { kr: "게재일", en: "Publication Date", value: (record) => formatResearchOutputDate(record.date) },
-      { kr: "저자명", en: "Authors", value: (record) => (record.authors || []).join(", ") },
-    ];
-  }
+function createResearchOutputRecordItem(record, layout) {
+  const item = document.createElement("li");
+  item.className = "patent-item research-output-record-item";
+  const id = document.createElement("span");
+  id.className = "patent-id";
+  id.textContent = String(record.id);
 
-  return [
-    { kr: "No.", en: "No.", value: (record) => record.id },
-    { kr: "발표논문 제목", en: "Paper Title", value: (record) => record.title },
-    { kr: "학술회의 명칭", en: "Conference", value: (record) => record.conference },
-    { kr: "수록면", en: "Pages", value: (record) => record.pages || "–" },
-    { kr: "개최기간", en: "Conference Date", value: (record) => formatResearchOutputDate(record.date, true) },
-    { kr: "저자명", en: "Authors", value: (record) => (record.authors || []).join(", ") },
-  ];
+  const content = document.createElement("article");
+  content.className = "patent-content";
+  const title = document.createElement("h3");
+  title.className = "patent-title";
+  title.textContent = String(record.title || "").trim();
+  const details = document.createElement("dl");
+  details.className = "patent-fields";
+  const authors = Array.isArray(record.authors)
+    ? record.authors.map((author) => String(author).trim()).filter(Boolean).join(", ")
+    : "";
+  const isJournal = layout === "journal-list";
+
+  const fields = isJournal
+    ? [
+        createPatentField("저자", "Authors", authors),
+        createPatentField("학술지명", "Journal", record.journal),
+        createPatentField("권·호", "Volume · Issue", formatVolumeAndIssue(record)),
+        createPatentField("수록면", "Pages", record.pages),
+        createPatentField(
+          "게재일",
+          "Publication Date",
+          formatResearchOutputDate(record.date)
+        ),
+      ]
+    : [
+        createPatentField("저자", "Authors", authors),
+        createPatentField("학술대회명", "Conference", record.conference),
+        createPatentField("수록면", "Pages", record.pages),
+        createPatentField(
+          "개최기간",
+          "Conference Date",
+          formatResearchOutputDate(record.date, true)
+        ),
+      ];
+
+  fields.filter(Boolean).forEach((field) => details.append(field));
+  content.append(title, details);
+  item.append(id, content);
+  return item;
 }
 
-function createResearchOutputTable(records, layout) {
-  const wrapper = document.createElement("div");
-  wrapper.className = "research-output-table-wrap";
-  const table = document.createElement("table");
-  table.className = "research-output-table";
-  const columns = getResearchOutputTableColumns(layout);
-  const head = document.createElement("thead");
-  const headRow = document.createElement("tr");
-
-  columns.forEach((column) => {
-    const heading = document.createElement("th");
-    heading.scope = "col";
-    setLocalizedContent(heading, column.kr, column.en);
-    headRow.append(heading);
-  });
-  head.append(headRow);
-
-  const body = document.createElement("tbody");
+function createResearchOutputRecordList(records, layout) {
+  const list = document.createElement("ol");
+  list.className = "patent-list research-output-record-list";
   records.forEach((record) => {
-    const row = document.createElement("tr");
-    columns.forEach((column, columnIndex) => {
-      const cell = document.createElement("td");
-      const value = column.value(record);
-      cell.textContent = String(value === undefined || value === null || value === "" ? "–" : value);
-      if (columnIndex === 0) {
-        cell.className = "research-output-number";
-      } else if (columnIndex === 1) {
-        cell.className = "research-output-title";
-      }
-      row.append(cell);
-    });
-    body.append(row);
+    list.append(createResearchOutputRecordItem(record, layout));
   });
-
-  table.append(head, body);
-  wrapper.append(table);
-  return wrapper;
+  return list;
 }
 
 function createResearchOutputSegment(text, className = "") {
@@ -2102,7 +2106,7 @@ function renderResearchOutputs(records) {
     return;
   }
 
-  const layout = container.dataset.layout || "conference-table";
+  const layout = container.dataset.layout || "conference-list";
   const entries = records.filter(Boolean).sort(compareResearchOutputs);
   const isBookLayout = layout === "books";
   setLocalizedContent(
@@ -2123,8 +2127,8 @@ function renderResearchOutputs(records) {
     return;
   }
 
-  const output = layout.endsWith("-table")
-    ? createResearchOutputTable(entries, layout)
+  const output = layout.endsWith("-list")
+    ? createResearchOutputRecordList(entries, layout)
     : createResearchOutputList(entries, layout);
   container.replaceChildren(output);
 }
@@ -2168,6 +2172,85 @@ async function initializeResearchOutputs() {
   }
 }
 
+function createCourseLink(course) {
+  const link = document.createElement("a");
+  link.className = "course-link";
+  link.href = "https://ys.learnus.org/";
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  const koreanName = String(course.nameKr || course.name || "").trim();
+  const englishName = String(course.nameEn || course.name || "").trim();
+  const label = document.createElement("span");
+  setLocalizedContent(label, koreanName, englishName);
+  const arrow = document.createElement("span");
+  arrow.className = "course-link-arrow";
+  arrow.setAttribute("aria-hidden", "true");
+  arrow.textContent = "↗";
+  link.append(label, arrow);
+  return link;
+}
+
+function renderCourses(courses) {
+  document.querySelectorAll("[data-course-level]").forEach((container) => {
+    const level = container.dataset.courseLevel;
+    const activeCourses = courses.filter(
+      (course) =>
+        course &&
+        course.active === true &&
+        String(course.level || "").trim() === level
+    );
+
+    if (activeCourses.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "course-empty";
+      setLocalizedContent(
+        empty,
+        "현재 진행 중인 강의가 없습니다.",
+        "No courses are currently active."
+      );
+      container.replaceChildren(empty);
+      return;
+    }
+
+    container.replaceChildren(...activeCourses.map(createCourseLink));
+  });
+}
+
+async function initializeCourses() {
+  const courseSection = document.querySelector("[data-courses-source]");
+  if (!courseSection) {
+    return;
+  }
+
+  try {
+    const response = await fetch(courseSection.dataset.coursesSource, {
+      cache: "no-cache",
+    });
+    if (!response.ok) {
+      throw new Error("Course data request failed: " + response.status);
+    }
+
+    const courses = await response.json();
+    if (!Array.isArray(courses)) {
+      throw new TypeError("Course data must be an array.");
+    }
+
+    renderCourses(courses);
+  } catch (error) {
+    document.querySelectorAll("[data-course-level]").forEach((container) => {
+      const message = document.createElement("p");
+      message.className = "course-error";
+      setLocalizedContent(
+        message,
+        "강의 목록을 불러오지 못했습니다.",
+        "The course list could not be loaded."
+      );
+      container.replaceChildren(message);
+    });
+    console.error(error);
+  }
+}
+
 function initializePage() {
   initializeNavigation();
   initializeLanguageSwitcher();
@@ -2180,6 +2263,7 @@ function initializePage() {
   initializePublications();
   initializePatents();
   initializeResearchOutputs();
+  initializeCourses();
 }
 
 document.addEventListener("DOMContentLoaded", initializePage);

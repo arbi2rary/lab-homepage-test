@@ -1,0 +1,27 @@
+[
+  {
+    "name": "시스템반도체설계",
+    "level": "학부",
+    "active": true
+  },
+  {
+    "name": "임베디드시스템실험",
+    "level": "학부",
+    "active": false
+  },
+  {
+    "name": "IC CAD 실험",
+    "level": "대학원",
+    "active": true
+  },
+  {
+    "name": "테스팅및테스트용이화설계",
+    "level": "대학원",
+    "active": false
+  },
+  {
+    "name": "차량용반도체CAD실험",
+    "level": "대학원",
+    "active": false
+  }
+]

@@ -678,64 +678,8 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
   overflow-wrap:anywhere;
 }
 
-.research-output-table-wrap{
-  overflow-x:auto;
-  border:1px solid var(--line);
-  border-radius:6px;
-  background:#fff;
-}
-
-.research-output-table{
-  width:100%;
-  min-width:1040px;
-  border-collapse:collapse;
-  font-size:13.5px;
-  line-height:1.55;
-}
-
-.research-output-table th,
-.research-output-table td{
-  padding:14px 13px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  text-align:left;
-  vertical-align:top;
-}
-
-.research-output-table th:last-child,
-.research-output-table td:last-child{
-  border-right:0;
-}
-
-.research-output-table tbody tr:last-child td{
-  border-bottom:0;
-}
-
-.research-output-table th{
-  background:#e8eff5;
-  color:var(--copper);
-  font-size:12.5px;
-  font-weight:600;
-  white-space:nowrap;
-}
-
-.research-output-table td{
-  color:var(--ink-soft);
-}
-
-.research-output-table .research-output-number{
-  width:52px;
-  color:var(--copper);
-  font-family:var(--font-mono);
-  text-align:center;
-  white-space:nowrap;
-}
-
-.research-output-table .research-output-title{
-  min-width:260px;
-  color:var(--ink);
-  font-weight:500;
-  word-break:keep-all;
+.research-output-record-list{
+  border-top:1px solid var(--line);
 }
 
 .research-output-list{
@@ -814,15 +758,6 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 
   .archive-count-row{
     margin-top:18px;
-  }
-
-  .research-output-table{
-    font-size:12.5px;
-  }
-
-  .research-output-table th,
-  .research-output-table td{
-    padding:12px 10px;
   }
 
   .research-output-list-item{
@@ -1698,6 +1633,47 @@ html[lang="en"] .alumni-card-name .member-name-english{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
+}
+
+.course-list{
+  display:grid;
+  gap:8px;
+}
+
+.course-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:13px 0;
+  border-top:1px solid var(--line);
+  color:var(--ink);
+  font-size:15px;
+  font-weight:500;
+  transition:color .15s ease;
+}
+
+.course-link:hover,
+.course-link:focus-visible{
+  color:var(--copper);
+}
+
+.course-link-arrow{
+  flex:none;
+  color:var(--copper-lt);
+  font-family:var(--font-mono);
+  font-size:13px;
+}
+
+.course-loading,
+.course-empty,
+.course-error{
+  color:var(--ink-soft);
+  font-size:14px;
+}
+
+.course-error{
+  color:#8a3434;
 }
 
 @media (max-width:1050px){
