@@ -424,15 +424,17 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .stat span{font-size:14px;color:var(--ink-soft)}
  
 /* ------------------------------------------------------------
-   연구 과제 (시간 순 — 진짜 순서이므로 연도 표기 사용)
+   연구 과제
    ------------------------------------------------------------ */
 .band{background:var(--bg-soft)}
-.timeline{border-left:2px solid var(--line-mid);margin-left:6px}
-.tl{position:relative;padding:0 0 28px 28px}
-.tl::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--copper-lt)}
-.tl .yr{font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);margin-bottom:4px}
+.timeline{--timeline-axis-x:7px;position:relative}
+.tl{position:relative;padding:0 0 30px 36px}
+.tl::before{content:"";position:absolute;z-index:1;left:var(--timeline-axis-x);top:7px;width:12px;height:12px;border:2px solid var(--copper-lt);border-radius:50%;background:#fff;transform:translateX(-50%)}
+.tl:not(:last-child)::after{content:"";position:absolute;left:var(--timeline-axis-x);top:19px;bottom:-7px;width:2px;background:var(--line-mid);transform:translateX(-50%)}
+.tl .yr{display:block;font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);margin-bottom:4px}
 .tl h3{font-size:17px;font-weight:500}
 .tl .src{font-size:14px;color:var(--ink-soft)}
+.tl .project-id{display:block;margin-bottom:5px}
 .more{margin-top:12px;display:inline-block;font-weight:500;color:var(--copper);border-bottom:1px solid var(--line-mid)}
 .area .more{align-self:flex-start}
 .scholar-link-wrap{
@@ -782,6 +784,45 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .course-card p{
   color:var(--ink-soft);
   font-size:14.5px;
+}
+
+.project-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:18px;
+}
+
+.project-card{
+  display:flex;
+  flex:0 1 calc((100% - 36px)/3);
+  flex-direction:column;
+  min-width:0;
+}
+
+.project-card .project-date{
+  display:block;
+  margin-top:auto;
+  padding-top:18px;
+  color:var(--ink-soft);
+  font-family:var(--font-mono);
+  font-size:12.5px;
+}
+
+.project-card .project-agency{
+  margin-top:7px;
+}
+
+.project-loading,
+.project-empty,
+.project-error{
+  width:100%;
+  color:var(--ink-soft);
+  font-size:14px;
+}
+
+.project-error{
+  color:#8a3434;
 }
 
 .more-panel{
@@ -1327,7 +1368,7 @@ html[lang="en"] .member-detail-name .member-name-english{
 .alumni-card-button{
   display:flex;
   width:100%;
-  min-height:172px;
+  min-height:148px;
   flex-direction:column;
   align-items:flex-start;
   padding:18px 16px;
@@ -1364,15 +1405,8 @@ html[lang="en"] .alumni-card-name .member-name-english{
   font-size:14px;
 }
 
-.alumni-card-degree{
-  margin-top:12px;
-  color:var(--copper);
-  font-size:12px;
-  line-height:1.45;
-}
-
 .alumni-card-affiliation{
-  margin-top:6px;
+  margin-top:12px;
   color:var(--ink-soft);
   font-size:12px;
   line-height:1.55;
@@ -1413,6 +1447,10 @@ html[lang="en"] .alumni-card-name .member-name-english{
 
   .feature-card{
     min-height:0;
+  }
+
+  .project-card{
+    flex-basis:calc((100% - 18px)/2);
   }
 }
 
@@ -1499,6 +1537,10 @@ html[lang="en"] .alumni-card-name .member-name-english{
 
   .about-copy{
     padding-left:18px;
+  }
+
+  .project-card{
+    flex-basis:100%;
   }
 }
 

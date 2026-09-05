@@ -685,14 +685,6 @@ function compareAlumniByGraduation(first, second) {
   );
 }
 
-function getAlumniCategoryLabels(category) {
-  if (category === "박사") {
-    return { kr: "동문박사", en: "Ph.D. Alumni" };
-  }
-
-  return { kr: "동문석사", en: "M.S. Alumni" };
-}
-
 function getObfuscationSeed(member) {
   return [
     String(member.name_kr || ""),
@@ -753,7 +745,6 @@ function decodeAlumniPrivateDetail(member) {
 }
 
 function populateAlumniDetail(detail, member) {
-  const category = getAlumniCategoryLabels(member.category);
   const privateDetail = decodeAlumniPrivateDetail(member);
   const affiliationValue = String(member.work || "").trim();
   const photo = createMemberPhoto(
@@ -767,7 +758,6 @@ function populateAlumniDetail(detail, member) {
   fields.className = "member-profile-fields";
 
   [
-    createProfileField("과정", "Program", category.kr, "", category.en),
     createProfileField(
       "재직처",
       "Affiliation",
@@ -807,7 +797,6 @@ function closeAlumniDetails(exceptButton = null) {
 
 function createAlumniElements(member, index) {
   const names = getMemberDisplayNames(member);
-  const category = getAlumniCategoryLabels(member.category);
   const detailId = "alumni-detail-" + String(index);
   const card = document.createElement("article");
   card.className = "alumni-card";
@@ -826,14 +815,7 @@ function createAlumniElements(member, index) {
   );
 
   const name = createCurrentMemberName(member, "alumni-card-name");
-  const degree = document.createElement("span");
-  degree.className = "alumni-card-degree";
-  setLocalizedContent(
-    degree,
-    category.kr,
-    category.en
-  );
-  button.append(name, degree);
+  button.append(name);
 
   const affiliationValue = String(member.work || "").trim();
   const affiliation = document.createElement("span");
@@ -1032,6 +1014,227 @@ async function initializeMembers() {
     updateLabStatisticsFromMembers(members);
   } catch (error) {
     renderMemberLoadError();
+    console.error(error);
+  }
+}
+
+function parseProjectDate(value) {
+  const match = String(value || "")
+    .trim()
+    .match(/^((?:19|20)\d{2})\.(\d{2})\.(\d{2})$/);
+
+  if (!match) {
+    return null;
+  }
+
+  const date = new Date(
+    Number(match[1]),
+    Number(match[2]) - 1,
+    Number(match[3])
+  );
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+function isCurrentProject(project, today) {
+  const endDate = parseProjectDate(project.end);
+  return Boolean(endDate && endDate >= today);
+}
+
+function compareCompletedProjects(first, second) {
+  const firstEnd = parseProjectDate(first.end)?.getTime() || 0;
+  const secondEnd = parseProjectDate(second.end)?.getTime() || 0;
+
+  if (firstEnd !== secondEnd) {
+    return secondEnd - firstEnd;
+  }
+
+  const firstStart = parseProjectDate(first.start)?.getTime() || 0;
+  const secondStart = parseProjectDate(second.start)?.getTime() || 0;
+
+  if (firstStart !== secondStart) {
+    return secondStart - firstStart;
+  }
+
+  return Number(second.id || 0) - Number(first.id || 0);
+}
+
+function getProjectLocalizedValue(project, key) {
+  const koreanValue = String(project[key + "_kr"] || "").trim();
+  const englishValue = String(project[key + "_en"] || "").trim();
+  return {
+    kr: koreanValue || englishValue,
+    en: englishValue || koreanValue,
+  };
+}
+
+function getProjectDateRange(project) {
+  return [project.start, project.end]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean)
+    .join(" – ");
+}
+
+function getProjectMachineDateRange(project) {
+  return [project.start, project.end]
+    .map((value) => String(value || "").trim().replace(/\./g, "-"))
+    .filter(Boolean)
+    .join("/");
+}
+
+function createCurrentProjectCard(project, index) {
+  const titleValue = getProjectLocalizedValue(project, "title");
+  const agencyValue = getProjectLocalizedValue(project, "agency");
+  const card = document.createElement("article");
+  card.className = "feature-card project-card";
+  const label = document.createElement("span");
+  label.className = "item-label";
+  label.textContent =
+    "CURRENT PROJECT " +
+    String(index + 1).padStart(2, "0") +
+    " · ID " +
+    String(project.id);
+  const title = document.createElement("h3");
+  setLocalizedContent(title, titleValue.kr, titleValue.en);
+  const date = document.createElement("time");
+  date.className = "project-date";
+  date.dateTime = getProjectMachineDateRange(project);
+  date.textContent = getProjectDateRange(project);
+  const agency = document.createElement("p");
+  agency.className = "project-agency";
+  setLocalizedContent(agency, agencyValue.kr, agencyValue.en);
+  card.append(label, title, date, agency);
+  return card;
+}
+
+function createCompletedProjectItem(project) {
+  const titleValue = getProjectLocalizedValue(project, "title");
+  const agencyValue = getProjectLocalizedValue(project, "agency");
+  const item = document.createElement("article");
+  item.className = "tl";
+  const id = document.createElement("span");
+  id.className = "item-label project-id";
+  id.textContent = "PROJECT ID " + String(project.id);
+  const date = document.createElement("time");
+  date.className = "yr";
+  date.dateTime = getProjectMachineDateRange(project);
+  date.textContent = getProjectDateRange(project);
+  const title = document.createElement("h3");
+  setLocalizedContent(title, titleValue.kr, titleValue.en);
+  const agency = document.createElement("div");
+  agency.className = "src";
+  setLocalizedContent(agency, agencyValue.kr, agencyValue.en);
+  item.append(id, date, title, agency);
+  return item;
+}
+
+function renderProjects(projects) {
+  const currentContainer = document.querySelector("[data-current-projects]");
+  const completedContainer = document.querySelector("[data-completed-projects]");
+
+  if (!currentContainer || !completedContainer) {
+    return;
+  }
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const currentProjects = projects.filter((project) =>
+    isCurrentProject(project, today)
+  );
+  const completedProjects = projects
+    .filter((project) => !isCurrentProject(project, today))
+    .sort(compareCompletedProjects);
+
+  if (currentProjects.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "project-empty";
+    setLocalizedContent(
+      empty,
+      "현재 수행 중인 과제가 없습니다.",
+      "There are no current projects."
+    );
+    currentContainer.replaceChildren(empty);
+  } else {
+    currentContainer.replaceChildren(
+      ...currentProjects.map(createCurrentProjectCard)
+    );
+  }
+
+  if (completedProjects.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "project-empty";
+    setLocalizedContent(
+      empty,
+      "기수행 과제가 없습니다.",
+      "There are no completed projects."
+    );
+    completedContainer.replaceChildren(empty);
+  } else {
+    completedContainer.replaceChildren(
+      ...completedProjects.map(createCompletedProjectItem)
+    );
+  }
+}
+
+function renderProjectLoadError() {
+  document
+    .querySelectorAll("[data-current-projects], [data-completed-projects]")
+    .forEach((container) => {
+      const message = document.createElement("p");
+      message.className = "project-error";
+      setLocalizedContent(
+        message,
+        "연구과제 정보를 불러오지 못했습니다.",
+        "Project information could not be loaded."
+      );
+      container.replaceChildren(message);
+    });
+}
+
+function initializeCompletedProjectLinks() {
+  const completedPanel = document.getElementById("completed-projects");
+  if (!completedPanel) {
+    return;
+  }
+
+  document
+    .querySelectorAll('a[href="#completed-projects"]')
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        completedPanel.open = true;
+      });
+    });
+
+  if (window.location.hash === "#completed-projects") {
+    completedPanel.open = true;
+  }
+}
+
+async function initializeProjects() {
+  const projectSection = document.querySelector("[data-projects-source]");
+  if (!projectSection) {
+    return;
+  }
+
+  initializeCompletedProjectLinks();
+
+  try {
+    const response = await fetch(projectSection.dataset.projectsSource, {
+      cache: "no-cache",
+    });
+
+    if (!response.ok) {
+      throw new Error("Project data request failed: " + response.status);
+    }
+
+    const projects = await response.json();
+    if (!Array.isArray(projects)) {
+      throw new TypeError("Project data must be an array.");
+    }
+
+    renderProjects(projects);
+  } catch (error) {
+    renderProjectLoadError();
     console.error(error);
   }
 }
@@ -1413,6 +1616,7 @@ function initializePage() {
   initializeSectionHighlighting();
   initializeImageSlots();
   initializeMembers();
+  initializeProjects();
   initializeNewsFilters();
   initializePublications();
 }
