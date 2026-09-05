@@ -1244,26 +1244,27 @@ html[lang="en"] .member-detail-name .member-name-english{
 
 .professor-profile-intro{
   display:grid;
-  grid-template-columns:minmax(210px,250px) minmax(0,1fr);
-  gap:36px 46px;
+  grid-template-columns:205px minmax(0,1fr);
+  gap:40px;
   align-items:start;
 }
 
 .professor-photo{
-  width:min(250px,100%);
+  width:205px;
+  max-width:100%;
   aspect-ratio:3/4;
   border-radius:8px;
 }
 
 .professor-profile-main{
   min-width:0;
-  padding-top:8px;
+  padding-top:2px;
 }
 
 .professor-profile-name{
-  margin-bottom:25px;
+  margin-bottom:20px;
   color:var(--ink);
-  font-size:24px;
+  font-size:22px;
   font-weight:600;
   line-height:1.35;
 }
@@ -1287,11 +1288,11 @@ html[lang="en"] .member-detail-name .member-name-english{
 
 .professor-main-sections{
   display:grid;
-  gap:24px;
+  gap:18px;
 }
 
 .professor-profile-section h5{
-  margin-bottom:9px;
+  margin-bottom:7px;
   color:var(--copper);
   font-family:"IBM Plex Sans KR",var(--font-sans);
   font-size:13px;
@@ -1301,7 +1302,7 @@ html[lang="en"] .member-detail-name .member-name-english{
 
 .professor-profile-section ul{
   display:grid;
-  gap:5px;
+  gap:3px;
   padding:0;
   color:var(--ink-soft);
   font-size:14.5px;
@@ -1313,33 +1314,64 @@ html[lang="en"] .member-detail-name .member-name-english{
   overflow-wrap:anywhere;
 }
 
+.professor-tag-section ul{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.professor-tag-section li{
+  padding:5px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--bg-soft);
+  color:var(--ink);
+  font-size:13px;
+  line-height:1.4;
+}
+
 .professor-career-section{
-  margin-top:34px;
-  padding-top:28px;
+  margin-top:30px;
+  padding-top:25px;
   border-top:1px solid var(--line);
 }
 
+.professor-career-highlight ul{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:6px 36px;
+}
+
 .professor-more-panel{
-  margin-top:32px;
+  margin-top:26px;
 }
 
 .professor-more-body{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:34px 48px;
+  gap:30px 48px;
   padding-top:20px;
 }
 
+.professor-contact-section{
+  padding:18px 20px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--bg-soft);
+}
+
+.professor-full-career-section,
 .professor-awards-section{
   grid-column:1/-1;
 }
 
+.professor-full-career-section ul,
 .professor-awards-section ul{
   columns:2;
   display:block;
   column-gap:48px;
 }
 
+.professor-full-career-section li,
 .professor-awards-section li{
   margin-bottom:5px;
   break-inside:avoid;
@@ -1510,7 +1542,7 @@ html[lang="en"] .alumni-card-name .member-name-english{
   }
 
   .professor-photo{
-    width:min(340px,100%);
+    width:min(200px,58vw);
   }
 
   .professor-profile-main{
@@ -1521,10 +1553,16 @@ html[lang="en"] .alumni-card-name .member-name-english{
     grid-template-columns:1fr;
   }
 
+  .professor-career-highlight ul{
+    grid-template-columns:1fr;
+  }
+
+  .professor-full-career-section,
   .professor-awards-section{
     grid-column:auto;
   }
 
+  .professor-full-career-section ul,
   .professor-awards-section ul{
     columns:1;
   }

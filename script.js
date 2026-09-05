@@ -571,6 +571,20 @@ function createProfessorProfileSection(
   className = ""
 ) {
   const values = getProfessorProfileValues(member, sectionName);
+  return createProfessorProfileSectionFromValues(
+    sectionName,
+    labelEn,
+    values,
+    className
+  );
+}
+
+function createProfessorProfileSectionFromValues(
+  labelKr,
+  labelEn,
+  values,
+  className = ""
+) {
   if (values.length === 0) {
     return null;
   }
@@ -580,7 +594,7 @@ function createProfessorProfileSection(
     .filter(Boolean)
     .join(" ");
   const heading = document.createElement("h5");
-  setLocalizedContent(heading, sectionName, labelEn);
+  setLocalizedContent(heading, labelKr, labelEn);
   const list = document.createElement("ul");
 
   values.forEach((value) => {
@@ -591,6 +605,61 @@ function createProfessorProfileSection(
 
   section.append(heading, list);
   return section;
+}
+
+function createProfessorEducationSection(member) {
+  const values = getProfessorProfileValues(member, "학력");
+  const educationEntries = [];
+
+  for (let index = 0; index < values.length; index += 2) {
+    const institution = String(values[index] || "")
+      .trim()
+      .replace(/,$/, "");
+    const degree = String(values[index + 1] || "").trim();
+
+    if (institution && degree) {
+      educationEntries.push(institution + " · " + degree);
+    } else if (institution) {
+      educationEntries.push(institution);
+    }
+  }
+
+  return createProfessorProfileSectionFromValues(
+    "학력",
+    "Education",
+    educationEntries,
+    "professor-education-section"
+  );
+}
+
+function createProfessorTagSection(member, sectionName, labelEn, className) {
+  return createProfessorProfileSection(
+    member,
+    sectionName,
+    labelEn,
+    "professor-tag-section " + className
+  );
+}
+
+function createProfessorHighlightedCareerSection(member) {
+  const careerValues = getProfessorProfileValues(member, "경력");
+  const highlightedCareerKeywords = [
+    "Schlumberger Inc.",
+    "Motorola Inc.",
+    "연세대학교 교수",
+    "공학한림원 회원",
+    "2023-2025 : 한국반도체테스트학회 회장",
+  ];
+  const highlightedCareerValues = careerValues.filter((value) =>
+    highlightedCareerKeywords.some((keyword) => String(value).includes(keyword))
+  );
+
+  return createProfessorProfileSectionFromValues(
+    "주요 경력",
+    "Selected Career",
+    highlightedCareerValues,
+    "professor-career-section professor-career-highlight"
+  );
 }
 
 function getProfessorDisplayNameParts(member) {
@@ -658,24 +727,34 @@ function renderProfessorProfile(members) {
   const mainSections = document.createElement("div");
   mainSections.className = "professor-main-sections";
   [
-    createProfessorProfileSection(professor, "학력", "Education"),
-    createProfessorProfileSection(professor, "연구분야", "Research Areas"),
+    createProfessorEducationSection(professor),
+    createProfessorTagSection(
+      professor,
+      "연구분야",
+      "Research Areas",
+      "professor-research-section"
+    ),
+    createProfessorTagSection(
+      professor,
+      "취미",
+      "Hobbies",
+      "professor-hobby-section"
+    ),
   ].filter(Boolean).forEach((section) => mainSections.append(section));
   main.append(name, mainSections);
   introduction.append(photo, main);
 
-  const career = createProfessorProfileSection(
-    professor,
-    "경력",
-    "Career",
-    "professor-career-section"
-  );
+  const career = createProfessorHighlightedCareerSection(professor);
 
   const more = document.createElement("details");
   more.className = "more-panel professor-more-panel";
   const summary = document.createElement("summary");
   const summaryText = document.createElement("span");
-  setLocalizedContent(summaryText, "교수님 상세 프로필 보기", "View More");
+  setLocalizedContent(
+    summaryText,
+    "전체 경력 및 상세 프로필 보기",
+    "View Full Career and Profile"
+  );
   const summaryIcon = document.createElement("span");
   summaryIcon.className = "summary-icon";
   summaryIcon.setAttribute("aria-hidden", "true");
@@ -686,13 +765,28 @@ function renderProfessorProfile(members) {
   [
     createProfessorProfileSection(
       professor,
+      "사무실",
+      "Office",
+      "professor-contact-section"
+    ),
+    createProfessorProfileSection(
+      professor,
+      "면담시간",
+      "Office Hours",
+      "professor-contact-section"
+    ),
+    createProfessorProfileSection(
+      professor,
+      "경력",
+      "Full Career",
+      "professor-full-career-section"
+    ),
+    createProfessorProfileSection(
+      professor,
       "수상",
       "Awards",
       "professor-awards-section"
     ),
-    createProfessorProfileSection(professor, "사무실", "Office"),
-    createProfessorProfileSection(professor, "면담시간", "Office Hours"),
-    createProfessorProfileSection(professor, "취미", "Hobbies"),
   ].filter(Boolean).forEach((section) => moreBody.append(section));
   more.append(summary, moreBody);
 
