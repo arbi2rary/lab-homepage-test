@@ -641,27 +641,6 @@ function createProfessorTagSection(member, sectionName, labelEn, className) {
   );
 }
 
-function createProfessorHighlightedCareerSection(member) {
-  const careerValues = getProfessorProfileValues(member, "경력");
-  const highlightedCareerKeywords = [
-    "Schlumberger Inc.",
-    "Motorola Inc.",
-    "연세대학교 교수",
-    "공학한림원 회원",
-    "2023-2025 : 한국반도체테스트학회 회장",
-  ];
-  const highlightedCareerValues = careerValues.filter((value) =>
-    highlightedCareerKeywords.some((keyword) => String(value).includes(keyword))
-  );
-
-  return createProfessorProfileSectionFromValues(
-    "주요 경력",
-    "Selected Career",
-    highlightedCareerValues,
-    "professor-career-section professor-career-highlight"
-  );
-}
-
 function getProfessorDisplayNameParts(member) {
   const originalName = getProfessorProfileValues(member, "이름")[0];
   const normalizedName = originalName === undefined
@@ -744,7 +723,12 @@ function renderProfessorProfile(members) {
   main.append(name, mainSections);
   introduction.append(photo, main);
 
-  const career = createProfessorHighlightedCareerSection(professor);
+  const career = createProfessorProfileSection(
+    professor,
+    "경력",
+    "Career",
+    "professor-career-section"
+  );
 
   const more = document.createElement("details");
   more.className = "more-panel professor-more-panel";
@@ -752,8 +736,8 @@ function renderProfessorProfile(members) {
   const summaryText = document.createElement("span");
   setLocalizedContent(
     summaryText,
-    "전체 경력 및 상세 프로필 보기",
-    "View Full Career and Profile"
+    "수상 및 상세 프로필 보기",
+    "View Awards and Profile"
   );
   const summaryIcon = document.createElement("span");
   summaryIcon.className = "summary-icon";
@@ -765,6 +749,12 @@ function renderProfessorProfile(members) {
   [
     createProfessorProfileSection(
       professor,
+      "수상",
+      "Awards",
+      "professor-awards-section"
+    ),
+    createProfessorProfileSection(
+      professor,
       "사무실",
       "Office",
       "professor-contact-section"
@@ -774,18 +764,6 @@ function renderProfessorProfile(members) {
       "면담시간",
       "Office Hours",
       "professor-contact-section"
-    ),
-    createProfessorProfileSection(
-      professor,
-      "경력",
-      "Full Career",
-      "professor-full-career-section"
-    ),
-    createProfessorProfileSection(
-      professor,
-      "수상",
-      "Awards",
-      "professor-awards-section"
     ),
   ].filter(Boolean).forEach((section) => moreBody.append(section));
   more.append(summary, moreBody);

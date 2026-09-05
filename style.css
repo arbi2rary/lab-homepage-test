@@ -1291,6 +1291,10 @@ html[lang="en"] .member-detail-name .member-name-english{
   gap:18px;
 }
 
+.professor-profile-section{
+  padding:0;
+}
+
 .professor-profile-section h5{
   margin-bottom:7px;
   color:var(--copper);
@@ -1336,11 +1340,6 @@ html[lang="en"] .member-detail-name .member-name-english{
   border-top:1px solid var(--line);
 }
 
-.professor-career-highlight ul{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:6px 36px;
-}
-
 .professor-more-panel{
   margin-top:26px;
 }
@@ -1359,19 +1358,16 @@ html[lang="en"] .member-detail-name .member-name-english{
   background:var(--bg-soft);
 }
 
-.professor-full-career-section,
 .professor-awards-section{
   grid-column:1/-1;
 }
 
-.professor-full-career-section ul,
 .professor-awards-section ul{
   columns:2;
   display:block;
   column-gap:48px;
 }
 
-.professor-full-career-section li,
 .professor-awards-section li{
   margin-bottom:5px;
   break-inside:avoid;
@@ -1553,16 +1549,10 @@ html[lang="en"] .alumni-card-name .member-name-english{
     grid-template-columns:1fr;
   }
 
-  .professor-career-highlight ul{
-    grid-template-columns:1fr;
-  }
-
-  .professor-full-career-section,
   .professor-awards-section{
     grid-column:auto;
   }
 
-  .professor-full-career-section ul,
   .professor-awards-section ul{
     columns:1;
   }
