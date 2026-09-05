@@ -1,0 +1,3886 @@
+[
+ {
+  "id": 217,
+  "type": "international-conference",
+  "year": 2026,
+  "month": 10,
+  "date": "2026.10.13",
+  "title": "STAG: Systolic-Array Trajectory Authentication Guard for Secure AI Accelerator Test",
+  "authors": [
+   "Dayoung Kim",
+   "Sooryeong Lee",
+   "Seungtae Kim",
+   "Nuri Son",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2026)",
+  "pages": "",
+  "location": "Incheon, Korea",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 216,
+  "type": "international-conference",
+  "year": 2026,
+  "month": 10,
+  "date": "2026.10.13",
+  "title": "Low-Overhead Partial Enhanced Scan for Transition Delay Fault Testing",
+  "authors": [
+   "Jaehyun Kim",
+   "Dahoon Kim",
+   "Hoyeon We",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2026)",
+  "pages": "",
+  "location": "Incheon, Korea",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 215,
+  "type": "international-conference",
+  "year": 2026,
+  "month": 10,
+  "date": "2026.10.13",
+  "title": "High-speed Address Generator Utilizing Ring-based Architecture for Memory Testing",
+  "authors": [
+   "Duyeon Won",
+   "Juyong Lee",
+   "Seung Ho Shin",
+   "Gyeonggyu Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2026)",
+  "pages": "",
+  "location": "Incheon, Korea",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 214,
+  "type": "international-conference",
+  "year": 2025,
+  "month": 10,
+  "date": "2025.10.17",
+  "title": "A Broadcast-Based Fully Parallel Test Architecture for Processing-in-Memory",
+  "authors": [
+   "Youngki Moon",
+   "Juyong Lee",
+   "Nayeun Kim",
+   "Yeonho Choi",
+   "Seung Ho Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2025)",
+  "pages": "",
+  "location": "Busan, Korea",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 213,
+  "type": "international-conference",
+  "year": 2025,
+  "month": 10,
+  "date": "2025.10.17",
+  "title": "A New Approach to Hybrid Delay Test Using Shared Observe Points",
+  "authors": [
+   "Jaehyun Kim",
+   "Sangjun Lee",
+   "Laesang Jung",
+   "Hanseong Cho",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2025)",
+  "pages": "",
+  "location": "Busan, Korea",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 212,
+  "type": "international-conference",
+  "year": 2024,
+  "month": 8,
+  "date": "2024.08.21",
+  "title": "APAPG: Address Pre-Processed ALPG for High-Speed Linear Test",
+  "authors": [
+   "Sooryeong Lee",
+   "Hayoung Lee",
+   "Juyong Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2024)",
+  "pages": "",
+  "location": "Sapporo, Hokkaido, Japan",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 211,
+  "type": "international-conference",
+  "year": 2024,
+  "month": 8,
+  "date": "2024.08.21",
+  "title": "Scan Architecture with Data Observation for Multiple Scan Cell Fault Diagnosis",
+  "authors": [
+   "Juyong Lee",
+   "Sooryeong Lee",
+   "Hayoung Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2024)",
+  "pages": "",
+  "location": "Sapporo, Hokkaido, Japan",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 210,
+  "type": "international-conference",
+  "year": 2024,
+  "month": 8,
+  "date": "2024.08.20",
+  "title": "Signal Shifting-based Reusable Redundant TSV Structure for Infrastructure TSV",
+  "authors": [
+   "Donghyun Han",
+   "Sunghoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2024)",
+  "pages": "",
+  "location": "Sapporo, Hokkaido, Japan",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 209,
+  "type": "international-conference",
+  "year": 2024,
+  "month": 8,
+  "date": "2024.08.20",
+  "title": "Effective Data-Width Aware ECC Scheme for HBM",
+  "authors": [
+   "Seung Ho Shin",
+   "Youngki Moon",
+   "Byungsoo Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2024)",
+  "pages": "",
+  "location": "Sapporo, Hokkaido, Japan",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 208,
+  "type": "international-conference",
+  "year": 2023,
+  "month": 10,
+  "date": "2023.10.27",
+  "title": "LOTS: Low Overhead TSV Repair Method Using IEEE-1838 Standard Architecture",
+  "authors": [
+   "Sunghoon Kim",
+   "Donghyun Han",
+   "Seokjun Jang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2023)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 207,
+  "type": "international-conference",
+  "year": 2023,
+  "month": 10,
+  "date": "2023.10.27",
+  "title": "GPU-Based Redundancy Analysis using Partitioning Method for Memory Repair",
+  "authors": [
+   "Younwoo Yoo",
+   "Hayoung Lee",
+   "Seung Ho Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2023)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 206,
+  "type": "international-conference",
+  "year": 2023,
+  "month": 10,
+  "date": "2023.10.27",
+  "title": "Machine Learning based Scan Chain Diagnosis for Double Faults",
+  "authors": [
+   "Hyojoon Yun",
+   "Taehyun Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2023)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 205,
+  "type": "international-conference",
+  "year": 2023,
+  "month": 10,
+  "date": "2023.10.27",
+  "title": "A New Flip-flop Shared Architecture of Test Point Insertion for Scan Design",
+  "authors": [
+   "Hyemin Kim",
+   "Sangjun Lee",
+   "Jongho Park",
+   "Sungwhan Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2023)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 204,
+  "type": "international-conference",
+  "year": 2023,
+  "month": 10,
+  "date": "2023.10.27",
+  "title": "Redundancy Analysis Simplification Scheme for High-Speed Memory Repair",
+  "authors": [
+   "Hayoung Lee",
+   "Younwoo Yoo",
+   "Seung Ho Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2023)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 203,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.21",
+  "title": "ZOS: Zero Overhead Scan for Systolic Array-based AI accelerator",
+  "authors": [
+   "Jihye Kim",
+   "Hayoung Lee",
+   "Jongho Park",
+   "Sunho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 202,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.21",
+  "title": "Logic Diagnosis Based on Deep Learning for Multiple Faults",
+  "authors": [
+   "Tae Hyun Kim",
+   "Hyeonchan Lim",
+   "Minho Cheong",
+   "Hyojoon Yun",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 201,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.21",
+  "title": "Cell-Aware Scan Diagnosis Using Partially Synchronous Set and Reset",
+  "authors": [
+   "Hyeonchan Lim",
+   "Hyojoon Yun",
+   "Juyong Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 200,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.20",
+  "title": "An Improved Early Termination Methodology Using Convolutional Neural Network",
+  "authors": [
+   "Seung Ho Shin",
+   "Hayoung Lee",
+   "Sooryeong Lee",
+   "Younwoo Yoo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 199,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.20",
+  "title": "PROG: Per-Row Output Generator for BOST",
+  "authors": [
+   "Sooryeong Lee",
+   "Hayoung Lee",
+   "Younwoo Yoo",
+   "Seung Ho Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 198,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.20",
+  "title": "Pair-Grouping Scan Chain Architecture for Multiple Scan Cell Fault Diagnosis",
+  "authors": [
+   "Sunghoon Kim",
+   "Seokjun Jang",
+   "Youngki Moon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 197,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.20",
+  "title": "Correlation Aware Random Pattern Generation for Test Time and Shift Power Reduction of Logic BIST",
+  "authors": [
+   "Jongho Park",
+   "Sangjun Lee",
+   "Inhwan Lee",
+   "Sungwhan Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 196,
+  "type": "international-conference",
+  "year": 2022,
+  "month": 10,
+  "date": "2022.10.20",
+  "title": "FAME: Fault Address Memory Structure for Repair Time Reduction",
+  "authors": [
+   "Hayoung Lee",
+   "Sooryeong Lee",
+   "Younwoo Yoo",
+   "Seung Ho Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2022)",
+  "pages": "",
+  "location": "Gangneung, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 195,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.08",
+  "title": "A Circular-based TSV Repair Architecture",
+  "authors": [
+   "Youngkwang Lee",
+   "Donghyun Han",
+   "Sooryeong Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 194,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.08",
+  "title": "Hardware Efficient Built-in Self-test Architecture for Power and Ground TSVs in 3D IC",
+  "authors": [
+   "Donghyun Han",
+   "Youngkwang Lee",
+   "Sooryeong Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 193,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.06",
+  "title": "Hybrid Test Access Mechanism for Multiple Identical Cores",
+  "authors": [
+   "Sangjun Lee",
+   "Jongho Park",
+   "Inhwan Lee",
+   "Kwonhyoung Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 192,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.06",
+  "title": "Area Efficient Built-In Redundancy Analysis using Pre-Solutions with Various Spare Structure",
+  "authors": [
+   "Youngki Moon",
+   "Hyunho Yoo",
+   "Donghyun Han",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 191,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.06",
+  "title": "Secure Scan Design through Pseudo Fault Injection",
+  "authors": [
+   "Seokjun Jang",
+   "Hyungil Woo",
+   "Sunghoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 190,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.06",
+  "title": "An Effective Spare Allocation Methodology for 3D Memory Repair with BIRA",
+  "authors": [
+   "Seung Ho Shin",
+   "Hayoung Lee. Younwoo Yoo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 189,
+  "type": "international-conference",
+  "year": 2021,
+  "month": 10,
+  "date": "2021.10.06",
+  "title": "Post-bond Repair of Line Faults with Double-bit ECC for 3D Memory",
+  "authors": [
+   "Younwoo Yoo",
+   "Hayoung Lee",
+   "Seung Ho Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2021)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 188,
+  "type": "international-conference",
+  "year": 2020,
+  "month": 11,
+  "date": "2020.11.05",
+  "title": "Fail Memory Configuration Set for RA Estimation",
+  "authors": [
+   "Hayoung Lee",
+   "Keewon Cho",
+   "Sungho Kang",
+   "Wooheon Kang",
+   "Seungtaek Lee",
+   "Woosik Jeong"
+  ],
+  "conference": "IEEE International Test Conference(ITC)",
+  "pages": "",
+  "location": "Online",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 187,
+  "type": "international-conference",
+  "year": 2020,
+  "month": 10,
+  "date": "2020.10.22",
+  "title": "Diagnosis of Scan Chain Faults Based-on Machine-Learning",
+  "authors": [
+   "Hyeonchan Lim",
+   "Tae Hyun Kim",
+   "Seunghwan Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2020)",
+  "pages": "",
+  "location": "Yeosu, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 186,
+  "type": "international-conference",
+  "year": 2020,
+  "month": 10,
+  "date": "2020.10.22",
+  "title": "Redundancy Analysis Optimization with Clustered Known Solutions for High Speed Repair",
+  "authors": [
+   "Hayoung Lee",
+   "Donghyun Han",
+   "Hogyeong Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2020)",
+  "pages": "",
+  "location": "Yeosu, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 185,
+  "type": "international-conference",
+  "year": 2020,
+  "month": 10,
+  "date": "2020.10.23",
+  "title": "Memory-like Defect Diagnosis for CMOL FPGAs",
+  "authors": [
+   "Jihye Kim",
+   "Hayoung Lee",
+   "Seokjun Jang",
+   "Hogyeong Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2020)",
+  "pages": "",
+  "location": "Yeosu, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 184,
+  "type": "international-conference",
+  "year": 2020,
+  "month": 9,
+  "date": "2020.09.25",
+  "title": "W-ERA: One-Time Memory Repair with Wafer-Level Early Repair Analysis for Cost Reduction",
+  "authors": [
+   "Hayoung Lee",
+   "Donghyun Han",
+   "Hogyeong Kim",
+   "Sungho Kang"
+  ],
+  "conference": "IEEE International Test Conference in Asia (ITC-Asia)",
+  "pages": "",
+  "location": "Taipei, Taiwan",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 183,
+  "type": "international-conference",
+  "year": 2019,
+  "month": 10,
+  "date": "2019.10.07",
+  "title": "An Efficient Scan Chain Diagnosis for Stuck-at and Transition Faults",
+  "authors": [
+   "Hyeonchan Lim",
+   "Seokjun Jang",
+   "Seunghwan Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2019)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 182,
+  "type": "international-conference",
+  "year": 2019,
+  "month": 10,
+  "date": "2019.10.07",
+  "title": "A New Scan Chain Reordering Method for Low Power Consumption based on Care Bit Density",
+  "authors": [
+   "Kyunghwan Cho",
+   "Jihye Kim",
+   "Hyunggoy Oh",
+   "Sangjun Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2019)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 181,
+  "type": "international-conference",
+  "year": 2019,
+  "month": 10,
+  "date": "2019.10.07",
+  "title": "Redundancy Analysis based on Fault Distribution for memory with complex spares",
+  "authors": [
+   "Hayoung Lee",
+   "Donghyun Han",
+   "Seungtaek Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2019)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 180,
+  "type": "international-conference",
+  "year": 2019,
+  "month": 10,
+  "date": "2019.10.07",
+  "title": "Tunable Compact Probing Detector with Fast Analysis Time Against Invasive Attacks",
+  "authors": [
+   "Young-woo Lee",
+   "Youngkwang Lee",
+   "Minho Moon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2019)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 179,
+  "type": "international-conference",
+  "year": 2019,
+  "month": 10,
+  "date": "2019.10.07",
+  "title": "Transition-delay Test Methodology for Designs with Self-gating",
+  "authors": [
+   "Jihye Kim",
+   "Sangjun Lee",
+   "Minho Moon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2019)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 178,
+  "type": "international-conference",
+  "year": 2019,
+  "month": 10,
+  "date": "2019.10.06",
+  "title": "A Hardware-efficient TSV Repair Scheme Based on Butterfly Topology",
+  "authors": [
+   "Minho Cheong",
+   "Hyunyul Lim",
+   "Taehyun Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2019)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 177,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 11,
+  "date": "2018.11.13",
+  "title": "2-D failure bitmap compression using line fault marking method",
+  "authors": [
+   "Keewon Cho",
+   "Young-woo Lee",
+   "Sungyoul Seo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2018)",
+  "pages": "",
+  "location": "Seoul, Daegu",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 176,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 11,
+  "date": "2018.11.13",
+  "title": "A Test Methodology for Neural Computing Unit",
+  "authors": [
+   "Minho Cheong",
+   "Ingeol Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2018)",
+  "pages": "",
+  "location": "Seoul, Daegu",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 175,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 11,
+  "date": "2018.11.14",
+  "title": "Low Power Scan Chain Architecture Based on Circuit Topology",
+  "authors": [
+   "Heetae Kim",
+   "Hyunggoy Oh",
+   "Sangjun Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2018)",
+  "pages": "",
+  "location": "Seoul, Daegu",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 174,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 11,
+  "date": "2018.11.14",
+  "title": "A Software-based Scan Chain Diagnosis for Double Faults in A Scan Chain",
+  "authors": [
+   "HyeonChan Lim",
+   "Seokjun Jang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2018)",
+  "pages": "",
+  "location": "Seoul, Daegu",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 173,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 11,
+  "date": "2018.11.13",
+  "title": "Dynamic voltage Drop induced Path Delay Analysis for STV and NTV Circuits during At-speed Scan Test",
+  "authors": [
+   "Hyunggoy Oh",
+   "Heetae Kim",
+   "Sangjun Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2018)",
+  "pages": "",
+  "location": "Seoul, Daegu",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 172,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 10,
+  "date": "2018.10.31",
+  "title": "3D Memory Formed of Unrepairable Memory Dice and Spare Layer",
+  "authors": [
+   "Donghyun Han",
+   "Hayoung Lee",
+   "Seungtaek Lee",
+   "Minho Moon",
+   "Sungho Kang"
+  ],
+  "conference": "TENCON 2018",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 171,
+  "type": "international-conference",
+  "year": 2018,
+  "month": 10,
+  "date": "2018.10.30",
+  "title": "Neural Network Reliability Enhancement Approach using Dropout Underutilization in GPU",
+  "authors": [
+   "Dongsu Lee",
+   "Hyunyul Lim",
+   "Taehyun Kim",
+   "Sungho Kang"
+  ],
+  "conference": "TENCON 2018",
+  "pages": "",
+  "location": "",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 170,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 11,
+  "date": "2017.11.06",
+  "title": "A New Repair Scheme for TSV-based 3D Memory using Base Die Repair Cells",
+  "authors": [
+   "Donghyun Han",
+   "Hayoung Lee",
+   "Donghyun Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2017)",
+  "pages": "",
+  "location": "Seoul, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 169,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 11,
+  "date": "2017.11.07",
+  "title": "An Efficient Built-in Self-Repair Scheme for Area Reduction",
+  "authors": [
+   "Keewon Cho",
+   "Young-woo Lee",
+   "Sungyoul Seo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2017)",
+  "pages": "",
+  "location": "Seoul, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 168,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 11,
+  "date": "2017.11.07",
+  "title": "A Selective Error Data Capture Method using On-Chip DRAM for Silicon Debug of Multi-core Design",
+  "authors": [
+   "Hyunggoy Oh",
+   "Heetae Kim",
+   "Jaeil Lim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2017)",
+  "pages": "",
+  "location": "Seoul, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 167,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 11,
+  "date": "2017.11.07",
+  "title": "Test Data Reduction Method Based on Berlekamp-Massey Algorithm",
+  "authors": [
+   "HyeonChan Lim",
+   "Junghwan Kim",
+   "Soyeon Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2017)",
+  "pages": "",
+  "location": "Seoul, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 166,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 11,
+  "date": "2017.11.06",
+  "title": "LARECD : Low Area overhead and Reliable Error Correction DMR architecture",
+  "authors": [
+   "Hyunyul Lim",
+   "Taehyun Kim",
+   "Dongsu Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2017)",
+  "pages": "",
+  "location": "Seoul, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 165,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 9,
+  "date": "2017.09.15",
+  "title": "Test Item Priority Estimation for High Parallel Test Efficiency under ATE Debug Time Constraints",
+  "authors": [
+   "Young-Woo Lee",
+   "Inhyuk Choi",
+   "Kang-Hoon Oh",
+   "James Jinsoo Ko",
+   "Sungho Kang"
+  ],
+  "conference": "The 1st IEEE International Test Conference in Asia (ITC-Asia)",
+  "pages": "",
+  "location": "Taipei, Taiwan",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 164,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 3,
+  "date": "2017.03.15",
+  "title": "Broadcast Scan Compression Based on Deterministic Pattern Generation Algorithm",
+  "authors": [
+   "Hyeonchan Lim",
+   "Sungyoul Seo",
+   "Soyeon Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International Symposium on Quality Electronic Design (ISQED 2017)",
+  "pages": "",
+  "location": "San Jose, USA",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 163,
+  "type": "international-conference",
+  "year": 2017,
+  "month": 3,
+  "date": "2017.03.14",
+  "title": "Off-Chip Test Architecture for Improving Multi-Site Testing Efficiency using Tri-State Decoder and 3V-Level Encoder",
+  "authors": [
+   "Sungyoul Seo",
+   "Hyeonchan Lim",
+   "Soyeon Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International Symposium on Quality Electronic Design (ISQED 2017)",
+  "pages": "",
+  "location": "San Jose, USA",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 162,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.28",
+  "title": "Test Access Mechanism for Stack Test Time Reduction of 3-Dimensional Integrated Circuit",
+  "authors": [
+   "Inhyuk Choi",
+   "Hyunggoy Oh",
+   "Sungho Kang"
+  ],
+  "conference": "Asia Pacific Conference on Circuits and Systems (APCCAS 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 161,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.27",
+  "title": "A New Online Test and Debug Methodology for Automotive Camera Image Processing System",
+  "authors": [
+   "Hyunggoy Oh",
+   "Inhyuk Choi",
+   "Sungho Kang"
+  ],
+  "conference": "Asia Pacific Conference on Circuits and Systems (APCCAS 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "IEEE CAS"
+ },
+ {
+  "id": 160,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.25",
+  "title": "A TSV Test Structure for Simultaneously Detecting Resistive Open and Bridge Defects in 3D-ICs",
+  "authors": [
+   "Young-woo Lee",
+   "Junghwan Kim",
+   "Inhyuk Choi",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 159,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.25",
+  "title": "P-Backtrace A New Scan Chain Diagnosis Method with Probability",
+  "authors": [
+   "Tae Hyun Kim",
+   "Hyun Yul Lim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 158,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.25",
+  "title": "A Test Methodology to Screen Scan-Path Failures",
+  "authors": [
+   "Junghwan Kim",
+   "Young-woo Lee",
+   "Minho Cheong",
+   "Sungyoul Seo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 157,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.25",
+  "title": "Process Variation-aware Bridge Fault Analysis",
+  "authors": [
+   "Heetae Kim",
+   "Inhyuk Choi",
+   "Jaeil Lim",
+   "Hyunggoy Oh",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 156,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.25",
+  "title": "Discussion of Cost-effective Redundancy Architectures",
+  "authors": [
+   "Keewon Cho",
+   "Jooyoung Kim",
+   "Hayoung Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 155,
+  "type": "international-conference",
+  "year": 2016,
+  "month": 10,
+  "date": "2016.10.24",
+  "title": "Software-Based Embedded Core Test Using Multi-Polynomial for Test Data Reduction",
+  "authors": [
+   "Soyeon Kang",
+   "Inhyuk Choi",
+   "Hyeonchan Lim",
+   "Sungyoul Seo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2016)",
+  "pages": "",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 154,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 11,
+  "date": "2015.11.23",
+  "title": "Scan Chain Reordering-aware X-Filling and Stitching for Scan Shift Power Reduction",
+  "authors": [
+   "Sungyoul Seo",
+   "Yong Lee",
+   "Hyeonchan Lim",
+   "Joohwan Lee",
+   "Hongbom Yoo",
+   "Yojoung Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2015",
+  "pages": "",
+  "location": "Mumbai, India",
+  "organizer": ""
+ },
+ {
+  "id": 153,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 11,
+  "date": "2015.11.03",
+  "title": "A New In-field Bad Block Detection Scheme for NAND flash Chips",
+  "authors": [
+   "Dongho Kang",
+   "Keewon Cho",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2015)",
+  "pages": "",
+  "location": "",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 152,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 11,
+  "date": "2015.11.03",
+  "title": "2-D compaction Method using Macro block for Post-Silicon Validation",
+  "authors": [
+   "Won Jung",
+   "Hyunggoy Oh",
+   "Dongho Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2015)",
+  "pages": "",
+  "location": "",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 151,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 11,
+  "date": "2015.11.04",
+  "title": "A Scan Segment Skip Technique for Low Power Test",
+  "authors": [
+   "Hayoung Lee",
+   "Junkyu Lee",
+   "Hyunyul Lim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2015)",
+  "pages": "",
+  "location": "",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 150,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 11,
+  "date": "2015.11.03",
+  "title": "A New Built-in Redundancy Analysis Algorithm Based On Multiple Memory Blocks",
+  "authors": [
+   "Jooyoung Kim",
+   "Keewon Cho",
+   "Woosung Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2015)",
+  "pages": "",
+  "location": "",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 149,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 11,
+  "date": "2015.11.04",
+  "title": "Failure Bitmap Compression Method for 3D-IC Redundancy Analysis",
+  "authors": [
+   "Keewon Cho",
+   "Woosung Lee",
+   "Jooyoung Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2015)",
+  "pages": "",
+  "location": "",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 148,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 6,
+  "date": "2015.06.30",
+  "title": "KRAFT: K-associative Relative Addressing Flash Transition Layer",
+  "authors": [
+   "Dongho Kang",
+   "Jaeseok Park",
+   "Ilwoong Kim",
+   "Ingeol Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2015)",
+  "pages": "394–396",
+  "location": "Jeju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 147,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 3,
+  "date": "2015.03.03",
+  "title": "Low Power Scan Bypass Technique with Test Data Reduction",
+  "authors": [
+   "Hyunyul Lim",
+   "Wooheon Kang",
+   "Sungyoul Seo",
+   "Yong Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Symposium on Quality Electronic Design (ISQED 2015)",
+  "pages": "173–176",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 146,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 3,
+  "date": "2015.03.03",
+  "title": "Near Optimal Repair Rate Built-in Redundancy Analysis with Very Small Hardware Overhead",
+  "authors": [
+   "Woosung Lee",
+   "Keewon Cho",
+   "Jooyoung Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International Symposium on Quality Electronic Design (ISQED 2015)",
+  "pages": "435–439",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 145,
+  "type": "international-conference",
+  "year": 2015,
+  "month": 3,
+  "date": "2015.03.03",
+  "title": "A Scan Shifting Method based on Clock Gating of Multiple Groups for Low Power Scan Testing",
+  "authors": [
+   "Sungyoul Seo",
+   "Yong Lee",
+   "Joohwan Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Symposium on Quality Electronic Design (ISQED 2015)",
+  "pages": "162–166",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 144,
+  "type": "international-conference",
+  "year": 2014,
+  "month": 11,
+  "date": "2014.11.05",
+  "title": "A New Redundancy Analysis Algorithm Using One Side Pivot",
+  "authors": [
+   "Jooyoung Kim",
+   "Keewon Cho",
+   "Woosung Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2014)",
+  "pages": "134–135",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 143,
+  "type": "international-conference",
+  "year": 2014,
+  "month": 11,
+  "date": "2014.11.05",
+  "title": "Reducing the Failure Bitmap Size with a Partial Solution Search Tree for the Low Cost Automatic Test Equipment (ATE).",
+  "authors": [
+   "Keewon Cho",
+   "Woosung Lee",
+   "Jooyoung Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2014)",
+  "pages": "128–129",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 142,
+  "type": "international-conference",
+  "year": 2014,
+  "month": 11,
+  "date": "2014.11.05",
+  "title": "Scan Cell Reordering Algorithm for Low Power Consumption during Scan-Based Testing",
+  "authors": [
+   "Wooheon Kang",
+   "Hyunyul Lim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2014)",
+  "pages": "300–301",
+  "location": "Jeju Island, Korea.",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 141,
+  "type": "international-conference",
+  "year": 2014,
+  "month": 11,
+  "date": "2014.11.05",
+  "title": "An Online Test and Debug Methodology for Automotive Image Processing System",
+  "authors": [
+   "Hyunggoy Oh",
+   "Inhyuk Choi",
+   "Taewoo Han",
+   "Won Jung",
+   "Byungin Moon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2013)",
+  "pages": "226–227",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 140,
+  "type": "international-conference",
+  "year": 2014,
+  "month": 11,
+  "date": "2014.11.17",
+  "title": "A Scalable and Parallel Test Access Strategy for NoC-based Multicore System",
+  "authors": [
+   "Taewoo Han",
+   "Inhyuk Choi",
+   "Hyunggyo Oh",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2014",
+  "pages": "81–86",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 139,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 11,
+  "date": "2013.11.21",
+  "title": "A Die Selection and Matching Method with Two Stages for Yield Enhancement of 3-D Memories",
+  "authors": [
+   "Wooheon Kang",
+   "Changwook Lee",
+   "Keewon Cho",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2013",
+  "pages": "301–306",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 138,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 11,
+  "date": "2013.11.18",
+  "title": "Test Scheduling Using Ant Colony Optimization for 3D Integrated Circuits",
+  "authors": [
+   "Inhyuk Choi",
+   "Taewoo Han",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2013)",
+  "pages": "15–16",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 137,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 11,
+  "date": "2013.11.18",
+  "title": "Efficient TSV repair method for 3D memories",
+  "authors": [
+   "Ilwoong Kim",
+   "Keewon Cho",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2013)",
+  "pages": "17–18",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 136,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 11,
+  "date": "2013.11.19",
+  "title": "Scan chain swapping using TSVs for test power reduction in 3D-IC",
+  "authors": [
+   "Ingeol Lee",
+   "Jaeseok Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2013)",
+  "pages": "170–171",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 135,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 11,
+  "date": "2013.11.19",
+  "title": "An efficient RPCT (Reduced Pin Count Testing) based on test data compression using burst clock controller in 3D-IC",
+  "authors": [
+   "Yong Lee",
+   "SungYoul Seo",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2013)",
+  "pages": "176–179",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 134,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 10,
+  "date": "2013.10.02",
+  "title": "Bit Transmission Error Correction Scheme for FlexRay Based Automotive Communication Systems",
+  "authors": [
+   "Inhyuk Choi",
+   "Taewoo Han",
+   "Sungho Kang"
+  ],
+  "conference": "Global Conference on Consumer Electronics (GCCE 2013)",
+  "pages": "488–490",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 133,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 8,
+  "date": "2013.08.26",
+  "title": "A New TSV Set Architecture for High Reliability",
+  "authors": [
+   "Jaeseok Park",
+   "Sungho Kang"
+  ],
+  "conference": "5th Asia Symposium on Quality Electronic Design (ASQED)",
+  "pages": "123–126",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 132,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 7,
+  "date": "2013.07.01",
+  "title": "NBTI Aware Voltage Scaling Using Linear Transient Weighted Factors",
+  "authors": [
+   "Jaeil Lim",
+   "Hyejeong Hong",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2013)",
+  "pages": "300–302",
+  "location": "Hangzhou, China",
+  "organizer": "Test Technology Technical Council"
+ },
+ {
+  "id": 131,
+  "type": "international-conference",
+  "year": 2013,
+  "month": 7,
+  "date": "2013.07.01",
+  "title": "A Reliable Massively Parallel Testing Method for Wafer Testing",
+  "authors": [
+   "Haksong Kim",
+   "Yong Lee",
+   "Sungyoul Seo",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2013)",
+  "pages": "378–379",
+  "location": "Yilan, Taiwan",
+  "organizer": "Test Technology Technical Council"
+ },
+ {
+  "id": 130,
+  "type": "international-conference",
+  "year": 2012,
+  "month": 12,
+  "date": "2012.12.11",
+  "title": "Process Variation-Aware Floorplanning for 3D Many-Core Processors",
+  "authors": [
+   "Hyejeong Hong",
+   "Jaeil Lim",
+   "Sungho Kang"
+  ],
+  "conference": "Electrical Design of Advanced Packaging and Systems Symposium (EDAPS 2012)",
+  "pages": "196–199",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 129,
+  "type": "international-conference",
+  "year": 2012,
+  "month": 11,
+  "date": "2012.11.06",
+  "title": "Integration of Dual Channel Timing Formatter System for High Speed Memory Test Equipment",
+  "authors": [
+   "Jaeseok Park",
+   "Ingeol Lee",
+   "Young-Seok Park",
+   "Sung-Geun Kim",
+   "Kyung Ho Ryu",
+   "Dong-Hoon Jung",
+   "Kangwook Jo",
+   "Choong Keun Lee",
+   "Hongil Yoon",
+   "Seong-Ook Jung",
+   "Woo-Young Choi.",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2012)",
+  "pages": "185–187",
+  "location": "Belfast, UK",
+  "organizer": "IEEE Circuits and Systems Society"
+ },
+ {
+  "id": 128,
+  "type": "international-conference",
+  "year": 2011,
+  "month": 11,
+  "date": "2011.11.22",
+  "title": "New Fault Detection Algorithm for Multi-Level Cell Flash Memories",
+  "authors": [
+   "Jaewon Cha",
+   "Ilwoong Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2011",
+  "pages": "341–346",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 127,
+  "type": "international-conference",
+  "year": 2011,
+  "month": 11,
+  "date": "2011.11.17",
+  "title": "Path  Search  Engine  for  Fast Optimal Path Search Using Efficient Hardware Architecture",
+  "authors": [
+   "Inhyuk Choi",
+   "Taewoo Han",
+   "Ilwoong Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2011)",
+  "pages": "96–99",
+  "location": "Jeju island, Korea",
+  "organizer": "IEICE, IEEK"
+ },
+ {
+  "id": 126,
+  "type": "international-conference",
+  "year": 2011,
+  "month": 8,
+  "date": "2011.08.09",
+  "title": "A Low-cost DDEM ADC Structure for the Testing of High-performance DACs",
+  "authors": [
+   "Jaewon Jang",
+   "Incheol Kim",
+   "Hyeonuk Son",
+   "Sungho Kang"
+  ],
+  "conference": "54th International Midwest Symposium on Circuits and Systems (MWSCAS 2011)",
+  "pages": "",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 125,
+  "type": "international-conference",
+  "year": 2011,
+  "month": 8,
+  "date": "2011.08.09",
+  "title": "A New Static Test of a DAC with a Built-in Structure",
+  "authors": [
+   "Incheol Kim",
+   "Jaewon Jang",
+   "HyeonUk Son",
+   "Sungho Kang"
+  ],
+  "conference": "54th International Midwest Symposium on Circuits and Systems (MWSCAS 2011)",
+  "pages": "",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 124,
+  "type": "international-conference",
+  "year": 2010,
+  "month": 11,
+  "date": "2010.11.23",
+  "title": "A New Scan Slice Encoding Scheme with Flexible Code for Test Data Compression",
+  "authors": [
+   "Keun-Soo Lee",
+   "Hyuntae Park",
+   "Hyeonuk Son",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2010)",
+  "pages": "217–220",
+  "location": "Santa Cruz, California, USA",
+  "organizer": "IEEE TEST SYMPOSIUM"
+ },
+ {
+  "id": 123,
+  "type": "international-conference",
+  "year": 2010,
+  "month": 11,
+  "date": "2010.11.23",
+  "title": "Enhenced Redundancy Analysis for Memories Using Geometric Faults Based Search Tree",
+  "authors": [
+   "Wooheon Kang",
+   "Hyungjun Cho",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2010)",
+  "pages": "225–228",
+  "location": "Yokohama Joho Bunka Center, Japan",
+  "organizer": ""
+ },
+ {
+  "id": 122,
+  "type": "international-conference",
+  "year": 2010,
+  "month": 11,
+  "date": "2010.11.22",
+  "title": "An Area Efficient Programmable Built-In Self-Test for Embedded Memories Using an Extended Address Counter",
+  "authors": [
+   "Kihyun Park",
+   "Joohwan Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2010)",
+  "pages": "59–62",
+  "location": "Busan, Korea",
+  "organizer": "Pohang University of Science and Technology"
+ },
+ {
+  "id": 121,
+  "type": "international-conference",
+  "year": 2010,
+  "month": 11,
+  "date": "2010.11.23",
+  "title": "FiX-Compact : A New X-Tolerant Response Compaction Scheme for Fixed Unknown Logic Values",
+  "authors": [
+   "Jaeseok Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2010)",
+  "pages": "209–212",
+  "location": "Busan, Korea",
+  "organizer": "Pohang University of Science and Technology"
+ },
+ {
+  "id": 120,
+  "type": "international-conference",
+  "year": 2010,
+  "month": 7,
+  "date": "2010.07.05",
+  "title": "A NOVEL SCREEN-ABILITY ESTIMATION METHODOLOGY FOR DRAM WITH A TEST ALGORITHM SIMULATOR: FS5",
+  "authors": [
+   "Woosik Jeong",
+   "Intae Kim",
+   "Sangmin Lee",
+   "Ohan Kwon",
+   "Eunbyul Kal",
+   "Kyoungshub Lee",
+   "Huycheol Bae",
+   "Kaangchil Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2010)",
+  "pages": "927–929",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 119,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 12,
+  "date": "2009.12.11",
+  "title": "An Ant Colony Optimization Approach for the Preference-based Shortest Path Search",
+  "authors": [
+   "Seung-Ho Ok",
+   "Woo-Jin Seo",
+   "Jin-Ho Ahn",
+   "Sungho Kang",
+   "Byungin Moon"
+  ],
+  "conference": "International Conference on Future Generation Communication and Networking(FGCN 2009)\n and the International Conference on Advanced Communication and Networking(ACN 2009) (FGCN/ACN 2009)",
+  "pages": "539–546",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 118,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 11,
+  "date": "2009.11.24",
+  "title": "A Hardware-Efficent Multi-character String Matching Architecture Using Brute-force Algorithm",
+  "authors": [
+   "Seongyong Ahn",
+   "Hyejong Hong",
+   "Hyunjin Kim",
+   "Jin-Ho Ahn",
+   "Dongmyong Ba다",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2009)",
+  "pages": "464–467",
+  "location": "Busan, Korea",
+  "organizer": "Pohang University of Science and Technology"
+ },
+ {
+  "id": 117,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 11,
+  "date": "2009.11.24",
+  "title": "An Area-efficient Built-in Redundancy Analysis for Embedded Memories with Optimal Repair Rate using 2-D Redundancy",
+  "authors": [
+   "Joohwan Lee",
+   "Kihyun Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2009)",
+  "pages": "353–356",
+  "location": "Busan, Korea",
+  "organizer": "Pohang University of Science and Technology"
+ },
+ {
+  "id": 116,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 11,
+  "date": "2009.11.24",
+  "title": "An Advanced BIRA Using Parallel Sub-analyzers for Embedded Memories",
+  "authors": [
+   "Woosik Jeong",
+   "Taewoo Han",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2009)",
+  "pages": "249–252",
+  "location": "Busan, Korea",
+  "organizer": "Pohang University of Science and Technology"
+ },
+ {
+  "id": 115,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 11,
+  "date": "2009.11.23",
+  "title": "DFT for Achieving Hybrid Transiton Delay Fault Test with Reduced Pin Count Testing",
+  "authors": [
+   "Changwon Son",
+   "Seongyong Ahn",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2009)",
+  "pages": "128–132",
+  "location": "Sapporo, Japan",
+  "organizer": "Test Technology Technical Council"
+ },
+ {
+  "id": 114,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 11,
+  "date": "2009.11.23",
+  "title": "A BIST Architecture for Multiple DACs in an LTPS TFT-LCD Source Driver IC",
+  "authors": [
+   "Hyeonuk Son",
+   "Jaewon Jang",
+   "Youbean Kim",
+   "Kicheol Kim",
+   "Incheol Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2009)",
+  "pages": "120–123",
+  "location": "Sapporo, Japan",
+  "organizer": "Test Technology Technical Council"
+ },
+ {
+  "id": 113,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 9,
+  "date": "2009.09.10",
+  "title": "FPGA-based Verification Methodology of SOC-type CMOS Image Signal Processor",
+  "authors": [
+   "YounSun Kim",
+   "Hong-Sik Kim",
+   "Raymond Lee",
+   "Sungho Kang"
+  ],
+  "conference": "22nd International SOC Conference (SOCC 2009)",
+  "pages": "231–234",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 112,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 8,
+  "date": "2009.08.25",
+  "title": "An Efficient Hardware Architecture of the A-star Algorithm for the Shortest Path Search Engine",
+  "authors": [
+   "Woo-Jin Seo",
+   "Seung-Ho Ok",
+   "Jin-Ho Ahn",
+   "Sungho Kang",
+   "Byungin Moon"
+  ],
+  "conference": "International Joint Conference on INC, IMS, and IDC",
+  "pages": "1499–1502",
+  "location": "Seoul, Korea",
+  "organizer": "IEEE"
+ },
+ {
+  "id": 111,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 7,
+  "date": "2009.07.07",
+  "title": "Digital Background Self-calibration for High Resolution Analog to Digital Converters",
+  "authors": [
+   "Kicheol Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2009)",
+  "pages": "pp.695–696",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 110,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 5,
+  "date": "2009.05.04",
+  "title": "A High-level Signal Integrity Fault Model and Test Methodology for Long On-Chip Interconnections",
+  "authors": [
+   "Sunghoon Chun",
+   "Yongjoon Kim",
+   "Taejin Kim",
+   "Sungho KANG"
+  ],
+  "conference": "27th VLSI Test Symposium (VTS 2009)",
+  "pages": "152–157",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 109,
+  "type": "international-conference",
+  "year": 2009,
+  "month": 4,
+  "date": "2009.04.15",
+  "title": "Hybrid Communication-Aware Task Scheduling for Energy Minimization in On-Chip Multiprocessor",
+  "authors": [
+   "HyunJin Kim",
+   "Seongyong Ahn",
+   "Hyejeong Hong",
+   "Hong-Sik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Coolchips XII",
+  "pages": "247–249",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 108,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "An Effective Parallel ALPG Using Instruction Unrolling for High Speed Memory Testing",
+  "authors": [
+   "Hyunjun Yoon",
+   "Myung-Hoon Yang",
+   "Yongjoon Kim",
+   "Youngkyu Park",
+   "Jaeseok Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2008)",
+  "pages": "370–375",
+  "location": "Santa Clara, California, USA",
+  "organizer": "IEEE Computer Society - Test Technology Tech. Council"
+ },
+ {
+  "id": 107,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "Path Delay Fault Diagnosis Using Path Scoring",
+  "authors": [
+   "Yoseop Lim",
+   "Joohwan Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2008)",
+  "pages": "199–202",
+  "location": "Tashkent, Uzbekistan",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK) and Tashkent University of Information and Technology (TUIT)"
+ },
+ {
+  "id": 106,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "Segmented Scan Architecture Using Segment Grouping for Test Cost Reduction",
+  "authors": [
+   "Myung-Hoon Yang",
+   "Taejin Kim",
+   "Yongjoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2008)",
+  "pages": "379–382",
+  "location": "San Diego, \nCalifornia, USA",
+  "organizer": "Test Technology Technical Council (tttc)"
+ },
+ {
+  "id": 105,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "A heuristic method to reduce fault candidates for a speedy fault diagnosis",
+  "authors": [
+   "Hyungjun Cho",
+   "Joohwan Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2008)",
+  "pages": "200–203",
+  "location": "Hong Kong",
+  "organizer": "IEEE Computer Society - Test Technology Tech. Council, \nHong Kong University of Science and Technology, \nThe Hong Kong Electron Devices and Solid State Circuits \n(ED/SSC) Joint Chapter"
+ },
+ {
+  "id": 104,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "Variable-Length Block Nine-Coded Compression Technique with Huffman Codes and Symbol Merging",
+  "authors": [
+   "Jaewon Jang",
+   "Youbean Kim",
+   "Kicheol Kim",
+   "Incheol Kim",
+   "Hyeonuk Son",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2008)",
+  "pages": "210–213",
+  "location": "COEX, \nSeoul, Korea",
+  "organizer": "IEEE Circuits and Systems Society (IEEE CASS), \nAssociation for Computing Machinery (ACM)’s \nSpecial Interest Group on Design Automation (SIGDA), \nThe Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 103,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "An Effective Hybrid Test Data Compression Method Using Scan Chain Compaction and Dictionary-based Scheme",
+  "authors": [
+   "Taejin KIM",
+   "SUNGHOON CHUN",
+   "Yongjoon KIM",
+   "Myung-Hoon YANG",
+   "Sungho KANG"
+  ],
+  "conference": "Asian Test Symposium 2008",
+  "pages": "1–6",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 102,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 11,
+  "date": "2008.11.24",
+  "title": "XPDF-ATPG: An Efficient Test Pattern Generation for Crosstalk-Induced Faults",
+  "authors": [
+   "Sunghoon Chun",
+   "Yongjoon Kim",
+   "Taejin Kim",
+   "Myung-Hoon Yang",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2008",
+  "pages": "1–6",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 101,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 10,
+  "date": "2008.10.28",
+  "title": "A new wafer level latent defect screening methodology for highly reliable dram using a response surface method",
+  "authors": [
+   "Junghyun Nam",
+   "Sunghoon Chun",
+   "Gibum Koo",
+   "Yanggi Kim",
+   "Byungsoo Moon",
+   "Jonghyoung Lim",
+   "Jaehoon Joo",
+   "Sangseok Kang",
+   "Hoonjung Kim",
+   "Kyeongseon Shin",
+   "Kisang Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International Test Conference (ITC 2008)",
+  "pages": "1–10",
+  "location": "Gyeongju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 100,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 6,
+  "date": "2008.06.24",
+  "title": "An Efficient BIST Architecture for Embedded RAMs",
+  "authors": [
+   "Youngkyu Park",
+   "Jaeseok Park",
+   "Sungho Kang"
+  ],
+  "conference": "9th International Conference on Electronics, Information, and Communication",
+  "pages": "343–346",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 99,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 4,
+  "date": "2008.04.27",
+  "title": "An Efficient Scan Chain Diagnosis Method Using a New Symbolic Simulation",
+  "authors": [
+   "Sunghoon Chun",
+   "Yongjoon Kim",
+   "Taejin Kim",
+   "Sungho Kang"
+  ],
+  "conference": "26th VLSI Test Symposium (VTS 2008)",
+  "pages": "73–78",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 98,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 1,
+  "date": "2008.01.23",
+  "title": "A Prevenient Voltage Stress Test Method for High Density Memory",
+  "authors": [
+   "Jongsoo Yim",
+   "Gunbae kim",
+   "Incheol Nam",
+   "Sangki Son",
+   "Jonghyoung Lim",
+   "Hwacheol Lee",
+   "Sangseok Kang",
+   "Byungheon Kwak",
+   "Jinseok Lee",
+   "Sungho Kang"
+  ],
+  "conference": "4th  International Symposium on Electronic Design, Test and Applications (DELTA 2008)",
+  "pages": "516–520",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 97,
+  "type": "international-conference",
+  "year": 2008,
+  "month": 1,
+  "date": "2008.01.21",
+  "title": "A New Low Energy BIST Using A Statistical Code",
+  "authors": [
+   "Sunghoon Chun",
+   "Taejin Kim",
+   "Sungho Kang"
+  ],
+  "conference": "13th Asia and South Pacific Design Automation Conference (ASP-DAC 2008)",
+  "pages": "647–652",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 96,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "SA-Based Test Time Optimization for SoCs Using Networks-on-Chip",
+  "authors": [
+   "Jin-ho Ahn",
+   "Hyunjin Kim",
+   "Youngho Park",
+   "Hong-Sik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "4th Conference on New Exploratory Technologies",
+  "pages": "464–467",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 95,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "A New LFSR Reseeding based Test Compression Scheme by Virtual Reduction of Smax",
+  "authors": [
+   "Hong-Sik Kim",
+   "Hyunjin Kim",
+   "Jin-ho Ahn",
+   "Sungho Kang"
+  ],
+  "conference": "4th Conference on New Exploratory Technologies",
+  "pages": "83–86",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 94,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "Power-Aware Task Scheduling for Dynamic Voltage Selection and Power Management for Multiprocessors",
+  "authors": [
+   "Hyunjin Kim",
+   "Jin-ho Ahn",
+   "Hong-Sik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "4th Conference on New Exploratory Technologies",
+  "pages": "165–169",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 93,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "An Efficient BIST Architecture for Embedded Dual-Port Memories",
+  "authors": [
+   "Youngkyu Park",
+   "Myung-Hoon Yang",
+   "Yongjoon Kim",
+   "DaeYeal Lee",
+   "Hyunjun Yoon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "157–160",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 92,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "A Compilation System Development for Regular Reconfigurable Architecture using Abstract Graph Model",
+  "authors": [
+   "Hyunjin Kim",
+   "Hyejeong Hong",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference Chip Design Contest",
+  "pages": "259–262",
+  "location": "Jeju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 91,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "An Improved False Aggressor Pruning Algorithm for an Effective Crosstalk Test",
+  "authors": [
+   "Hyungjun Cho",
+   "Kyungmin Kim",
+   "Youbean Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference Chip Design Contest",
+  "pages": "337–340",
+  "location": "New Delhi, India",
+  "organizer": "Test Technology Technical Council"
+ },
+ {
+  "id": 90,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "An Efficient BIST (Built-in Self-test) for A/D converters",
+  "authors": [
+   "Kicheol Kim",
+   "Youbean Kim",
+   "Incheol Kim",
+   "Hyeonuk Son",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference Chip Design Contest",
+  "pages": "614–615",
+  "location": "Jeju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 89,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "A New Low Power BIST Architecture Based on Probability Models",
+  "authors": [
+   "HyeonUk Son",
+   "Youbean Kim",
+   "Kicheol Kim",
+   "Incheol Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "153–156",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 88,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "A Multiple Fault Diagnosis Method Based on a Single Fault Simulation",
+  "authors": [
+   "Yoseop Lim",
+   "Joohwan Lee",
+   "Eunsei Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "149–152",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 87,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "A Hybrid Binary Search Scheme for IP Address Lookup",
+  "authors": [
+   "Hyuntae Park",
+   "Hyun-Sik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "229–232",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 86,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "LFSR Reseeding Methodology for Low Power, Deterministic Pattern",
+  "authors": [
+   "Myung-Hoon Yang",
+   "Yongjoon Kim",
+   "Youngkyu Park",
+   "Daeyeal Lee",
+   "Hyunjun Yoon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 85,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "A Novel Symbolic Simulation for Scan Chain Diagnosis",
+  "authors": [
+   "Sunghoon Chun",
+   "Taejin Kim",
+   "Eunsei Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "333–336",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 84,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "Built-in Self-test for A/D Converters in the Presence of Transient Zones",
+  "authors": [
+   "Incheol Kim",
+   "Kicheol Kim",
+   "Youbean Kim",
+   "HyeonUk Son",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2007)",
+  "pages": "145–148",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 83,
+  "type": "international-conference",
+  "year": 2007,
+  "month": 10,
+  "date": "2007.10",
+  "title": "High-MDSI: A High-level Signal Integrity Fault Test Pattern Generation Method \nfor Interconnects",
+  "authors": [
+   "Sunghoon Chun",
+   "Yongjoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2007",
+  "pages": "115–118",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 82,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 11,
+  "date": "2006.11",
+  "title": "An Effective Test Pattern Generation for Signal Integrity",
+  "authors": [
+   "Yongjoon Kim",
+   "Myung-Hoon Yang",
+   "Youngkyu Park",
+   "DaeYeal Lee",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2006",
+  "pages": "279–284",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 81,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 11,
+  "date": "2006.11",
+  "title": "TOSCA: Total Scan Power Reduction Architecture \nbased on Pseudo-Random Built-in Self Test Structure",
+  "authors": [
+   "Youbean Kim",
+   "Dongsup Song",
+   "Kicheol Kim",
+   "Incheol Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2006",
+  "pages": "17–22",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 80,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "Regular Mapping Methodology on Network on Chip for Heterogeneous Tasking Environment",
+  "authors": [
+   "Hyunjin Kim",
+   "Hyejeong Hong",
+   "Sungho Kang",
+   "Byung In Moon"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "311–314",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 79,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "DTMW: Duplicated Transition Monitoring Window for Low Power Test based on Pseudo-Random BIST",
+  "authors": [
+   "Youbean Kim",
+   "Dongsup Song",
+   "Kicheol Kim",
+   "Incheol Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "61–64",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 78,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "A New Efficient Binary Search on Range for IP address Lookup",
+  "authors": [
+   "Hyun-Sik Kim",
+   "Hyuntae Park",
+   "Daein Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "39–42",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 77,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "An Efficient Operation Mapping Scheme on Hypercube-based Coprocessors with Reconfigurable Datapath",
+  "authors": [
+   "Hyejeong Hong",
+   "Hyunjin Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "383–386",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 76,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "An Efficient Diagnosis Method using Pattern Comparison",
+  "authors": [
+   "Hyungjun Cho",
+   "Joohwan Lee",
+   "Yoseop Lim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "285–288",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 75,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "A Partitioned Binary Search Scheme on Multiple Trees for Efficient IP Address Lookup",
+  "authors": [
+   "Hyuntae Park",
+   "Byung In Moon",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "47–50",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 74,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "An Accurate Matching Algorithm with essential factors for Fault Diagnosis",
+  "authors": [
+   "Joohwan Lee",
+   "Yoseop Lim",
+   "Hyungjun Cho",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "301–304",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 73,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "A Fault Tolerant Carry Select Adder with Modular Self Checking Scheme",
+  "authors": [
+   "Gunbae Kim",
+   "IlWoong Kim",
+   "Ilgweon Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "289–292",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 72,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "Delay Testing Considering Sub-Aggressor Effects",
+  "authors": [
+   "Minjoo Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "181–184",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 71,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "A New BIST Architecture for Word Oriented Memory",
+  "authors": [
+   "IlWoong Kim",
+   "Gunbae Kim",
+   "Ilgweon Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "73–77",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 70,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "Accelerated Multi-phase Packet Classification Architecture Using Internal Buffer",
+  "authors": [
+   "Daein Kang",
+   "Hyun-Sik Kim",
+   "Hyuntae Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "55–58",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 69,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "A Functional Pattern Generation Method For Faulty Scan Chain Diagnosis",
+  "authors": [
+   "Mingyu Sim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "77–81",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 68,
+  "type": "international-conference",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "An Optimal Diagnosis Algorithm for Dual-Port Memories",
+  "authors": [
+   "Youngkyu Park",
+   "Myung-Hoon Yang",
+   "Yongjoon Kim",
+   "DaeYeal Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2006)",
+  "pages": "297–300",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 67,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 12,
+  "date": "2005.12",
+  "title": "A New Low Power Test Pattern Generator \nusing a Transition Monitoring Window based on BIST Architecture",
+  "authors": [
+   "Youbean Kim",
+   "Myung-Hoon Yang",
+   "Yong Lee",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2005",
+  "pages": "230–235",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 66,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 10,
+  "date": "2005.10",
+  "title": "A Nested Loop-Level Parallelism for DSP in Reconfigurable Computing using Forward Scheduling",
+  "authors": [
+   "HyunJin Kim",
+   "Sung-il Bae",
+   "Hyuntae Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2005)",
+  "pages": "52–55",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 65,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 10,
+  "date": "2005.10",
+  "title": "A New Hardware Efficient Interconnect BIST",
+  "authors": [
+   "Daeyeal Lee",
+   "Yongjoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2005)",
+  "pages": "178–181",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 64,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 10,
+  "date": "2005.10",
+  "title": "An Efficient Processor Architecture for Digital Signal Processing using Registered Logic",
+  "authors": [
+   "Sung-il Bae",
+   "HyunJin Kim",
+   "Hyuntae Park",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2005)",
+  "pages": "48–51",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 63,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 10,
+  "date": "2005.10",
+  "title": "Efficient Test Data Compression Using Transition Directed Run-length Code in System-on-a-Chip",
+  "authors": [
+   "Yong Lee",
+   "Myung-Hoon Yang",
+   "Yongjoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2005)",
+  "pages": "182–185",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 62,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 10,
+  "date": "2005.10",
+  "title": "Layout-aware Low Power Test Pattern Generation",
+  "authors": [
+   "Yongjoon Kim",
+   "Sunghoon Chun",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2005)",
+  "pages": "169–173",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 61,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 7,
+  "date": "2005.07",
+  "title": "An Efficient Test Scheduling Algorithm in Networks on Chip Architecture",
+  "authors": [
+   "Jin-Ho Ahn",
+   "Byung In Moon",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2005)",
+  "pages": "1383–1384",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 60,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 7,
+  "date": "2005.07",
+  "title": "An Immunotronic Approach for Hardware Fault Detection and its Application to the Design of Stigmergy Engine",
+  "authors": [
+   "Sanghyung Lee",
+   "Gunbae Kim",
+   "Euntai Kim",
+   "Hyekyung Cho",
+   "Hongil Yoon",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2005)",
+  "pages": "707–708",
+  "location": "Busan, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 59,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 7,
+  "date": "2005.07",
+  "title": "Efficient Test Point Selection using Multi-Objective Genetic Algorithms with Biological Kronecker Delta Evolution",
+  "authors": [
+   "Jaehun Lee",
+   "Jin-Ho Ahn",
+   "Euntai Kim",
+   "Hyekyung Cho",
+   "Hongil Yoon",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2005)",
+  "pages": "269–270",
+  "location": "Tokyo, Japan",
+  "organizer": "IEEE GCCE"
+ },
+ {
+  "id": 58,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 7,
+  "date": "2005.07",
+  "title": "An Effective Metric for System survivability",
+  "authors": [
+   "Jin-Ho Ahn",
+   "Euntai Kim",
+   "Hyekyung Cho",
+   "Hongil Yoon",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2005)",
+  "pages": "29–30",
+  "location": "Penang, Malaysia",
+  "organizer": "Selangor Human Resource Development Centre (SHRDC)"
+ },
+ {
+  "id": 57,
+  "type": "international-conference",
+  "year": 2005,
+  "month": 7,
+  "date": "2005.07",
+  "title": "Deterministic BIST Based on a Clustered Reconfigurable Interconnection Network",
+  "authors": [
+   "Dongsub Song",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/System, Computers and Communications\n(ITC-CSCC 2005)",
+  "pages": "9–10",
+  "location": "The Ocean Resort, Yeosu, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 56,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 11,
+  "date": "2004.11",
+  "title": "RAIN :RAndomINsertion Scheduling Algorithm for SoC Test",
+  "authors": [
+   "Jung-Been Im",
+   "Sunghoon Chun",
+   "Geunbae Kim",
+   "Jin-Ho An",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2004",
+  "pages": "242–247",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 55,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 10,
+  "date": "2004.10",
+  "title": "An Efficient Matching Algorithm Based on the Number of Primary Outputs",
+  "authors": [
+   "Joo-Hwan Lee",
+   "Hong-Sik Kim",
+   "Yo-Seop Lim",
+   "Sungho Kang"
+  ],
+  "conference": "IT-SoC Conference 2004",
+  "pages": "688–691",
+  "location": "Gyeongju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 54,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 10,
+  "date": "2004.10",
+  "title": "Creating a Small Dictionary for Maximal Diagnosis",
+  "authors": [
+   "Sunghoon Chun",
+   "Sangwook Kim",
+   "Hongjoon Kim",
+   "Sungho Kang"
+  ],
+  "conference": "IT-SoC Conference 2004",
+  "pages": "309–316",
+  "location": "Gyeongju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 53,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 10,
+  "date": "2004.10",
+  "title": "Analsis of Impact of Simultaneous Multithreading on Cache Interference",
+  "authors": [
+   "ByungIn Moon",
+   "Ilgu Yun",
+   "Hongil Yun",
+   "Sungho Kang"
+  ],
+  "conference": "International SoC Design Conference (ISOCC 2004)",
+  "pages": "535–538",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 52,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 10,
+  "date": "2004.10",
+  "title": "A cost-effective concurrent control flow checking scheme using loop detection and prediction",
+  "authors": [
+   "Gunbae Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2004)",
+  "pages": "384–387",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 51,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 10,
+  "date": "2004.10",
+  "title": "Increasing Encording Efficiency in LFSR Reseeding Based Test Compression",
+  "authors": [
+   "Hongsik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2004)",
+  "pages": "376–379",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 50,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 10,
+  "date": "2004.10",
+  "title": "An Efficient hardware Implementation of Adaptive Packet Routing Based on Ant Algorithm",
+  "authors": [
+   "Jinho Ahn",
+   "sungho Kang"
+  ],
+  "conference": "International SOC Design Conference (ISOCC 2004)",
+  "pages": "252–255",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 49,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 8,
+  "date": "2004.08",
+  "title": "An Efficient All-Digital Built-In Self-Test for Chargepump PLL",
+  "authors": [
+   "Junseok Han",
+   "Dongsup Song",
+   "Sungho Kang"
+  ],
+  "conference": "Asia-Pacific Conference on ASIC (AP-ASIC)",
+  "pages": "80–83",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 48,
+  "type": "international-conference",
+  "year": 2004,
+  "month": 2,
+  "date": "2004.02",
+  "title": "Route Reinforcement for Efficient QoS Routing Based on Ant Algorithm",
+  "authors": [
+   "Jae Seuk Oh",
+   "Sung-il Bae",
+   "Jin-ho Ahn",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on Information Networking (ICOIN 2004)",
+  "pages": "75–85",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 47,
+  "type": "international-conference",
+  "year": 2003,
+  "month": 11,
+  "date": "2003.11",
+  "title": "VLSI Design of AntNet for Adaptive Network Routing",
+  "authors": [
+   "Jin-Ho Ahn",
+   "Jae Seuk Oh",
+   "Sungho Kang"
+  ],
+  "conference": "Asia Pacific System on a Chip (AP-SOC 2002)",
+  "pages": "15",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 46,
+  "type": "international-conference",
+  "year": 2003,
+  "month": 9,
+  "date": "2003.09",
+  "title": "A New Maximal Diagnosis Algorithm for Bus-structured Systems",
+  "authors": [
+   "Yongjun Kim",
+   "Dongsup Song",
+   "Yongseung Shin",
+   "Sunghoon Jun",
+   "Sungho Kang"
+  ],
+  "conference": "International Test Conference (ITC 2003)",
+  "pages": "349–357",
+  "location": "Seoul, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 45,
+  "type": "international-conference",
+  "year": 2002,
+  "month": 11,
+  "date": "2002.11",
+  "title": "DPSC SRAM Transparent Test Algorithms",
+  "authors": [
+   "Hongsik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Asian Test Symposium 2002",
+  "pages": "145–150",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 44,
+  "type": "international-conference",
+  "year": 2002,
+  "month": 11,
+  "date": "2002.11",
+  "title": "A Survival Architecture for Reconfigurable SoC",
+  "authors": [
+   "Gilyoung Kang",
+   "Sungchul Yoon",
+   "Geunbae Kim",
+   "Sungho Kang"
+  ],
+  "conference": "Asia Pacific System on a Chip (AP-SOC 2002)",
+  "pages": "179–183",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 43,
+  "type": "international-conference",
+  "year": 2002,
+  "month": 11,
+  "date": "2002.11",
+  "title": "A New Maximal Diagnosis Algorithm for SoC Interconnects",
+  "authors": [
+   "Yongjun Kim",
+   "Dongsup Song",
+   "Yongseung Shin",
+   "Sunghoon Jun",
+   "Sungho Kang"
+  ],
+  "conference": "Asia Pacific System on a Chip (AP-SOC 2002)",
+  "pages": "166–170",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 42,
+  "type": "international-conference",
+  "year": 2001,
+  "month": 11,
+  "date": "2001.11",
+  "title": "Control-Theoretic MAX-MIN Flow Control with Minimum Rate Guarantee",
+  "authors": [
+   "Sungho Kang",
+   "Song Jung",
+   "Sang-Ho Lee"
+  ],
+  "conference": "Global Telecommunications Conference (GLOBECOM 2001)",
+  "pages": "2412–2418",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 41,
+  "type": "international-conference",
+  "year": 2001,
+  "month": 10,
+  "date": "2001.10",
+  "title": "A New Multiple Weight Set Calculation Algorithm",
+  "authors": [
+   "Hong-Sik Kim",
+   "Jin-Kyue Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Test Conference (ITC 2001)",
+  "pages": "878–884",
+  "location": "Santa Clara, California, USA",
+  "organizer": "International Society for Quality Electronic Design"
+ },
+ {
+  "id": 40,
+  "type": "international-conference",
+  "year": 2001,
+  "month": 9,
+  "date": "2001.09",
+  "title": "A Heuristic for Multiple Weight Set Generation",
+  "authors": [
+   "Hong-Sik Kim",
+   "Jin-Kyue Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on Computer Design",
+  "pages": "513–514",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 39,
+  "type": "international-conference",
+  "year": 2001,
+  "month": 9,
+  "date": "2001.09",
+  "title": "An Efficient ABR Service Engine for ATM Network",
+  "authors": [
+   "Young-In Choi",
+   "Sungho Kang",
+   "Song Jung"
+  ],
+  "conference": "ASIC/SOC Conference",
+  "pages": "261–265",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 38,
+  "type": "international-conference",
+  "year": 2000,
+  "month": 8,
+  "date": "2000.08",
+  "title": "A 0.35-um CMOS Low Noise VGA",
+  "authors": [
+   "Kyuyoung Chung",
+   "Gunhee Han",
+   "Sungho Kang"
+  ],
+  "conference": "Asia-Pacific Conference on ASIC (AP-ASIC)",
+  "pages": "5–8",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 37,
+  "type": "international-conference",
+  "year": 2000,
+  "month": 8,
+  "date": "2000.08",
+  "title": "Test Methodology for Low Power SRAM's",
+  "authors": [
+   "Hong-Sik Kim",
+   "Ilseok Suh",
+   "Sungho Kang",
+   "Gunhee Han"
+  ],
+  "conference": "Asia-Pacific Conference on ASIC (AP-ASIC)",
+  "pages": "277–280",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 36,
+  "type": "international-conference",
+  "year": 2000,
+  "month": 8,
+  "date": "2000.08",
+  "title": "Testability Strategy and DFT Methodology of CalmRISC32",
+  "authors": [
+   "Hong-sik Kim",
+   "Ilseok Suh",
+   "Sungho Kang",
+   "Gunhee Han"
+  ],
+  "conference": "Asia-Pacific Conference on ASIC (AP-ASIC)",
+  "pages": "295–298",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 35,
+  "type": "international-conference",
+  "year": 2000,
+  "month": 2,
+  "date": "2000.02",
+  "title": "Delay Test for System on Chip",
+  "authors": [
+   "Sungho Kang"
+  ],
+  "conference": "Semicon Korea 2000",
+  "pages": "299–327",
+  "location": "Mumbai, India",
+  "organizer": "Test Technology Technical Council"
+ },
+ {
+  "id": 34,
+  "type": "international-conference",
+  "year": 1999,
+  "month": 10,
+  "date": "1999.10",
+  "title": "Dynamic Power Supply Current Test For CMOS SRAM",
+  "authors": [
+   "Do Hyun Yoon",
+   "Hongsik Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on VLSI and CAD",
+  "pages": "399–402",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 33,
+  "type": "international-conference",
+  "year": 1999,
+  "month": 10,
+  "date": "1999.10",
+  "title": "An Efficient Interconnect Test Using BIST Module In A Boundary-Scan Environment",
+  "authors": [
+   "Hyun-Jin Kim",
+   "Jongcheol Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on Computer Design",
+  "pages": "328–329",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 32,
+  "type": "international-conference",
+  "year": 1999,
+  "month": 10,
+  "date": "1999.10",
+  "title": "A New Weight Set Generation Algorithm for Weighted Random Pattern Generation",
+  "authors": [
+   "Hangkyu Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on Computer Design",
+  "pages": "160–165",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 31,
+  "type": "international-conference",
+  "year": 1999,
+  "month": 8,
+  "date": "1999.08",
+  "title": "New Scan Design of Asynchronous Sequential Circuits",
+  "authors": [
+   "Yong Seok Kang",
+   "Kyung-Hoi Hur",
+   "Sungho Kang"
+  ],
+  "conference": "Asia-Pacific Conference on ASIC (AP-ASIC)",
+  "pages": "355–358",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 30,
+  "type": "international-conference",
+  "year": 1999,
+  "month": 3,
+  "date": "1999.03",
+  "title": "At-Speed Boundary-Scan Interconnect Testing in a Board with Multiple System Clocks",
+  "authors": [
+   "Jongcheol Shin",
+   "Hyun-Jin Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on Design Automation and Test",
+  "pages": "473–477",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 29,
+  "type": "international-conference",
+  "year": 1998,
+  "month": 7,
+  "date": "1998.07",
+  "title": "Weight Set Optimization for Weighted Random Pattern Generation",
+  "authors": [
+   "Hangkyu Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/Systems, Computers and Communications\n(ITC-CSCC 1998)",
+  "pages": "1401–1404",
+  "location": "Santa Clara, California, USA",
+  "organizer": "International Society for Quality Electronic Design"
+ },
+ {
+  "id": 28,
+  "type": "international-conference",
+  "year": 1998,
+  "month": 7,
+  "date": "1998.07",
+  "title": "The Split Walking One Sequence for Wiring Interconnects",
+  "authors": [
+   "Hyun-Jin Kim",
+   "Jongcheol Shin",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/Systems, Computers and Communications\n(ITC-CSCC 1998)",
+  "pages": "1329–1332",
+  "location": "Jeju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 27,
+  "type": "international-conference",
+  "year": 1998,
+  "month": 7,
+  "date": "1998.07",
+  "title": "A New BIST for Diagnosis and Transparent Testing in High Density SRAMs",
+  "authors": [
+   "Myung-Hoon Yang",
+   "Jong Cheol Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/Systems, Computers and Communications\n(ITC-CSCC 1998)",
+  "pages": "1317–1320",
+  "location": "Jeju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 26,
+  "type": "international-conference",
+  "year": 1997,
+  "month": 10,
+  "date": "1997.10",
+  "title": "An Efficient BIST Architecture For Boards With Multiple Scan Chains",
+  "authors": [
+   "Yong Tae Yim",
+   "Hyun-Jin Kim",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on VLSI and CAD",
+  "pages": "367–369",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 25,
+  "type": "international-conference",
+  "year": 1997,
+  "month": 10,
+  "date": "1997.10",
+  "title": "A Memory-Based Pipelined Architecture For Blocking Effect Removal In HDTV",
+  "authors": [
+   "Jae-Wook Lee",
+   "Myung-Hoon Yang",
+   "Sungho Kang",
+   "Yoonsik Choe"
+  ],
+  "conference": "International Conference on VLSI and CAD",
+  "pages": "481–483",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 24,
+  "type": "international-conference",
+  "year": 1997,
+  "month": 10,
+  "date": "1997.10",
+  "title": "Built-In Self Test For High Density SRAMS",
+  "authors": [
+   "Yong Seok Kang",
+   "Jong Cheol Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on VLSI and CAD",
+  "pages": "52–54",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 23,
+  "type": "international-conference",
+  "year": 1997,
+  "month": 10,
+  "date": "1997.10",
+  "title": "Built-In Self Test for Content Addressable Memories",
+  "authors": [
+   "Yong Seok Kang",
+   "Jong Cheol Lee",
+   "Sungho Kang"
+  ],
+  "conference": "International Conference on Computer Design",
+  "pages": "48–53",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 22,
+  "type": "international-conference",
+  "year": 1997,
+  "month": 9,
+  "date": "1997.09",
+  "title": "Efficient Redundancy Identification for Test Pattern Generation",
+  "authors": [
+   "Sang Yoon Han",
+   "Sungho Kang"
+  ],
+  "conference": "International ASIC conference",
+  "pages": "52–56",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 21,
+  "type": "international-conference",
+  "year": 1997,
+  "month": 6,
+  "date": "1997.06",
+  "title": "A Parallel Test Algorithm for Pattern Sensitive Faults \nin Semiconductor Random Access Memories",
+  "authors": [
+   "Jong Cheol Lee",
+   "Yong Seok Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International Symposium on Circuits and Systems",
+  "pages": "2721–2724",
+  "location": "The Ocean Resort, Yeosu, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 20,
+  "type": "international-conference",
+  "year": 1996,
+  "month": 12,
+  "date": "1996.12",
+  "title": "Efficient Simulation Model Generation Using Automatic Programming Techniques",
+  "authors": [
+   "Jae-Wook Lee",
+   "Sungho Kang"
+  ],
+  "conference": "SCS Winter Simulation Conference",
+  "pages": "708–713",
+  "location": "Gyeongju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 19,
+  "type": "international-conference",
+  "year": 1996,
+  "month": 9,
+  "date": "1996.09",
+  "title": "An Efficient Path-Delay Fault Simulator for Mixed Level Circuits",
+  "authors": [
+   "Yong Seok Kang",
+   "Yong Tae Yim",
+   "Sungho Kang"
+  ],
+  "conference": "International ASIC Conference",
+  "pages": "263–266",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 18,
+  "type": "international-conference",
+  "year": 1996,
+  "month": 9,
+  "date": "1996.09",
+  "title": "Sampling Based Design Verification Using Design Error Models",
+  "authors": [
+   "Sungho Kang"
+  ],
+  "conference": "International ASIC Conference",
+  "pages": "197–200",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 17,
+  "type": "international-conference",
+  "year": 1996,
+  "month": 7,
+  "date": "1996.07",
+  "title": "An Efficient Method of Path-Delay Test Generation For Standard Scan Designs",
+  "authors": [
+   "Young Seok Kang",
+   "Sungho Kang"
+  ],
+  "conference": "International Technical Conference on Circuits/Systems, Computers and Communications\n(ITC-CSCC 1996)",
+  "pages": "887–890",
+  "location": "Jeju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 16,
+  "type": "international-conference",
+  "year": 1995,
+  "month": 9,
+  "date": "1995.09",
+  "title": "Single Chip Array Processor for High Performance Design Error Simulation",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "International ASIC Conference",
+  "pages": "338–341",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 15,
+  "type": "international-conference",
+  "year": 1995,
+  "month": 8,
+  "date": "1995.08",
+  "title": "A New Design Error Simulation Tool Based On Error Modeling And Sampling Techniques",
+  "authors": [
+   "Youngmin Hur",
+   "Stephen A. Szygenda",
+   "Sungho Kang",
+   "S. Shaylaja"
+  ],
+  "conference": "IMACS European Simualtion Conference on Simulation Tools and Applications",
+  "pages": "179–185",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 14,
+  "type": "international-conference",
+  "year": 1995,
+  "month": 6,
+  "date": "1995.06",
+  "title": "Automatic Code Generation for Simulators using Domain Specific Automatic Programming Techniques",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda",
+   "Youngmin Hur"
+  ],
+  "conference": "International Conference on Applied Modeling, Simulation and Optimization",
+  "pages": "221–226",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 13,
+  "type": "international-conference",
+  "year": 1995,
+  "month": 1,
+  "date": "1995.01",
+  "title": "Massively Parallel Array Processor for Logic, Fault, and Design Error Simulation",
+  "authors": [
+   "Youngmin Hur",
+   "Stephen A. Szygenda",
+   "Scott Fehr",
+   "Gransville Ott. Sungho Kang"
+  ],
+  "conference": "International Symp. on High Performance Computer Architecture",
+  "pages": "340–347",
+  "location": "Taipei, Taiwan",
+  "organizer": "Components, Packaging and Manufacturing Technology Society(CPMT)"
+ },
+ {
+  "id": 12,
+  "type": "international-conference",
+  "year": 1995,
+  "month": 1,
+  "date": "1995.01",
+  "title": "High Performance Fault Simulation Using A New Hardware Accelerator",
+  "authors": [
+   "Youngmin Hur",
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "International Conference on Electronic Hardware Description Languages",
+  "pages": "108–112",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 11,
+  "type": "international-conference",
+  "year": 1994,
+  "month": 10,
+  "date": "1994.10",
+  "title": "Path-Delay Fault Simulation for a Standard Scan Design Methodology",
+  "authors": [
+   "Sungho Kang",
+   "Bill Underwood",
+   "On Law"
+  ],
+  "conference": "International Conference on Computer Design",
+  "pages": "359–362",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 10,
+  "type": "international-conference",
+  "year": 1994,
+  "month": 10,
+  "date": "1994.10",
+  "title": "Fastpath: A Path-Delay Test Generator for Standard Scan Designs",
+  "authors": [
+   "Bill Underwood",
+   "Sungho Kang",
+   "On Law",
+   "Haluk Konuk"
+  ],
+  "conference": "International Test Conference (ITC 1994)",
+  "pages": "154–163",
+  "location": "Santa Clara, California, USA",
+  "organizer": "International Society for Quality Electronic Design"
+ },
+ {
+  "id": 9,
+  "type": "international-conference",
+  "year": 1993,
+  "month": 11,
+  "date": "1993.11",
+  "title": "A Path-Delay Test Generator for Large VLSI Circuits",
+  "authors": [
+   "Bill Underwood",
+   "Sungho Kang",
+   "On Law"
+  ],
+  "conference": "International Conference on VLSI and CAD",
+  "pages": "368–371",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 8,
+  "type": "international-conference",
+  "year": 1993,
+  "month": 4,
+  "date": "1993.04",
+  "title": "Automatic VHDL Model Generation System",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "11th International Conference on Hardware Description Languages and Their Application",
+  "pages": "339–346",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 7,
+  "type": "international-conference",
+  "year": 1992,
+  "month": 10,
+  "date": "1992.10",
+  "title": "Modeling and Simulation of Design Errors",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "International Conference on Computer Design",
+  "pages": "443–446",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 6,
+  "type": "international-conference",
+  "year": 1992,
+  "month": 9,
+  "date": "1992.09",
+  "title": "New Design Error Modeling and Metrics for Design Validation",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "European Design Automation Conference",
+  "pages": "472–477",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 5,
+  "type": "international-conference",
+  "year": 1992,
+  "month": 9,
+  "date": "1992.09",
+  "title": "Automatic Error Pattern Generation For Design Error Detection In A Design Validation Simulation System",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "International ASIC Conference",
+  "pages": "533–536",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 4,
+  "type": "international-conference",
+  "year": 1992,
+  "month": 7,
+  "date": "1992.07",
+  "title": "Fast Logic Simulation For Design Verification Using A Non-Dominating SET Value 'S'",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "25th Summer Simulation Conference",
+  "pages": "235–239",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 3,
+  "type": "international-conference",
+  "year": 1992,
+  "month": 5,
+  "date": "1992.05",
+  "title": "Comparative Analysis of Error Simulation Algorithms for Design Validation",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "Modeling and Simulation Conference",
+  "pages": "2553–2564",
+  "location": "Gyeongju, Korea",
+  "organizer": "The Institute of Electronics Engineers of Korea (IEEK)"
+ },
+ {
+  "id": 2,
+  "type": "international-conference",
+  "year": 1991,
+  "month": 9,
+  "date": "1991.09",
+  "title": "AFMG: Automatic Functional Model Generation System for Digital Simulation",
+  "authors": [
+   "Changho Han",
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "International ASIC Conference",
+  "pages": "12–2.1–12–2.4",
+  "location": "",
+  "organizer": ""
+ },
+ {
+  "id": 1,
+  "type": "international-conference",
+  "year": 1991,
+  "month": 3,
+  "date": "1991.03",
+  "title": "MOVE: Model Verification System",
+  "authors": [
+   "Sungho Kang",
+   "Stephen A. Szygenda"
+  ],
+  "conference": "International Conference on Computers and Communications",
+  "pages": "762–768",
+  "location": "",
+  "organizer": ""
+ }
+]

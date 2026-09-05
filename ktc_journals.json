@@ -1,0 +1,123 @@
+[
+ {
+  "id": 9,
+  "type": "ktc-journal",
+  "year": 2009,
+  "title": "Programmable 메모리 Built-In Self-Test(BIST) 기술 동향",
+  "authors": [
+   "박영규",
+   "박기현",
+   "김일웅",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "2",
+  "issue": "3",
+  "pages": ""
+ },
+ {
+  "id": 8,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "Built-In Redundancy Anlysis 기술 동향",
+  "authors": [
+   "조형준",
+   "양명훈",
+   "윤현준",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "4",
+  "pages": "278–289"
+ },
+ {
+  "id": 7,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "테스트 입력 벡터 및 출력 데이터 압축 기술에 관한 조사",
+  "authors": [
+   "김홍식",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "4",
+  "pages": "250–253"
+ },
+ {
+  "id": 6,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "나노 공정에서의 수율향상을 위한 N-Detection 테스트",
+  "authors": [
+   "전성훈",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "4",
+  "pages": "202–253"
+ },
+ {
+  "id": 5,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "아날로그-디지털 변환기에 대한 테스트 기술 동향",
+  "authors": [
+   "김기철",
+   "김인철",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "3",
+  "pages": "196–201"
+ },
+ {
+  "id": 4,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "자체내장 테스트를 통한 저속 ATE에서의 고속 테스트 방안",
+  "authors": [
+   "정우식",
+   "김일웅",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "2",
+  "pages": "142–146"
+ },
+ {
+  "id": 3,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "Linemap을 이용한 고효율의 BIRA 알고리즘",
+  "authors": [
+   "한태우",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "2",
+  "pages": "120–124"
+ },
+ {
+  "id": 2,
+  "type": "ktc-journal",
+  "year": 2008,
+  "title": "An Efficient ATPG for Crosstalk-Induced Delay Faults",
+  "authors": [
+   "전성훈",
+   "김태진",
+   "김용준",
+   "양명훈",
+   "강성호"
+  ],
+  "journal": "한국반도체테스트학회지",
+  "volume": "1",
+  "issue": "2",
+  "pages": "106–111"
+ }
+]

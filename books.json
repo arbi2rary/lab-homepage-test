@@ -1,0 +1,510 @@
+[
+ {
+  "id": 32,
+  "type": "book",
+  "year": 2013,
+  "date": "2013.02.27",
+  "title": "나노 테크놀로지에서의 설계 방법론",
+  "authors": [
+   "홍성관",
+   "김주호",
+   "정의영",
+   "강성호"
+  ],
+  "publisher": "홍릉과학출판사",
+  "edition": "1st",
+  "isbn": "978-89-97570-78-2",
+  "in_library": true
+ },
+ {
+  "id": 31,
+  "type": "book",
+  "year": 2012,
+  "date": "2012.11.30",
+  "title": "고신뢰성 자동차 전자시스템 설계기술",
+  "authors": [
+   "박성주",
+   "강성호",
+   "백상현",
+   "안진호",
+   "이현빈",
+   "정용채",
+   "김동신",
+   "신외경",
+   "유수일",
+   "천범익",
+   "최성진"
+  ],
+  "publisher": "홍릉과학출판사",
+  "edition": "1st",
+  "isbn": "978-89-97570-50-8",
+  "in_library": true
+ },
+ {
+  "id": 30,
+  "type": "book",
+  "year": 2006,
+  "date": "2006.08.30",
+  "title": "전기전자기초실험",
+  "authors": [
+   "김재석",
+   "강성호",
+   "이상렬",
+   "윤홍일",
+   "박정욱"
+  ],
+  "publisher": "대영사",
+  "edition": "1st",
+  "isbn": "89-7163-287-9",
+  "in_library": true
+ },
+ {
+  "id": 29,
+  "type": "book",
+  "year": 2005,
+  "date": "2005.10.09",
+  "title": "아날로그/혼성모드 신호설계 가이드라인",
+  "authors": [
+   "김대정",
+   "송민규",
+   "강성호",
+   "이승준",
+   "이찬호"
+  ],
+  "publisher": "홍릉과학출판사",
+  "edition": "1st",
+  "isbn": "89-7283-515-3",
+  "in_library": true
+ },
+ {
+  "id": 28,
+  "type": "book",
+  "year": 2004,
+  "date": "2004.05.15",
+  "title": "I AM COMPUTER II",
+  "authors": [
+   "강성호",
+   "변혜란"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-5667-195-8",
+  "in_library": true
+ },
+ {
+  "id": 27,
+  "type": "book",
+  "year": 2004,
+  "date": "2004.05.15",
+  "title": "HDL을 이용한 SOC 및 IP 설계 기법",
+  "authors": [
+   "강성호",
+   "김대정",
+   "이승준",
+   "이찬호"
+  ],
+  "publisher": "홍릉과학출판사",
+  "edition": "1st",
+  "isbn": "89-7283-398-3",
+  "in_library": true
+ },
+ {
+  "id": 26,
+  "type": "book",
+  "year": 2003,
+  "date": "2003.02.27",
+  "title": "ASIC 설계실험",
+  "authors": [
+   "강성호",
+   "김재석",
+   "한건희",
+   "이문기",
+   "이용석"
+  ],
+  "publisher": "대영사",
+  "edition": "1st",
+  "isbn": "89-7163-220-8",
+  "in_library": true
+ },
+ {
+  "id": 25,
+  "type": "book",
+  "year": 2002,
+  "date": "2002.08.27",
+  "title": "VLSI 설계 실험",
+  "authors": [
+   "강성호",
+   "김재석",
+   "한건희"
+  ],
+  "publisher": "대영사",
+  "edition": "1st",
+  "isbn": "89-7163-204-6",
+  "in_library": true
+ },
+ {
+  "id": 24,
+  "type": "book",
+  "year": 2002,
+  "date": "2002.02.20",
+  "title": "PC Plus",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-88066-10-4",
+  "in_library": true
+ },
+ {
+  "id": 23,
+  "type": "book",
+  "year": 2002,
+  "date": "2002.01.25",
+  "title": "2002 Hello!! C언어",
+  "authors": [
+   "강성호",
+   "김학배",
+   "최우영"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "1st",
+  "isbn": "89-8000-059-6",
+  "in_library": true
+ },
+ {
+  "id": 22,
+  "type": "book",
+  "year": 2002,
+  "date": "2002.01.25",
+  "title": "2002 Hello!! Computer",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "1st",
+  "isbn": "89-8000-186-X",
+  "in_library": true
+ },
+ {
+  "id": 21,
+  "type": "book",
+  "year": 2001,
+  "date": "2001.09.01",
+  "title": "논리 회로 실험",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "개정증보판",
+  "isbn": "89-88066-01-4",
+  "in_library": true
+ },
+ {
+  "id": 20,
+  "type": "book",
+  "year": 2001,
+  "date": "2001.08.27",
+  "title": "I AM COMPUTER",
+  "authors": [
+   "강성호",
+   "변혜란"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-88066-16-2",
+  "in_library": true
+ },
+ {
+  "id": 19,
+  "type": "book",
+  "year": 2001,
+  "date": "2001.03.05",
+  "title": "Hello!! Computer",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "4th",
+  "isbn": "89-8000-073-1",
+  "in_library": true
+ },
+ {
+  "id": 18,
+  "type": "book",
+  "year": 2001,
+  "date": "2001.03.02",
+  "title": "메모리 테스트",
+  "authors": [
+   "강성호",
+   "김규철",
+   "소병세",
+   "홍성제"
+  ],
+  "publisher": "대영사",
+  "edition": "1st",
+  "isbn": "89-7163-151-1",
+  "in_library": true
+ },
+ {
+  "id": 17,
+  "type": "book",
+  "year": 2001,
+  "date": "2001.15",
+  "title": "Hello!! C 언어",
+  "authors": [
+   "강성호",
+   "김학배",
+   "최우영"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "2nd-3",
+  "isbn": "89-8000-059-6",
+  "in_library": true
+ },
+ {
+  "id": 16,
+  "type": "book",
+  "year": 2000,
+  "date": "2000.08.20",
+  "title": "Hello!! Computer",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "3rd",
+  "isbn": "89-8000-073-1",
+  "in_library": true
+ },
+ {
+  "id": 15,
+  "type": "book",
+  "year": 2000,
+  "date": "2000.02.05",
+  "title": "첫눈에 반한 공과대학",
+  "authors": [
+   "강성호외 44명 공대교수"
+  ],
+  "publisher": "김영사",
+  "edition": "1st",
+  "isbn": "89-349-0484-4",
+  "in_library": true
+ },
+ {
+  "id": 14,
+  "type": "book",
+  "year": 1999,
+  "date": "1999.09.01",
+  "title": "논리 회로 실험",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "개정판",
+  "isbn": "0-02-311601-3",
+  "in_library": true
+ },
+ {
+  "id": 13,
+  "type": "book",
+  "year": 1999,
+  "date": "1999.09.01",
+  "title": "시스템 설계를 위한 VHDL 기초와 응용",
+  "authors": [
+   "강성호",
+   "민형복",
+   "우종정",
+   "장훈",
+   "한창호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-88066-27-8",
+  "in_library": true
+ },
+ {
+  "id": 12,
+  "type": "book",
+  "year": 1999,
+  "date": "1999.03.10",
+  "title": "Hello!! Computer",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "2nd",
+  "isbn": "89-8000-073-1",
+  "in_library": true
+ },
+ {
+  "id": 11,
+  "type": "book",
+  "year": 1999,
+  "date": "1999.02.20",
+  "title": "디지탈 시스템 설계",
+  "authors": [
+   "강성호",
+   "민형복",
+   "우종정",
+   "장훈",
+   "한창호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-88066-17-0",
+  "in_library": true
+ },
+ {
+  "id": 10,
+  "type": "book",
+  "year": 1999,
+  "date": "1999.02.20",
+  "title": "디지탈 시스템 설계 및 VHDL",
+  "authors": [
+   "강성호",
+   "민형복",
+   "우종정",
+   "장훈",
+   "한창호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-88066-15-4",
+  "in_library": true
+ },
+ {
+  "id": 9,
+  "type": "book",
+  "year": 1999,
+  "date": "1999.01.25",
+  "title": "Hello!! C 언어",
+  "authors": [
+   "강성호",
+   "김학배",
+   "최우영"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "2nd",
+  "isbn": "89-8000-059-6",
+  "in_library": true
+ },
+ {
+  "id": 8,
+  "type": "book",
+  "year": 1998,
+  "date": "1998.09.01",
+  "title": "논리 회로 실험",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "0-02-311601-3",
+  "in_library": true
+ },
+ {
+  "id": 7,
+  "type": "book",
+  "year": 1998,
+  "date": "1998.03.20",
+  "title": "테스팅 및 테스팅을 고려한 설계",
+  "authors": [
+   "홍성제",
+   "박은세",
+   "강성호",
+   "최호용",
+   "장훈"
+  ],
+  "publisher": "홍릉과학출판사",
+  "edition": "1st",
+  "isbn": "89-7283-063-1",
+  "in_library": true
+ },
+ {
+  "id": 6,
+  "type": "book",
+  "year": 1998,
+  "date": "1998.02.15",
+  "title": "Hello!! Computer",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "1st",
+  "isbn": "89-8000-073-1",
+  "in_library": true
+ },
+ {
+  "id": 5,
+  "type": "book",
+  "year": 1998,
+  "date": "1998.02.10",
+  "title": "논리 회로 실험",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "인터비젼",
+  "edition": "1st",
+  "isbn": "89-88066-01-4",
+  "in_library": true
+ },
+ {
+  "id": 4,
+  "type": "book",
+  "year": 1997,
+  "date": "1997.08.20",
+  "title": "Hello!! C 언어",
+  "authors": [
+   "강성호",
+   "김학배",
+   "최우영"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "1st",
+  "isbn": "89-8000-059-6",
+  "in_library": true
+ },
+ {
+  "id": 3,
+  "type": "book",
+  "year": 1997,
+  "date": "1997.06.20",
+  "title": "컴퓨터 시스템 :하드웨어구조와 소프트웨어 운영",
+  "authors": [
+   "우광방",
+   "강성호"
+  ],
+  "publisher": "상조사",
+  "edition": "1st",
+  "isbn": "89-379-192-7",
+  "in_library": true
+ },
+ {
+  "id": 2,
+  "type": "book",
+  "year": 1997,
+  "date": "1997.02.25",
+  "title": "Hello!! Computer",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "1st",
+  "isbn": "89-8000-050-2",
+  "in_library": true
+ },
+ {
+  "id": 1,
+  "type": "book",
+  "year": 1996,
+  "date": "1996.03.01",
+  "title": "컴퓨터 입문",
+  "authors": [
+   "강성호"
+  ],
+  "publisher": "복두 출판사",
+  "edition": "1st",
+  "isbn": "89-8000-036-7",
+  "in_library": true
+ }
+]

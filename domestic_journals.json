@@ -1,0 +1,1764 @@
+[
+ {
+  "id": 91,
+  "type": "domestic-journal",
+  "year": 2013,
+  "month": 2,
+  "date": "2013.02",
+  "title": "IEEE 1500 표준 기반의 효율적인 프로그램 가능한 메모리 BIST",
+  "authors": [
+   "박영규",
+   "최인혁",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "50권 SD편",
+  "issue": "2호",
+  "pages": "404–411",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 90,
+  "type": "domestic-journal",
+  "year": 2012,
+  "month": 9,
+  "date": "2012.09",
+  "title": "비트맵 메모리 공유를 통해 면적을 크게 줄인 효율적인 수리 방법",
+  "authors": [
+   "조형준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "49권 SD편",
+  "issue": "9호",
+  "pages": "237–243",
+  "issn": "1229-6368",
+  "note": "제목수정"
+ },
+ {
+  "id": 89,
+  "type": "domestic-journal",
+  "year": 2012,
+  "month": 8,
+  "date": "2012.08",
+  "title": "이중 포트 메모리를 위한 효율적인 프로그램 가능한 메모리 BIST",
+  "authors": [
+   "박영규",
+   "한태우",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "49권 SD편",
+  "issue": "8호",
+  "pages": "55–62",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 88,
+  "type": "domestic-journal",
+  "year": 2012,
+  "month": 5,
+  "date": "2012.05",
+  "title": "아날로그-디지털 변환기의 정적 파라미터 테스트를 위한 내장 자체 테스트 방법",
+  "authors": [
+   "김인철",
+   "장재원",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "49권 SD편",
+  "issue": "5호",
+  "pages": "30–36",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 87,
+  "type": "domestic-journal",
+  "year": 2011,
+  "month": 7,
+  "date": "2011.07",
+  "title": "3차원 메모리의 수율 증진을 위해 접합 공정에서 발생하는 추가 고장을 고려한 다이 매칭 방법",
+  "authors": [
+   "이주환",
+   "박기현",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "48권 SD편",
+  "issue": "7호",
+  "pages": "30–36",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 86,
+  "type": "domestic-journal",
+  "year": 2010,
+  "month": 12,
+  "date": "2010.12",
+  "title": "불량 예비셀을 고려한 자체 내장 수리연산을 위한 분석 영역 가상화 방법",
+  "authors": [
+   "정우식",
+   "강우헌",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "47권 SD편",
+  "issue": "12호",
+  "pages": "24–30",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 85,
+  "type": "domestic-journal",
+  "year": 2010,
+  "month": 11,
+  "date": "2010.11",
+  "title": "최적 수리효율을 갖는 다중 블록 광역대체 수리구조 메모리를 위한 자체 내장 수리연산회로",
+  "authors": [
+   "정우식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "47권 SD편",
+  "issue": "11호",
+  "pages": "30–36",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 84,
+  "type": "domestic-journal",
+  "year": 2010,
+  "month": 8,
+  "date": "2010.08",
+  "title": "선호도 기반 최단경로 탐색을 위한 휴리스틱 융합 알고리즘",
+  "authors": [
+   "옥승호",
+   "안진호",
+   "강성호",
+   "문병인"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "47권 TC편",
+  "issue": "8호",
+  "pages": "74–84",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 83,
+  "type": "domestic-journal",
+  "year": 2010,
+  "month": 8,
+  "date": "2010.08",
+  "title": "내장된 자체 테스트를 위한 저전력 테스트 패턴 생성기 구조",
+  "authors": [
+   "김기철",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "47권 SD편",
+  "issue": "8호",
+  "pages": "29–35",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 82,
+  "type": "domestic-journal",
+  "year": 2009,
+  "month": 7,
+  "date": "2009.07",
+  "title": "멀티프로세서상의 에너지 소모를 고려한 동적 전압 스케일링 및 전력 셧다운을 이용한 태스크 스케줄링",
+  "authors": [
+   "김현진",
+   "홍혜정",
+   "김홍식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "46권 SD편",
+  "issue": "7호",
+  "pages": "22–28",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 81,
+  "type": "domestic-journal",
+  "year": 2009,
+  "month": 6,
+  "date": "2009.06",
+  "title": "리스트 스케줄링을 통한 Coarse-Grained 재구성 구조의 맵핑 알고리즘 개발",
+  "authors": [
+   "김현진",
+   "홍혜정",
+   "김홍식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "46권 SD편",
+  "issue": "6호",
+  "pages": "508–514",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 80,
+  "type": "domestic-journal",
+  "year": 2009,
+  "month": 5,
+  "date": "2009.05",
+  "title": "저전력 BIST를 위한 패턴 사상 기법에 관한 연구",
+  "authors": [
+   "김유빈",
+   "장재원",
+   "손현욱",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "46권 SD편",
+  "issue": "5호",
+  "pages": "411–420",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 79,
+  "type": "domestic-journal",
+  "year": 2009,
+  "month": 5,
+  "date": "2009.05",
+  "title": "테스트 시간과 테스트 전력 감소를 위한 선택적 세그먼트 바이패스 스캔 구조",
+  "authors": [
+   "양명훈",
+   "김용준",
+   "윤현준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "46권 SD편",
+  "issue": "5호",
+  "pages": "397–404",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 78,
+  "type": "domestic-journal",
+  "year": 2009,
+  "month": 3,
+  "date": "2009.03",
+  "title": "고속 고장 진단을 위해 고장 후보 정렬과 테스트 패턴 정렬을 이용한 고장 탈락 방법",
+  "authors": [
+   "이주환",
+   "임요섭",
+   "김홍식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "46권 SD편",
+  "issue": "3호",
+  "pages": "32–40",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 77,
+  "type": "domestic-journal",
+  "year": 2009,
+  "month": 3,
+  "date": "2009.03",
+  "title": "효율적인 LFSR 리시딩 기반의 테스트 압축 기법",
+  "authors": [
+   "김홍식",
+   "김현진",
+   "안진호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "46권 SD편",
+  "issue": "3호",
+  "pages": "26–31",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 76,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 10,
+  "date": "2008.10",
+  "title": "테스트 시간 및 데이터 압축을 위한 스캔 적용 기법",
+  "authors": [
+   "김용준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "10호",
+  "pages": "988–993",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 75,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 9,
+  "date": "2008.09",
+  "title": "명령어 분석기를 이용한 고속 메모리 테스트를 위한 병렬 ALPG",
+  "authors": [
+   "윤현준",
+   "양명훈",
+   "김용준",
+   "박영규",
+   "박재석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "9호",
+  "pages": "873–880",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 74,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 9,
+  "date": "2008.09",
+  "title": "천이 수정을 통한 고 성능 테스트 데이터 압축 기법",
+  "authors": [
+   "박재석",
+   "양명훈",
+   "김용준",
+   "박영규",
+   "윤현준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "9호",
+  "pages": "897–904",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 73,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 6,
+  "date": "2008.06",
+  "title": "스캔입력 변형기법을 통한 새로운 저전력 스캔 BIST 구조",
+  "authors": [
+   "손현욱",
+   "김유빈",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "6호",
+  "pages": "617–622",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 72,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 4,
+  "date": "2008.04",
+  "title": "규칙적인 NoC 구조에서의 네트워크 지연 시간 최소화를 위한 어플리케이션 코어 매핑 방법 연구",
+  "authors": [
+   "안진호",
+   "김홍식",
+   "김현진",
+   "박영호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "4호",
+  "pages": "443–449",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 71,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 3,
+  "date": "2008.03",
+  "title": "실시간 시공 노이즈 제거 시스템 구현\n(Implementation of a Real-Time Spatio-Temporal Noise Reduction System)",
+  "authors": [
+   "홍혜정",
+   "김현진",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SP편",
+  "issue": "2호",
+  "pages": "74–80",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 70,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 2,
+  "date": "2008.02",
+  "title": "SA 기법 응용 NoC 기반 SoC 테스트 시간 감소 방법",
+  "authors": [
+   "안진호",
+   "김홍식",
+   "김현진",
+   "박영호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "2호",
+  "pages": "163–169",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 69,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 1,
+  "date": "2008.01",
+  "title": "ACO를 이용한 저전력 ECC H-매트릭스 최적화 방안",
+  "authors": [
+   "이대열",
+   "양명훈",
+   "김용준",
+   "박영규",
+   "윤현준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "1호",
+  "pages": "43–49",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 68,
+  "type": "domestic-journal",
+  "year": 2008,
+  "month": 1,
+  "date": "2008.01",
+  "title": "Signal Integrity 연결선 테스트용 다중천이 패턴 생성방안",
+  "authors": [
+   "김용준",
+   "양명훈",
+   "박영규",
+   "이대열",
+   "윤현준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "45권 SD편",
+  "issue": "1호",
+  "pages": "14–19",
+  "issn": "1229-6368",
+  "note": ""
+ },
+ {
+  "id": 67,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 12,
+  "date": "2007.12",
+  "title": "A New Scan Chain Fault Simulation for Scan Chain Diagnosis",
+  "authors": [
+   "전성훈",
+   "김태진",
+   "박은세",
+   "강성호"
+  ],
+  "journal": "Journal of Semiconductor Technology and Science",
+  "volume": "7",
+  "issue": "",
+  "pages": "221–228",
+  "issn": "1598-1657",
+  "note": ""
+ },
+ {
+  "id": 66,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 12,
+  "date": "2007.12",
+  "title": "Sign Bit을 사용한 고효율의 메모리 자체 수리 회로 구조",
+  "authors": [
+   "강일권",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "44권 SD편",
+  "issue": "12호",
+  "pages": "1130–1137",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 65,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 11,
+  "date": "2007.11",
+  "title": "고장 대상 후보를 줄이기 위한 패턴 비교 알고리즘",
+  "authors": [
+   "조형준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "44권 SD편",
+  "issue": "11호",
+  "pages": "82–88",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 64,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 9,
+  "date": "2007.09",
+  "title": "내부 버퍼와 단일 엔트리 캐슁을 이용한 다단계 패킷 분류 가속화 구조",
+  "authors": [
+   "강대인",
+   "박현태",
+   "김현식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "44권 TC편",
+  "issue": "9호",
+  "pages": "38–45",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 63,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 4,
+  "date": "2007.04",
+  "title": "매칭에 기반한 발전된 고장 진단 방법",
+  "authors": [
+   "임요섭",
+   "강성호"
+  ],
+  "journal": "한국통신학회 논문지",
+  "volume": "32권 무선통신편",
+  "issue": "4호",
+  "pages": "379–386",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 62,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 2,
+  "date": "2007.02",
+  "title": "위상천이 네트워크를 사용한 X-마스크 기법",
+  "authors": [
+   "송동섭",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "44권 SD편",
+  "issue": "2호",
+  "pages": "127–137",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 61,
+  "type": "domestic-journal",
+  "year": 2007,
+  "month": 2,
+  "date": "2007.02",
+  "title": "이중 포트 메모리의 실제적인 고장을 고려한 효율적인 테스트 알고리즘",
+  "authors": [
+   "박영규",
+   "양명훈",
+   "김용준",
+   "이대열",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "44권 SD편",
+  "issue": "2호",
+  "pages": "72–85",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 60,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 10,
+  "date": "2006.10",
+  "title": "다양한 코어의 병렬 테스트를 지원하는 효과적인 SoC 테스트 구조",
+  "authors": [
+   "김현식",
+   "김용준",
+   "박현태",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "43권 SD편",
+  "issue": "10호",
+  "pages": "743–753",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 59,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 9,
+  "date": "2006.09",
+  "title": "다중 고착 진단을 위한 효율적인 고장 진단 알고리듬",
+  "authors": [
+   "임요섭",
+   "이주환",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "43권 SD편",
+  "issue": "9호",
+  "pages": "594–598",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 58,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 6,
+  "date": "2006.06",
+  "title": "BIST 환경에서의 천이 억제 스캔 셀 구조",
+  "authors": [
+   "김인철",
+   "송동섭",
+   "김유빈",
+   "김기철",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "43권 SD편",
+  "issue": "6호",
+  "pages": "404–411",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 57,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 5,
+  "date": "2006.05",
+  "title": "가변적인 복수해슁을 이용한 글로벌 IPv6 유니캐스트 주소 검색 구조",
+  "authors": [
+   "박현태",
+   "문병인",
+   "강성호"
+  ],
+  "journal": "한국통신학회 논문지",
+  "volume": "31권",
+  "issue": "5B호",
+  "pages": "378–389",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 56,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 5,
+  "date": "2006.05",
+  "title": "적응적인 복수해슁과 프리픽스그룹화를 이용한 고속",
+  "authors": [
+   "박현태",
+   "문병인",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "43권 TC편",
+  "issue": "5호",
+  "pages": "609–618",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 55,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 4,
+  "date": "2006.04",
+  "title": "효율적인 고장진단을 위한 딕셔너리 구조 개발",
+  "authors": [
+   "김상욱",
+   "김용준",
+   "전성훈",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "43권 SD편",
+  "issue": "4호",
+  "pages": "295–301",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 54,
+  "type": "domestic-journal",
+  "year": 2006,
+  "month": 1,
+  "date": "2006.01",
+  "title": "Rectangle Packing 방식 기반 NoC 테스트 스케쥴링",
+  "authors": [
+   "안진호",
+   "김근배",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "43권 SD편",
+  "issue": "1호",
+  "pages": "71–78",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 53,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 12,
+  "date": "2005.12",
+  "title": "결정론적 테스트 세트의 신호확률에 기반을 둔 \nclustered reconfigurable interconnection network 내장된 자체 테스트 기법",
+  "authors": [
+   "송동섭",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 SD편",
+  "issue": "12호",
+  "pages": "819–830",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 52,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 12,
+  "date": "2005.12",
+  "title": "루프 검출 및 예측 방법을 적용한 비용 효율적인 실시간 분기 흐름 검사 기법",
+  "authors": [
+   "김근배",
+   "안진호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 SD편",
+  "issue": "12호",
+  "pages": "831–842",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 51,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 9,
+  "date": "2005.09",
+  "title": "시드 병합을 통한 테스트 데이터의 압축방법",
+  "authors": [
+   "이민주",
+   "전성훈",
+   "김용준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 SD편",
+  "issue": "9호",
+  "pages": "583–592",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 50,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 8,
+  "date": "2005.08",
+  "title": "천이감시 윈도우를 이용한 새로운 저전력 LFSR 구조",
+  "authors": [
+   "김유빈",
+   "양명훈",
+   "이 용",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 SD편",
+  "issue": "8호",
+  "pages": "489–496",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 49,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 5,
+  "date": "2005.05",
+  "title": "네트워크 프로세서에 적합한 개선된 AntNet기반 라우팅 최적화기법",
+  "authors": [
+   "박현태",
+   "안진호",
+   "배성일",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 TC편",
+  "issue": "5호",
+  "pages": "325–334",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 48,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 3,
+  "date": "2005.03",
+  "title": "가변 길이의 다중 특성 다항식을 사용하는 LFSR을 이용한 새로운 Reseeding 방법",
+  "authors": [
+   "양명훈",
+   "김유빈",
+   "이용",
+   "박현태",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 SD편",
+  "issue": "3호",
+  "pages": "209–216",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 47,
+  "type": "domestic-journal",
+  "year": 2005,
+  "month": 2,
+  "date": "2005.02",
+  "title": "저전력 테스트를 고려한 효율적인 테스트 데이터 압축 방법",
+  "authors": [
+   "전성훈",
+   "임정빈",
+   "김근배",
+   "안진호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "42권 SD편",
+  "issue": "2호",
+  "pages": "151–160",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 46,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 11,
+  "date": "2004.11",
+  "title": "IR 기법을 이용한 효율적인 테스트 데이터 압축 방법",
+  "authors": [
+   "전성훈",
+   "임정빈",
+   "김근배",
+   "안진호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "11호",
+  "pages": "87–95",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 45,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 9,
+  "date": "2004.09",
+  "title": "SoC환경에서의 저전력 테스트를 고려한 테스트 패턴 압축에 대한 효율적인 알고리즘",
+  "authors": [
+   "신용승",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "9호",
+  "pages": "85–95",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 44,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 9,
+  "date": "2004.09",
+  "title": "SoC 테스트 시간 축소를 위한 새로운 내장 코어 기반 SoC 테스트 전략",
+  "authors": [
+   "강길영",
+   "김근배",
+   "임정빈",
+   "전성훈",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "9호",
+  "pages": "97–106",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 43,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 5,
+  "date": "2004.05",
+  "title": "이중 포트 메모리를 위한 효과적인 테스트와 진단 알고리즘",
+  "authors": [
+   "김지혜",
+   "김홍식",
+   "김상욱",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "5호",
+  "pages": "115–131",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 42,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 5,
+  "date": "2004.05",
+  "title": "순차 회로를 위한 효율적인 혼합 고장 진단 알고리즘",
+  "authors": [
+   "김지혜",
+   "이주환",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "5호",
+  "pages": "51–60",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 41,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 4,
+  "date": "2004.04",
+  "title": "SRAM 기반의 FPGA 연결선을 위한 고장 진단 알고리즘 개발",
+  "authors": [
+   "김용준",
+   "김지혜",
+   "전성훈",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "4호",
+  "pages": "113–122",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 40,
+  "type": "domestic-journal",
+  "year": 2004,
+  "month": 3,
+  "date": "2004.03",
+  "title": "패킷 방식 네트워크상의 적응적 경로 선정을 위한 군집체 특성 적용 하드웨어 구현",
+  "authors": [
+   "안진호",
+   "오재석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "41권 SD편",
+  "issue": "3호",
+  "pages": "71–81",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 39,
+  "type": "domestic-journal",
+  "year": 2003,
+  "month": 12,
+  "date": "2003.12",
+  "title": "Real-Time Application의 효과적인 QoS 라우팅을 위한 적응적 Route 선택 강화 방법",
+  "authors": [
+   "오재석",
+   "배성일",
+   "안진호",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "40권 TC편",
+  "issue": "12호",
+  "pages": "71–82",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 38,
+  "type": "domestic-journal",
+  "year": 2003,
+  "month": 8,
+  "date": "2003.08",
+  "title": "효율적인 혼합 BIST 방법",
+  "authors": [
+   "김현돈",
+   "신용승",
+   "김용준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "40권 SD편",
+  "issue": "8호",
+  "pages": "68–76",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 37,
+  "type": "domestic-journal",
+  "year": 2003,
+  "month": 7,
+  "date": "2003.07",
+  "title": "내장형 자체 테스트 패턴 생성을 위한 하드웨어 오버헤드 축소",
+  "authors": [
+   "김현돈",
+   "신용승",
+   "김용준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "40권 SD편",
+  "issue": "7호",
+  "pages": "58–63",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 36,
+  "type": "domestic-journal",
+  "year": 2003,
+  "month": 5,
+  "date": "2003.05",
+  "title": "고속 IP Lookup을 위한 병렬적인 하이브리드 구조의 설계",
+  "authors": [
+   "서대식",
+   "윤성철",
+   "오재석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "40권 SD편",
+  "issue": "5호",
+  "pages": "61–69",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 35,
+  "type": "domestic-journal",
+  "year": 2003,
+  "month": 1,
+  "date": "2003.01",
+  "title": "이중 포트 메모리를 위한 효과적인 테스트 알고리듬",
+  "authors": [
+   "김지혜",
+   "송동섭",
+   "배상민",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "40권 SD편",
+  "issue": "1호",
+  "pages": "72–79",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 34,
+  "type": "domestic-journal",
+  "year": 2003,
+  "month": 1,
+  "date": "2003.01",
+  "title": "SoC IP 간의 효과적인 연결 테스트를 위한 알고리듬 개발",
+  "authors": [
+   "김용준",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "40권 SD편",
+  "issue": "1호",
+  "pages": "61–71",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 33,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 11,
+  "date": "2002.11",
+  "title": "이웃 패턴 감응 고장을 위한 효과적인 메모리 테스트 알고리듬",
+  "authors": [
+   "서일석",
+   "강용석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "11호",
+  "pages": "44–52",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 32,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 8,
+  "date": "2002.08",
+  "title": "혼성 신호 회로에 대한 효과적인 BIST",
+  "authors": [
+   "방금환",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "8호",
+  "pages": "24–33",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 31,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 7,
+  "date": "2002.07",
+  "title": "패턴 집단 생성 방식을 사용한 내장형 자체 테스트 기법",
+  "authors": [
+   "강용석",
+   "김현돈",
+   "서일석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "7호",
+  "pages": "81–88",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 30,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 7,
+  "date": "2002.07",
+  "title": "내장된 자체 테스트 기법을 이용한 새로운 다중 클락 회로 테스트 방법론",
+  "authors": [
+   "서일석",
+   "강용석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "7호",
+  "pages": "74–80",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 29,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 5,
+  "date": "2002.05",
+  "title": "시스템 온 칩 테스트를 위한 효과적인 테스트 접근 구조",
+  "authors": [
+   "송동섭",
+   "배상민",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "5호",
+  "pages": "54–64",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 28,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 3,
+  "date": "2002.03",
+  "title": "이중 포트 메모리를 위한 고장진단 알고리듬",
+  "authors": [
+   "박한원",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "3호",
+  "pages": "20–33",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 27,
+  "type": "domestic-journal",
+  "year": 2002,
+  "month": 2,
+  "date": "2002.02",
+  "title": "고성능 32-bit DSP 코프로세서의 아키텍쳐 개발",
+  "authors": [
+   "윤성철",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "39권 SD편",
+  "issue": "2호",
+  "pages": "72–81",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 26,
+  "type": "domestic-journal",
+  "year": 2001,
+  "month": 8,
+  "date": "2001.08",
+  "title": "마이크로파이프라인 회로를 위한 지연 고장 테스트",
+  "authors": [
+   "강용석",
+   "허경회",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "38권 SD편",
+  "issue": "8호",
+  "pages": "592–604",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 25,
+  "type": "domestic-journal",
+  "year": 2001,
+  "month": 4,
+  "date": "2001.04",
+  "title": "고집적 메모리를 위한 효율적인 고장 진단 알고리듬",
+  "authors": [
+   "박한원",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "50권",
+  "issue": "4호",
+  "pages": "192–200",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 24,
+  "type": "domestic-journal",
+  "year": 2001,
+  "month": 4,
+  "date": "2001.04",
+  "title": "지연 고장 테스팅에 대한 고장 검출율 메트릭",
+  "authors": [
+   "김명균",
+   "강성호",
+   "한창호",
+   "민형복"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "38권 SD편",
+  "issue": "4호",
+  "pages": "266–276",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 23,
+  "type": "domestic-journal",
+  "year": 2001,
+  "month": 2,
+  "date": "2001.02",
+  "title": "독립고장과 양립 가능한 고장을 이용한 효율적인 테스트 패턴 압축 기법",
+  "authors": [
+   "윤도현",
+   "강성호",
+   "민형복"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "38권 SD편",
+  "issue": "2호",
+  "pages": "145–153",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 22,
+  "type": "domestic-journal",
+  "year": 2000,
+  "month": 12,
+  "date": "2000.12",
+  "title": "경계스캔 구조를 사용한 시스템의 온라인 버스 모니터링",
+  "authors": [
+   "송동섭",
+   "배상민",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "49권",
+  "issue": "12호",
+  "pages": "675–682",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 21,
+  "type": "domestic-journal",
+  "year": 2000,
+  "month": 12,
+  "date": "2000.12",
+  "title": "동적 전원 공급 전류를 이용한 효율적인 SRAM 테스트 기법",
+  "authors": [
+   "윤도현",
+   "김홍식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "37권 SD편",
+  "issue": "12호",
+  "pages": "50–59",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 20,
+  "type": "domestic-journal",
+  "year": 2000,
+  "month": 11,
+  "date": "2000.11",
+  "title": "멀티 드롭 멀티 보드 시스템을 위한 새로운 IEEE1149.1 경계 주사 구조",
+  "authors": [
+   "배상민",
+   "송동섭",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "49권",
+  "issue": "11호",
+  "pages": "637–642",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 19,
+  "type": "domestic-journal",
+  "year": 2000,
+  "month": 11,
+  "date": "2000.11",
+  "title": "순차 회로의 효율적인 지연 고장 검출을 위한 새로운 테스트 알고리듬 및 스캔 구조",
+  "authors": [
+   "허경회",
+   "강용석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "37권 SD편",
+  "issue": "11호",
+  "pages": "989–998",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 18,
+  "type": "domestic-journal",
+  "year": 2000,
+  "month": 10,
+  "date": "2000.10",
+  "title": "경로 지연 고장 테스팅을 위한 효율적인 부분 확장 주사 방법",
+  "authors": [
+   "김원기",
+   "김명균",
+   "강성호",
+   "한건희"
+  ],
+  "journal": "정보처리학회 논문지",
+  "volume": "7권",
+  "issue": "10호",
+  "pages": "3226–3235",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 17,
+  "type": "domestic-journal",
+  "year": 2000,
+  "month": 6,
+  "date": "2000.06",
+  "title": "내장된 자체 테스트에서 경로 지연 고장 테스트를 위한 새로운 가중치 계산 알고리듬",
+  "authors": [
+   "허윤",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "37권",
+  "issue": "6호",
+  "pages": "488–500",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 16,
+  "type": "domestic-journal",
+  "year": 1999,
+  "month": 12,
+  "date": "1999.12",
+  "title": "효율적인 캐쉬 테스트 알고리듬 및 BIST 구조",
+  "authors": [
+   "김홍식",
+   "윤도현",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "36권",
+  "issue": "12호",
+  "pages": "839–904",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 15,
+  "type": "domestic-journal",
+  "year": 1999,
+  "month": 9,
+  "date": "1999.09",
+  "title": "SET기반 전자상거래의 보안위협요소 분석 및 대응 방안에 관한 연구",
+  "authors": [
+   "김상균",
+   "강성호"
+  ],
+  "journal": "한국전자거래(CALS/EC) 학회 논문지",
+  "volume": "4권",
+  "issue": "2호",
+  "pages": "59–79",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 14,
+  "type": "domestic-journal",
+  "year": 1999,
+  "month": 9,
+  "date": "1999.09",
+  "title": "순차 회로의 지연 고장 검출을 위한 새로운 스캔 설계",
+  "authors": [
+   "허경회",
+   "강용석",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "48권",
+  "issue": "9호",
+  "pages": "1161–1166",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 13,
+  "type": "domestic-journal",
+  "year": 1999,
+  "month": 7,
+  "date": "1999.07",
+  "title": "스캔 환경에서 간접 유추 알고리즘을 이용한 경로 지연 고장 검사 입력 생성기",
+  "authors": [
+   "김원기",
+   "김명균",
+   "강성호"
+  ],
+  "journal": "정보처리학회 논문지",
+  "volume": "6권",
+  "issue": "6호",
+  "pages": "1656–1666",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 12,
+  "type": "domestic-journal",
+  "year": 1999,
+  "month": 2,
+  "date": "1999.02",
+  "title": "다중 주사 경로 회로 기판을 위한 내장된 자체 테스트 기법의 연구",
+  "authors": [
+   "김현진",
+   "신종철",
+   "임용태",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "36권 C편",
+  "issue": "2호",
+  "pages": "14–25",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 11,
+  "type": "domestic-journal",
+  "year": 1998,
+  "month": 12,
+  "date": "1998.12",
+  "title": "회로 기판상의 연결 테스트에 대한 분할 그룹 워킹 시퀀스",
+  "authors": [
+   "김현진",
+   "신종철",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "47권",
+  "issue": "12호",
+  "pages": "2251–2257",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 10,
+  "type": "domestic-journal",
+  "year": 1998,
+  "month": 9,
+  "date": "1998.09",
+  "title": "가중치 집합 최적화를 통한 효율적인 가중 무작위 패턴 생성",
+  "authors": [
+   "이항규",
+   "김홍식",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "35권 C편",
+  "issue": "9호",
+  "pages": "707–715",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 9,
+  "type": "domestic-journal",
+  "year": 1998,
+  "month": 8,
+  "date": "1998.08",
+  "title": "병렬 테스트 방법을 적용한 고집적 SRAM을 위한 내장된 자체 테스트 기법",
+  "authors": [
+   "이종철",
+   "강용석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "35권 C편",
+  "issue": "8호",
+  "pages": "614–626",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 8,
+  "type": "domestic-journal",
+  "year": 1998,
+  "month": 8,
+  "date": "1998.08",
+  "title": "Content Addressable Memory의 이웃패턴감응고장 테스트를 위한 내장된 자체 테스트 기법",
+  "authors": [
+   "강용석",
+   "이종철",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "35권 C편",
+  "issue": "8호",
+  "pages": "605–613",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 7,
+  "type": "domestic-journal",
+  "year": 1998,
+  "month": 7,
+  "date": "1998.07",
+  "title": "혼합 모드 BIST 테스트 패턴 생성기",
+  "authors": [
+   "김홍식",
+   "이항규",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "47권",
+  "issue": "7호",
+  "pages": "1015–1022",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 6,
+  "type": "domestic-journal",
+  "year": 1998,
+  "month": 2,
+  "date": "1998.02",
+  "title": "다중 보드 접근을 위한 새로운 IEEE 표준 1149.1 Backplane 테스트 확장",
+  "authors": [
+   "임용태",
+   "김현진",
+   "강성호"
+  ],
+  "journal": "정보처리학회 논문지",
+  "volume": "5권",
+  "issue": "2호",
+  "pages": "558–571",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 5,
+  "type": "domestic-journal",
+  "year": 1997,
+  "month": 8,
+  "date": "1997.08",
+  "title": "빠른 무해 인식에 의한 효율적인 테스트 패턴 생성",
+  "authors": [
+   "한상윤",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "34권 C편",
+  "issue": "8호",
+  "pages": "579–588",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 4,
+  "type": "domestic-journal",
+  "year": 1997,
+  "month": 2,
+  "date": "1997.02",
+  "title": "미지구조 기능 블록에 대한 경로 지연고장 검사입력 생성기",
+  "authors": [
+   "임용태",
+   "강성호"
+  ],
+  "journal": "전기학회 논문지",
+  "volume": "46권",
+  "issue": "2호",
+  "pages": "272–278",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 3,
+  "type": "domestic-journal",
+  "year": 1997,
+  "month": 2,
+  "date": "1997.02",
+  "title": "고집적 회로에 대한 고속 경로지연 고장 시뮬레이터",
+  "authors": [
+   "임용태",
+   "강용석",
+   "강성호"
+  ],
+  "journal": "정보처리학회 논문지",
+  "volume": "4권",
+  "issue": "1호",
+  "pages": "298–310",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 2,
+  "type": "domestic-journal",
+  "year": 1996,
+  "month": 12,
+  "date": "1996.12",
+  "title": "회로 분할법에 의한 정확한 논리 시뮬레이션",
+  "authors": [
+   "오상호",
+   "조동균",
+   "강성호"
+  ],
+  "journal": "시뮬레이션학회 논문지",
+  "volume": "5권",
+  "issue": "2호",
+  "pages": "73–83",
+  "issn": "",
+  "note": ""
+ },
+ {
+  "id": 1,
+  "type": "domestic-journal",
+  "year": 1996,
+  "month": 9,
+  "date": "1996.09",
+  "title": "표준 스캔 설계 환경을 위한 경로 지연 고장 검사입력 생성기",
+  "authors": [
+   "강용석",
+   "강성호"
+  ],
+  "journal": "전자공학회 논문지",
+  "volume": "33권 A편",
+  "issue": "9호",
+  "pages": "1887–1896",
+  "issn": "",
+  "note": ""
+ }
+]

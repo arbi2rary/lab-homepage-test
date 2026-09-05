@@ -1,0 +1,268 @@
+[
+ {
+  "id": 22,
+  "type": "article",
+  "year": 2011,
+  "title": "매니코어 Lifetime 신뢰성 연구동향",
+  "authors": [
+   "강성호",
+   "홍혜정"
+  ],
+  "journal": "IDEC News Letter",
+  "volume": "170",
+  "issue": "8",
+  "pages": ""
+ },
+ {
+  "id": 21,
+  "type": "article",
+  "year": 2009,
+  "title": "(IT 기획시리즈)나노 기술 시대의 DFT:현황과 향후과제",
+  "authors": [
+   "강성호",
+   "김용준"
+  ],
+  "journal": "정보통신산업진흥원",
+  "volume": "1417",
+  "issue": "10",
+  "pages": "25–34"
+ },
+ {
+  "id": 20,
+  "type": "article",
+  "year": 2009,
+  "title": "Deep Packet Inspection(DPI)구현",
+  "authors": [
+   "강성호",
+   "김현진"
+  ],
+  "journal": "IDEC News Letter",
+  "volume": "148",
+  "issue": "10",
+  "pages": "14–17"
+ },
+ {
+  "id": 19,
+  "type": "article",
+  "year": 2008,
+  "title": "SoC 테스트를 위한 테스트 데이터 압축방법",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "IDEC News Letter",
+  "volume": "133",
+  "issue": "7",
+  "pages": ""
+ },
+ {
+  "id": 18,
+  "type": "article",
+  "year": 2006,
+  "title": "경제성을 고려한 DFT의 선택 방법",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "IDEC News Letter",
+  "volume": "112",
+  "issue": "10",
+  "pages": ""
+ },
+ {
+  "id": 17,
+  "type": "article",
+  "year": 2005,
+  "title": "NoC(Networks on Chip)",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "IDEC News Letter",
+  "volume": "92",
+  "issue": "2",
+  "pages": ""
+ },
+ {
+  "id": 16,
+  "type": "article",
+  "year": 2004,
+  "title": "네트워크 기반 바이오프로세서의 설계 및 구현",
+  "authors": [],
+  "journal": "SIPAC News Letter",
+  "volume": "",
+  "issue": "9",
+  "pages": ""
+ },
+ {
+  "id": 15,
+  "type": "article",
+  "year": 2004,
+  "title": "보드 및 SoC IP간의 연결선 테스트를 위한 알고리즘",
+  "authors": [],
+  "journal": "SIPAC News Letter",
+  "volume": "",
+  "issue": "3",
+  "pages": ""
+ },
+ {
+  "id": 14,
+  "type": "article",
+  "year": 2002,
+  "title": "DSP 설계기술 동향",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "IDEC News Letter",
+  "volume": "66",
+  "issue": "11",
+  "pages": "26–27"
+ },
+ {
+  "id": 13,
+  "type": "article",
+  "year": 2002,
+  "title": "테스트가 용이한 SoC 설계기법",
+  "authors": [],
+  "journal": "SIPAC News Letter",
+  "volume": "",
+  "issue": "3",
+  "pages": ""
+ },
+ {
+  "id": 12,
+  "type": "article",
+  "year": 2002,
+  "title": "SOC 설계와 테스트",
+  "authors": [],
+  "journal": "SIPAC News Letter",
+  "volume": "",
+  "issue": "1",
+  "pages": ""
+ },
+ {
+  "id": 11,
+  "type": "article",
+  "year": 2002,
+  "title": "[대특집-SOC(System On Chip) 기술]SOC 테스트 기술 동향",
+  "authors": [
+   "강성호",
+   "송동섭"
+  ],
+  "journal": "전자공학회지",
+  "volume": "29",
+  "issue": "1",
+  "pages": "45–58"
+ },
+ {
+  "id": 10,
+  "type": "article",
+  "year": 2001,
+  "title": "SOC 설계와 IP 활용",
+  "authors": [],
+  "journal": "SIPAC News Letter",
+  "volume": "",
+  "issue": "10",
+  "pages": ""
+ },
+ {
+  "id": 9,
+  "type": "article",
+  "year": 2001,
+  "title": "SOC 환경에서의 BIST",
+  "authors": [],
+  "journal": "IDEC News Letter",
+  "volume": "",
+  "issue": "6",
+  "pages": ""
+ },
+ {
+  "id": 8,
+  "type": "article",
+  "year": 1999,
+  "title": "(인터넷 여행)US PATENT AND TRADEMARK OFFICE 등",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "전기학회지",
+  "volume": "48",
+  "issue": "11",
+  "pages": "38–39"
+ },
+ {
+  "id": 7,
+  "type": "article",
+  "year": 1999,
+  "title": "(인터넷 여행)IEEE, IEE, ACM, IFIP",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "전기학회지",
+  "volume": "48",
+  "issue": "3",
+  "pages": "44–45"
+ },
+ {
+  "id": 6,
+  "type": "article",
+  "year": 1998,
+  "title": "VLSI 테스팅 특집 - 특집 편집기 -",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "전자공학회지",
+  "volume": "25",
+  "issue": "11",
+  "pages": "1094"
+ },
+ {
+  "id": 5,
+  "type": "article",
+  "year": 1998,
+  "title": "VLSI 테스팅의 기술동향",
+  "authors": [
+   "강성호",
+   "강응석"
+  ],
+  "journal": "전자공학회지",
+  "volume": "25",
+  "issue": "11",
+  "pages": "1095–1106"
+ },
+ {
+  "id": 4,
+  "type": "article",
+  "year": 1998,
+  "title": "연세대학의 전기공학교육",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "전기학회지",
+  "volume": "47",
+  "issue": "2",
+  "pages": "37–40"
+ },
+ {
+  "id": 3,
+  "type": "article",
+  "year": 1997,
+  "title": "소장회원이 바라본 21세기에 대한 제언",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "전기학회지",
+  "volume": "46",
+  "issue": "12",
+  "pages": "33–35"
+ },
+ {
+  "id": 2,
+  "type": "article",
+  "year": 1995,
+  "title": "내장된 자체검사 기법(BIST)의 기술동향",
+  "authors": [
+   "강성호"
+  ],
+  "journal": "전자공학회지",
+  "volume": "22",
+  "issue": "12",
+  "pages": "1455–1466"
+ }
+]

@@ -1795,7 +1795,7 @@ function createPatentItem(patent, status) {
 
   const id = document.createElement("span");
   id.className = "patent-id";
-  setLocalizedContent(id, "특허 " + patent.id, "Patent " + patent.id);
+  id.textContent = String(patent.id);
 
   const content = document.createElement("article");
   content.className = "patent-content";
@@ -1935,6 +1935,239 @@ async function initializePatents() {
   }
 }
 
+function formatResearchOutputDate(value, monthOnly = false) {
+  const normalizedValue = String(value || "").trim();
+  if (!normalizedValue) {
+    return "–";
+  }
+
+  if (monthOnly) {
+    const match = normalizedValue.match(/^((?:19|20)\d{2}\.\d{2})/);
+    return match ? match[1] : normalizedValue;
+  }
+
+  return normalizedValue;
+}
+
+function formatVolumeAndIssue(record) {
+  return [record.volume, record.issue]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean)
+    .join(", ") || "–";
+}
+
+function getResearchOutputTableColumns(layout) {
+  if (layout === "journal-table") {
+    return [
+      { kr: "No.", en: "No.", value: (record) => record.id },
+      { kr: "논문 제목", en: "Paper Title", value: (record) => record.title },
+      { kr: "학술지명", en: "Journal", value: (record) => record.journal },
+      { kr: "권·호", en: "Volume · Issue", value: formatVolumeAndIssue },
+      { kr: "수록면", en: "Pages", value: (record) => record.pages || "–" },
+      { kr: "게재일", en: "Publication Date", value: (record) => formatResearchOutputDate(record.date) },
+      { kr: "저자명", en: "Authors", value: (record) => (record.authors || []).join(", ") },
+    ];
+  }
+
+  return [
+    { kr: "No.", en: "No.", value: (record) => record.id },
+    { kr: "발표논문 제목", en: "Paper Title", value: (record) => record.title },
+    { kr: "학술회의 명칭", en: "Conference", value: (record) => record.conference },
+    { kr: "수록면", en: "Pages", value: (record) => record.pages || "–" },
+    { kr: "개최기간", en: "Conference Date", value: (record) => formatResearchOutputDate(record.date, true) },
+    { kr: "저자명", en: "Authors", value: (record) => (record.authors || []).join(", ") },
+  ];
+}
+
+function createResearchOutputTable(records, layout) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "research-output-table-wrap";
+  const table = document.createElement("table");
+  table.className = "research-output-table";
+  const columns = getResearchOutputTableColumns(layout);
+  const head = document.createElement("thead");
+  const headRow = document.createElement("tr");
+
+  columns.forEach((column) => {
+    const heading = document.createElement("th");
+    heading.scope = "col";
+    setLocalizedContent(heading, column.kr, column.en);
+    headRow.append(heading);
+  });
+  head.append(headRow);
+
+  const body = document.createElement("tbody");
+  records.forEach((record) => {
+    const row = document.createElement("tr");
+    columns.forEach((column, columnIndex) => {
+      const cell = document.createElement("td");
+      const value = column.value(record);
+      cell.textContent = String(value === undefined || value === null || value === "" ? "–" : value);
+      if (columnIndex === 0) {
+        cell.className = "research-output-number";
+      } else if (columnIndex === 1) {
+        cell.className = "research-output-title";
+      }
+      row.append(cell);
+    });
+    body.append(row);
+  });
+
+  table.append(head, body);
+  wrapper.append(table);
+  return wrapper;
+}
+
+function createResearchOutputSegment(text, className = "") {
+  const segment = document.createElement("span");
+  segment.className = ["research-output-segment", className]
+    .filter(Boolean)
+    .join(" ");
+  segment.textContent = text;
+  return segment;
+}
+
+function createResearchOutputList(records, layout) {
+  const list = document.createElement("ol");
+  list.className = "research-output-list";
+
+  records.forEach((record) => {
+    const item = document.createElement("li");
+    item.className = "research-output-list-item";
+    const title = createResearchOutputSegment(
+      "“" + String(record.title || "").trim() + "”",
+      "research-output-list-title"
+    );
+    const authors = createResearchOutputSegment(
+      Array.isArray(record.authors) ? record.authors.join(", ") : ""
+    );
+    let sourceText = "";
+
+    if (layout === "books") {
+      sourceText = [record.publisher, formatResearchOutputDate(record.date)]
+        .map((value) => String(value || "").trim())
+        .filter((value) => value && value !== "–")
+        .join(", ");
+      if (record.isbn) {
+        sourceText += (sourceText ? " " : "") + "<ISBN " + record.isbn + ">";
+      }
+    } else {
+      const sourceParts = [
+        record.journal,
+        record.volume ? "vol. " + record.volume : "",
+        record.issue ? "no. " + record.issue : "",
+        record.pages ? "pp. " + record.pages : "",
+        record.year,
+      ].map((value) => String(value || "").trim()).filter(Boolean);
+      sourceText = sourceParts.join(", ") + (sourceParts.length > 0 ? "." : "");
+    }
+
+    [title, authors, createResearchOutputSegment(sourceText)].forEach(
+      (segment, index) => {
+        if (index > 0) {
+          const separator = document.createElement("span");
+          separator.className = "research-output-separator";
+          separator.setAttribute("aria-hidden", "true");
+          separator.textContent = "/";
+          item.append(separator);
+        }
+        item.append(segment);
+      }
+    );
+    list.append(item);
+  });
+
+  return list;
+}
+
+function compareResearchOutputs(first, second) {
+  const dateComparison = String(second.date || "").localeCompare(
+    String(first.date || "")
+  );
+  if (dateComparison !== 0) {
+    return dateComparison;
+  }
+
+  if (Number(second.year || 0) !== Number(first.year || 0)) {
+    return Number(second.year || 0) - Number(first.year || 0);
+  }
+
+  return Number(second.id || 0) - Number(first.id || 0);
+}
+
+function renderResearchOutputs(records) {
+  const container = document.getElementById("research-output-archive");
+  const total = document.getElementById("research-output-total");
+  if (!container || !total) {
+    return;
+  }
+
+  const layout = container.dataset.layout || "conference-table";
+  const entries = records.filter(Boolean).sort(compareResearchOutputs);
+  const isBookLayout = layout === "books";
+  setLocalizedContent(
+    total,
+    "총 " + entries.length + (isBookLayout ? "권" : "편"),
+    entries.length + (isBookLayout ? " books" : " records")
+  );
+
+  if (entries.length === 0) {
+    const emptyMessage = document.createElement("p");
+    emptyMessage.className = "publication-empty";
+    setLocalizedContent(
+      emptyMessage,
+      container.dataset.emptyKr || "표시할 자료가 없습니다.",
+      container.dataset.emptyEn || "No records are available."
+    );
+    container.replaceChildren(emptyMessage);
+    return;
+  }
+
+  const output = layout.endsWith("-table")
+    ? createResearchOutputTable(entries, layout)
+    : createResearchOutputList(entries, layout);
+  container.replaceChildren(output);
+}
+
+async function initializeResearchOutputs() {
+  const container = document.getElementById("research-output-archive");
+  if (!container) {
+    return;
+  }
+
+  const sources = String(
+    container.dataset.sources || container.dataset.source || ""
+  ).split(",").map((source) => source.trim()).filter(Boolean);
+
+  try {
+    const datasets = await Promise.all(
+      sources.map(async (source) => {
+        const response = await fetch(source, { cache: "no-cache" });
+        if (!response.ok) {
+          throw new Error("Research output data request failed: " + response.status);
+        }
+        const data = await response.json();
+        if (!Array.isArray(data)) {
+          throw new TypeError("Research output data must be an array.");
+        }
+        return data;
+      })
+    );
+
+    renderResearchOutputs(datasets.flat());
+  } catch (error) {
+    const errorMessage = document.createElement("p");
+    errorMessage.className = "publication-error";
+    setLocalizedContent(
+      errorMessage,
+      "연구업적 목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.",
+      "The research output list could not be loaded. Please try again later."
+    );
+    container.replaceChildren(errorMessage);
+    console.error(error);
+  }
+}
+
 function initializePage() {
   initializeNavigation();
   initializeLanguageSwitcher();
@@ -1946,6 +2179,7 @@ function initializePage() {
   initializeLinkedDetailsPanels();
   initializePublications();
   initializePatents();
+  initializeResearchOutputs();
 }
 
 document.addEventListener("DOMContentLoaded", initializePage);
