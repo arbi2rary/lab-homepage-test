@@ -26,7 +26,7 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260905-12">
+  <link rel="stylesheet" href="style.css?v=20260905-13">
 </head>
 <body>
 
@@ -125,8 +125,8 @@
               <span class="chevron" aria-hidden="true"></span>
             </button>
             <ul class="submenu submenu-right">
-              <li><a href="#news" data-kr="공지사항" data-en="Notices">공지사항</a></li>
-              <li><a href="#news" data-kr="연구성과" data-en="Research Highlights">연구성과</a></li>
+              <li><a href="#news" data-news-filter="notice" data-kr="공지사항" data-en="Notices">공지사항</a></li>
+              <li><a href="#news" data-news-filter="achievement" data-kr="연구성과" data-en="Research Highlights">연구성과</a></li>
             </ul>
           </li>
         </ul>
@@ -349,10 +349,10 @@
 
     <div class="main-publication-archive">
       <div class="publication-heading">
-        <h3 data-kr="국제논문" data-en="International Journals">국제논문</h3>
+        <h3 data-kr="국제논문지" data-en="International Journals">국제논문지</h3>
         <span class="publication-total" id="publication-total" aria-live="polite"></span>
       </div>
-      <div class="publication-years" id="publication-years" data-source="publications.json?v=20260904-2" data-category="international-journal" data-unit-kr="편" data-unit-en="papers" data-empty-kr="표시할 국제논문이 없습니다." data-empty-en="No international journal papers are available.">
+      <div class="publication-years" id="publication-years" data-source="publications.json?v=20260904-2" data-category="international-journal" data-unit-kr="편" data-unit-en="papers" data-empty-kr="표시할 국제논문지가 없습니다." data-empty-en="No international journal papers are available.">
         <p class="publication-loading" data-kr="논문 목록을 불러오는 중입니다." data-en="Loading publications.">논문 목록을 불러오는 중입니다.</p>
       </div>
       <noscript><p class="publication-error">논문 목록을 보려면 브라우저에서 JavaScript를 활성화해 주세요.</p></noscript>
@@ -371,7 +371,7 @@
         </a>
         <a class="achievement-link-card" href="domestic-journals.html">
           <span class="item-label">DOMESTIC JOURNAL</span>
-          <h3 data-kr="국내논문" data-en="Domestic Journals">국내논문</h3>
+          <h3 data-kr="국내논문지" data-en="Domestic Journals">국내논문지</h3>
           <p data-kr="국내 학술지 게재 논문" data-en="Papers published in domestic journals">국내 학술지 게재 논문</p>
         </a>
         <a class="achievement-link-card" href="domestic-conferences.html">
@@ -512,9 +512,10 @@
 </section>
 
 <!-- ================= 소식 =================
-     채울 것: data-cat 값은 publication / award / notice 중 하나.
-     publication과 award는 연구업적 탭에 함께 표시됩니다.
-     새 소식은 li 하나 복사해서 맨 앞에 붙이면 됩니다.
+     목록은 news.json 하나에서 불러옵니다. 새 소식은 news.json에만 추가하면 됩니다.
+     category 값 publication / patent / award  -> 연구업적 게시판
+     category 값 event / recruit / notice      -> 공지 게시판
+     전체 탭에서는 두 게시판을 날짜순으로 함께 보여줍니다.
 -->
 <section id="news">
   <div class="wrap">
@@ -525,23 +526,13 @@
       <button aria-pressed="false" data-filter="achievement" data-kr="연구업적" data-en="Research Outputs">연구업적</button>
       <button aria-pressed="false" data-filter="notice" data-kr="공지" data-en="Notices">공지</button>
     </div>
-    <ul class="news">
-      <li data-cat="notice">
-        <span class="cat">공지</span><time datetime="2026-09-01">2026.09.01</time>
-        <h3>연구실 홈페이지를 새로 열었습니다</h3>
-        <p>[[한두 문장]]</p>
-      </li>
-      <li data-cat="publication">
-        <span class="cat">논문</span><time datetime="[[2026-08-01]]">[[2026.08.01]]</time>
-        <h3>[[논문 제목 요약]]</h3>
-        <p>[[한두 문장]]</p>
-      </li>
-      <li data-cat="award">
-        <span class="cat">수상</span><time datetime="[[2026-06-01]]">[[2026.06.01]]</time>
-        <h3>[[수상 내용]]</h3>
-        <p>[[한두 문장]]</p>
-      </li>
+    <ul class="news" id="news-list" data-source="news.json?v=20260905-1" aria-live="polite">
+      <li class="news-status" data-kr="소식을 불러오는 중입니다." data-en="Loading news.">소식을 불러오는 중입니다.</li>
     </ul>
+    <div class="news-more-row">
+      <button type="button" class="news-more-button" id="news-more" hidden></button>
+    </div>
+    <noscript><p class="news-status">소식을 보려면 브라우저에서 JavaScript를 활성화해 주세요.</p></noscript>
   </div>
 </section>
 
@@ -573,6 +564,6 @@
   </div>
 </footer>
   
-  <script src="script.js?v=20260905-12"></script>
+  <script src="script.js?v=20260905-13"></script>
 </body>
 </html>
