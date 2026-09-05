@@ -1484,8 +1484,9 @@ html[lang="en"] .member-detail-name .member-name-english{
   border-top:1px solid var(--line);
 }
 
-.professor-more-panel{
+.professor-detail-sections{
   margin-top:26px;
+  border-top:1px solid var(--line);
 }
 
 .professor-more-body{

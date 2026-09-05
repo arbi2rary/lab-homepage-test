@@ -730,22 +730,9 @@ function renderProfessorProfile(members) {
     "professor-career-section"
   );
 
-  const more = document.createElement("details");
-  more.className = "more-panel professor-more-panel";
-  const summary = document.createElement("summary");
-  const summaryText = document.createElement("span");
-  setLocalizedContent(
-    summaryText,
-    "수상 및 상세 프로필 보기",
-    "View Awards and Profile"
-  );
-  const summaryIcon = document.createElement("span");
-  summaryIcon.className = "summary-icon";
-  summaryIcon.setAttribute("aria-hidden", "true");
-  summary.append(summaryText, summaryIcon);
-
-  const moreBody = document.createElement("div");
-  moreBody.className = "more-panel-body professor-more-body";
+  const detailSections = document.createElement("div");
+  detailSections.className =
+    "more-panel-body professor-more-body professor-detail-sections";
   [
     createProfessorProfileSection(
       professor,
@@ -765,14 +752,13 @@ function renderProfessorProfile(members) {
       "Office Hours",
       "professor-contact-section"
     ),
-  ].filter(Boolean).forEach((section) => moreBody.append(section));
-  more.append(summary, moreBody);
+  ].filter(Boolean).forEach((section) => detailSections.append(section));
 
   profile.append(introduction);
   if (career) {
     profile.append(career);
   }
-  profile.append(more);
+  profile.append(detailSections);
   container.replaceChildren(profile);
 }
 
@@ -1367,6 +1353,22 @@ async function initializeProjects() {
   }
 }
 
+function getNewsFilterCategory(category) {
+  if (
+    category === "publication" ||
+    category === "award" ||
+    category === "achievement"
+  ) {
+    return "achievement";
+  }
+
+  if (category === "event" || category === "notice") {
+    return "notice";
+  }
+
+  return category;
+}
+
 function initializeNewsFilters() {
   document.querySelectorAll(".filters button").forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
@@ -1378,9 +1380,10 @@ function initializeNewsFilters() {
       const selectedCategory = filterButton.dataset.filter;
 
       document.querySelectorAll(".news li").forEach((item) => {
+        const itemCategory = getNewsFilterCategory(item.dataset.cat);
         item.hidden =
           selectedCategory !== "all" &&
-          item.dataset.cat !== selectedCategory;
+          itemCategory !== selectedCategory;
       });
     });
   });

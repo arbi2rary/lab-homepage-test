@@ -26,7 +26,7 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260905-11">
+  <link rel="stylesheet" href="style.css?v=20260905-12">
 </head>
 <body>
 
@@ -512,7 +512,8 @@
 </section>
 
 <!-- ================= 소식 =================
-     채울 것: data-cat 값은 publication / award / event / notice 중 하나.
+     채울 것: data-cat 값은 publication / award / notice 중 하나.
+     publication과 award는 연구업적 탭에 함께 표시됩니다.
      새 소식은 li 하나 복사해서 맨 앞에 붙이면 됩니다.
 -->
 <section id="news">
@@ -520,11 +521,9 @@
     <p class="eyebrow">NEWS + UPDATES</p>
     <h2 data-kr="소식" data-en="News">소식</h2>
     <div class="filters">
-      <button aria-pressed="true" data-filter="all">전체</button>
-      <button aria-pressed="false" data-filter="publication">논문</button>
-      <button aria-pressed="false" data-filter="award">수상</button>
-      <button aria-pressed="false" data-filter="event">행사</button>
-      <button aria-pressed="false" data-filter="notice">공지</button>
+      <button aria-pressed="true" data-filter="all" data-kr="전체" data-en="All">전체</button>
+      <button aria-pressed="false" data-filter="achievement" data-kr="연구업적" data-en="Research Outputs">연구업적</button>
+      <button aria-pressed="false" data-filter="notice" data-kr="공지" data-en="Notices">공지</button>
     </div>
     <ul class="news">
       <li data-cat="notice">
@@ -574,6 +573,6 @@
   </div>
 </footer>
   
-  <script src="script.js?v=20260905-11"></script>
+  <script src="script.js?v=20260905-12"></script>
 </body>
 </html>
