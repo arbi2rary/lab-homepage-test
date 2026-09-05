@@ -214,7 +214,9 @@ function getMemberDisplayNames(member) {
   const koreanName = String(member.name_kr || "").trim();
 
   return {
-    kr: koreanName ? koreanName + " (" + englishName + ")" : englishName,
+    kr: koreanName && englishName
+      ? koreanName + " (" + englishName + ")"
+      : koreanName || englishName,
     en: englishName || koreanName,
   };
 }
@@ -385,7 +387,6 @@ function createCurrentMemberName(member, className) {
 }
 
 function createCurrentMemberDetail(member, detailId) {
-  const names = getMemberDisplayNames(member);
   const category = getMemberCategoryLabels(member.category);
   const detail = document.createElement("section");
   detail.className = "member-detail-panel";
@@ -425,7 +426,7 @@ function closeCurrentMemberDetails(exceptButton = null) {
   });
 }
 
-function placeMemberDetailAfterCardRow(card, detail) {
+function placeDetailAfterCardRow(card, detail) {
   const container = card.parentElement;
   if (!container) {
     return;
@@ -436,7 +437,7 @@ function placeMemberDetailAfterCardRow(card, detail) {
   const cardTop = card.offsetTop;
   const rowCards = [...container.children].filter(
     (element) =>
-      element.classList.contains("member-card") &&
+      element.matches(".member-card, .alumni-card") &&
       Math.abs(element.offsetTop - cardTop) <= 1
   );
   const lastCardInRow = rowCards[rowCards.length - 1] || card;
@@ -446,13 +447,16 @@ function placeMemberDetailAfterCardRow(card, detail) {
 
 function repositionOpenMemberDetails() {
   document
-    .querySelectorAll('.member-photo-button[aria-expanded="true"]')
+    .querySelectorAll(
+      '.member-photo-button[aria-expanded="true"], ' +
+      '.alumni-card-button[aria-expanded="true"]'
+    )
     .forEach((button) => {
-      const card = button.closest(".member-card");
+      const card = button.closest(".member-card, .alumni-card");
       const detail = document.getElementById(button.getAttribute("aria-controls"));
 
       if (card && detail) {
-        placeMemberDetailAfterCardRow(card, detail);
+        placeDetailAfterCardRow(card, detail);
       }
     });
 }
@@ -500,7 +504,7 @@ function createCurrentMemberElements(member, index) {
     closeCurrentMemberDetails(photoButton);
 
     if (willOpen) {
-      placeMemberDetailAfterCardRow(card, detail);
+      placeDetailAfterCardRow(card, detail);
     }
 
     detail.hidden = !willOpen;
@@ -558,55 +562,181 @@ function getGraduationYear(graduation) {
   return match ? match[0] : "";
 }
 
-function createAlumniEntry(member, index) {
-  const names = getMemberDisplayNames(member);
-  const category = getMemberCategoryLabels(member.category);
-  const graduationYear = getGraduationYear(member.graduation);
-  const entry = document.createElement("details");
-  entry.className = "alumni-entry";
-  entry.dataset.alumniDegree = member.category === "박사" ? "phd" : "ms";
+function getAlumniCategoryLabels(category) {
+  if (category === "박사") {
+    return { kr: "동문박사", en: "Ph.D. Alumni" };
+  }
 
-  const summary = document.createElement("summary");
-  const name = document.createElement("strong");
-  setLocalizedContent(name, names.kr, names.en);
+  return { kr: "동문석사", en: "M.S. Alumni" };
+}
+
+function getObfuscationSeed(member) {
+  return [
+    String(member.name_kr || ""),
+    String(member.graduation || ""),
+    "soclab-alumni-v1",
+  ].join("|");
+}
+
+function createObfuscationState(value) {
+  let state = 2166136261;
+  const bytes = new TextEncoder().encode(value);
+
+  bytes.forEach((byte) => {
+    state ^= byte;
+    state = Math.imul(state, 16777619) >>> 0;
+  });
+
+  return state || 1;
+}
+
+function advanceObfuscationState(state) {
+  let next = state >>> 0;
+  next ^= (next << 13) >>> 0;
+  next ^= next >>> 17;
+  next ^= (next << 5) >>> 0;
+  return next >>> 0;
+}
+
+function decodeAlumniPrivateDetail(member) {
+  const protectedValue = String(member.private_detail_obfuscated || "");
+  const [version, encodedValue] = protectedValue.split(".", 2);
+
+  if (version !== "v1" || !encodedValue) {
+    return {};
+  }
+
+  try {
+    const base64Value = encodedValue.replace(/-/g, "+").replace(/_/g, "/");
+    const paddedValue = base64Value.padEnd(
+      Math.ceil(base64Value.length / 4) * 4,
+      "="
+    );
+    const encryptedText = window.atob(paddedValue);
+    const decryptedBytes = new Uint8Array(encryptedText.length);
+    let state = createObfuscationState(getObfuscationSeed(member));
+
+    for (let index = 0; index < encryptedText.length; index += 1) {
+      state = advanceObfuscationState(state);
+      decryptedBytes[index] = encryptedText.charCodeAt(index) ^ (state & 0xff);
+    }
+
+    const detail = JSON.parse(new TextDecoder().decode(decryptedBytes));
+    return detail && typeof detail === "object" ? detail : {};
+  } catch (error) {
+    console.error("Alumni detail could not be decoded.", error);
+    return {};
+  }
+}
+
+function populateAlumniDetail(detail, member) {
+  const category = getAlumniCategoryLabels(member.category);
+  const privateDetail = decodeAlumniPrivateDetail(member);
+  const photo = createMemberPhoto(
+    member,
+    "member-detail-photo alumni-detail-photo"
+  );
+  const content = document.createElement("div");
+  content.className = "member-detail-content";
+  const name = createCurrentMemberName(member, "member-detail-name");
+  const fields = document.createElement("dl");
+  fields.className = "member-profile-fields";
+
+  [
+    createProfileField("과정", "Program", category.kr, "", category.en),
+    createProfileField("학위논문", "Thesis", member.thesis),
+    createProfileField("메일", "Email", privateDetail.email, "mailto:"),
+    createProfileField("취미", "Hobby", privateDetail.hobby),
+  ].filter(Boolean).forEach((field) => fields.append(field));
+
+  content.append(name, fields);
+  detail.replaceChildren(photo, content);
+}
+
+function clearAlumniDetail(detail) {
+  detail.hidden = true;
+  detail.replaceChildren();
+}
+
+function closeAlumniDetails(exceptButton = null) {
+  document
+    .querySelectorAll('.alumni-card-button[aria-expanded="true"]')
+    .forEach((button) => {
+      if (button === exceptButton) {
+        return;
+      }
+
+      button.setAttribute("aria-expanded", "false");
+      const detail = document.getElementById(button.getAttribute("aria-controls"));
+      if (detail) {
+        clearAlumniDetail(detail);
+      }
+    });
+}
+
+function createAlumniElements(member, index) {
+  const names = getMemberDisplayNames(member);
+  const category = getAlumniCategoryLabels(member.category);
+  const graduationYear = getGraduationYear(member.graduation);
+  const detailId = "alumni-detail-" + String(index);
+  const card = document.createElement("article");
+  card.className = "alumni-card";
+  const button = document.createElement("button");
+  button.className = "alumni-card-button";
+  button.type = "button";
+  button.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-controls", detailId);
+  button.dataset.ariaKr = names.kr + " 상세정보 보기";
+  button.dataset.ariaEn = "View profile for " + names.en;
+  button.setAttribute(
+    "aria-label",
+    localStorage.getItem("soclab-language") === "en"
+      ? button.dataset.ariaEn
+      : button.dataset.ariaKr
+  );
+
+  const name = createCurrentMemberName(member, "alumni-card-name");
   const degree = document.createElement("span");
-  degree.className = "alumni-degree-meta";
+  degree.className = "alumni-card-degree";
   setLocalizedContent(
     degree,
     [category.kr, graduationYear].filter(Boolean).join(" · "),
     [category.en, graduationYear].filter(Boolean).join(" · ")
   );
-  summary.append(name, degree);
+  button.append(name, degree);
 
   const affiliationValue = String(member.work || "").trim();
-  if (affiliationValue) {
-    const affiliation = document.createElement("span");
-    affiliation.className = "alumni-affiliation";
-    affiliation.textContent = affiliationValue;
-    summary.append(affiliation);
-  }
+  const affiliation = document.createElement("span");
+  affiliation.className = "alumni-card-affiliation";
+  setLocalizedContent(
+    affiliation,
+    affiliationValue || "재직처 확인 중",
+    affiliationValue || "Affiliation pending"
+  );
+  button.append(affiliation);
+  card.append(button);
 
-  const profile = document.createElement("div");
-  profile.className = "alumni-profile";
-  profile.append(createMemberPhoto(member, "alumni-profile-photo"));
-  const information = document.createElement("div");
-  information.className = "alumni-profile-content";
-  const heading = document.createElement("h3");
-  setLocalizedContent(heading, names.kr, names.en);
-  const fields = document.createElement("dl");
-  fields.className = "member-profile-fields";
+  const detail = document.createElement("section");
+  detail.className = "member-detail-panel alumni-detail-panel";
+  detail.id = detailId;
+  detail.hidden = true;
 
-  [
-    createProfileField("이메일", "Email", member.email, "mailto:"),
-    createProfileField("학위논문", "Thesis", member.thesis),
-    createProfileField("취미", "Hobby", member.hobby),
-  ].filter(Boolean).forEach((field) => fields.append(field));
+  button.addEventListener("click", () => {
+    const willOpen = detail.hidden;
+    closeAlumniDetails(button);
 
-  information.append(heading, fields);
-  profile.append(information);
-  entry.append(summary, profile);
-  entry.dataset.memberIndex = String(index);
-  return entry;
+    if (willOpen) {
+      placeDetailAfterCardRow(card, detail);
+      populateAlumniDetail(detail, member);
+      detail.hidden = false;
+    } else {
+      clearAlumniDetail(detail);
+    }
+
+    button.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  return { card, detail };
 }
 
 function createAlumniDegreeSection(category, alumni) {
@@ -623,10 +753,19 @@ function createAlumniDegreeSection(category, alumni) {
   heading.append(title, count);
 
   const entries = document.createElement("div");
-  entries.className = "alumni-entry-list";
+  entries.className = "alumni-card-grid";
+  const cards = document.createDocumentFragment();
+  const details = document.createDocumentFragment();
   alumni.forEach((member, index) => {
-    entries.append(createAlumniEntry(member, index));
+    const categoryKey = category === "박사" ? "phd" : "ms";
+    const elements = createAlumniElements(
+      member,
+      categoryKey + "-" + String(index)
+    );
+    cards.append(elements.card);
+    details.append(elements.detail);
   });
+  entries.append(cards, details);
   section.append(heading, entries);
   return section;
 }

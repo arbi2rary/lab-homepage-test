@@ -1125,8 +1125,7 @@ html[lang="en"] .member-name-english{
   border-radius:7px;
 }
 
-.member-detail-name,
-.alumni-profile-content h3{
+.member-detail-name{
   margin-bottom:16px;
   color:var(--ink);
   font-size:20px;
@@ -1260,76 +1259,74 @@ html[lang="en"] .member-detail-name .member-name-english{
   display:none;
 }
 
-.alumni-entry-list{
-  border-top:1px solid var(--line);
-}
-
-.alumni-entry{
-  border-bottom:1px solid var(--line);
-  background:transparent;
-}
-
-.alumni-entry > summary{
+.alumni-card-grid{
   display:grid;
-  grid-template-columns:minmax(210px,1.2fr) minmax(130px,.6fr) minmax(180px,1fr) 14px;
-  gap:18px;
-  align-items:center;
-  min-height:68px;
-  padding:14px 18px;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:16px;
+  align-items:start;
+}
+
+.alumni-card{
+  min-width:0;
+}
+
+.alumni-card-button{
+  display:flex;
+  width:100%;
+  min-height:172px;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:18px 16px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  text-align:left;
   cursor:pointer;
-  list-style:none;
+  transition:border-color .16s ease,box-shadow .16s ease,transform .16s ease;
 }
 
-.alumni-entry > summary::-webkit-details-marker{
-  display:none;
+.alumni-card-button:hover,
+.alumni-card-button:focus-visible,
+.alumni-card-button[aria-expanded="true"]{
+  border-color:var(--line-mid);
+  box-shadow:0 8px 24px rgba(58,99,137,.1);
+  transform:translateY(-2px);
 }
 
-.alumni-entry > summary::after{
-  content:"";
-  grid-column:4;
-  width:8px;
-  height:8px;
-  border-right:1.5px solid var(--copper);
-  border-bottom:1.5px solid var(--copper);
-  transform:rotate(45deg) translate(-2px,-2px);
-  transition:transform .18s ease;
-}
-
-.alumni-entry[open] > summary::after{
-  transform:rotate(225deg) translate(-2px,-2px);
-}
-
-.alumni-entry > summary strong{
-  grid-column:1;
+.alumni-card-name{
+  width:100%;
   color:var(--ink);
-  font-size:15.5px;
+  font-size:15px;
   font-weight:600;
 }
 
-.alumni-degree-meta{
-  grid-column:2;
+.alumni-card-name .member-name-english{
+  font-size:11px;
+}
+
+html[lang="en"] .alumni-card-name .member-name-english{
+  font-size:14px;
+}
+
+.alumni-card-degree{
+  margin-top:12px;
   color:var(--copper);
-  font-size:13.5px;
+  font-size:12px;
+  line-height:1.45;
 }
 
-.alumni-affiliation{
-  grid-column:3;
+.alumni-card-affiliation{
+  margin-top:6px;
   color:var(--ink-soft);
-  font-size:13.5px;
+  font-size:12px;
+  line-height:1.55;
+  overflow-wrap:anywhere;
 }
 
-.alumni-profile{
-  display:grid;
-  grid-template-columns:170px minmax(0,1fr);
-  gap:30px;
-  padding:28px 30px 34px;
-  border-top:1px solid rgba(213,225,236,.72);
-}
-
-.alumni-profile-photo{
-  width:170px;
-  aspect-ratio:3/4;
-  border-radius:7px;
+.alumni-detail-panel{
+  grid-column:1/-1;
 }
 
 .compact-section{
@@ -1344,7 +1341,8 @@ html[lang="en"] .member-detail-name .member-name-english{
 }
 
 @media (max-width:1050px){
-  .people{
+  .people,
+  .alumni-card-grid{
     grid-template-columns:repeat(4,minmax(0,1fr));
   }
 }
@@ -1365,18 +1363,17 @@ html[lang="en"] .member-detail-name .member-name-english{
 }
 
 @media (max-width:720px){
-  .people{
+  .people,
+  .alumni-card-grid{
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:30px 24px;
   }
 
-  .member-detail-panel,
-  .alumni-profile{
+  .member-detail-panel{
     grid-template-columns:1fr;
   }
 
-  .member-detail-photo,
-  .alumni-profile-photo{
+  .member-detail-photo{
     width:min(180px,55vw);
   }
 
@@ -1388,29 +1385,11 @@ html[lang="en"] .member-detail-name .member-name-english{
     margin-top:18px;
   }
 
-  .alumni-entry > summary{
-    grid-template-columns:minmax(0,1fr) 14px;
-    gap:4px 14px;
-  }
-
-  .alumni-entry > summary strong,
-  .alumni-degree-meta,
-  .alumni-affiliation{
-    grid-column:1;
-  }
-
-  .alumni-entry > summary::after{
-    grid-column:2;
-    grid-row:1/4;
-  }
-
-  .alumni-profile{
-    padding:24px 18px 30px;
-  }
 }
 
 @media (max-width:480px){
-  .people{
+  .people,
+  .alumni-card-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:24px 14px;
   }
