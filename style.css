@@ -431,7 +431,7 @@ h2::after{content:"";display:block;width:40px;height:3px;background:var(--line-m
 .tl{position:relative;padding:0 0 30px 36px}
 .tl::before{content:"";position:absolute;z-index:1;left:var(--timeline-axis-x);top:7px;width:12px;height:12px;border:2px solid var(--copper-lt);border-radius:50%;background:#fff;transform:translateX(-50%)}
 .tl:not(:last-child)::after{content:"";position:absolute;left:var(--timeline-axis-x);top:19px;bottom:-7px;width:2px;background:var(--line-mid);transform:translateX(-50%)}
-.tl .yr{display:block;font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);margin-bottom:4px}
+.tl .yr{display:block;font-family:"IBM Plex Sans KR",var(--font-sans);font-size:13px;color:var(--ink-soft);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1;margin-bottom:4px}
 .tl h3{font-size:17px;font-weight:500}
 .tl .src{font-size:14px;color:var(--ink-soft)}
 .tl .project-id{display:block;margin-bottom:5px}
@@ -805,8 +805,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   margin-top:auto;
   padding-top:18px;
   color:var(--ink-soft);
-  font-family:var(--font-mono);
+  font-family:"IBM Plex Sans KR",var(--font-sans);
   font-size:12.5px;
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum" 1;
+}
+
+.project-card .item-label,
+.tl .project-id{
+  font-family:"IBM Plex Sans KR",var(--font-sans);
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum" 1;
 }
 
 .project-card .project-agency{
@@ -1230,14 +1239,18 @@ html[lang="en"] .member-detail-name .member-name-english{
 }
 
 .professor-profile{
+  display:block;
+}
+
+.professor-profile-intro{
   display:grid;
-  grid-template-columns:minmax(260px,340px) minmax(0,1fr);
-  gap:42px 54px;
+  grid-template-columns:minmax(210px,250px) minmax(0,1fr);
+  gap:36px 46px;
   align-items:start;
 }
 
 .professor-photo{
-  width:100%;
+  width:min(250px,100%);
   aspect-ratio:3/4;
   border-radius:8px;
 }
@@ -1248,11 +1261,28 @@ html[lang="en"] .member-detail-name .member-name-english{
 }
 
 .professor-profile-name{
-  margin-bottom:30px;
+  margin-bottom:25px;
   color:var(--ink);
-  font-size:clamp(25px,3vw,36px);
+  font-size:24px;
   font-weight:600;
   line-height:1.35;
+}
+
+.professor-profile-name span{
+  display:block;
+}
+
+.professor-name-primary{
+  white-space:pre-wrap;
+}
+
+.professor-name-secondary{
+  margin-top:4px;
+  color:var(--ink-soft);
+  font-family:"IBM Plex Sans KR",var(--font-sans);
+  font-size:13px;
+  font-weight:400;
+  letter-spacing:-.01em;
 }
 
 .professor-main-sections{
@@ -1283,9 +1313,14 @@ html[lang="en"] .member-detail-name .member-name-english{
   overflow-wrap:anywhere;
 }
 
+.professor-career-section{
+  margin-top:34px;
+  padding-top:28px;
+  border-top:1px solid var(--line);
+}
+
 .professor-more-panel{
-  grid-column:1/-1;
-  margin-top:0;
+  margin-top:32px;
 }
 
 .professor-more-body{
@@ -1469,7 +1504,7 @@ html[lang="en"] .alumni-card-name .member-name-english{
     width:min(180px,55vw);
   }
 
-  .professor-profile{
+  .professor-profile-intro{
     grid-template-columns:1fr;
     gap:28px;
   }

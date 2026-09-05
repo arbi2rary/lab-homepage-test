@@ -593,6 +593,26 @@ function createProfessorProfileSection(
   return section;
 }
 
+function getProfessorDisplayNameParts(member) {
+  const originalName = getProfessorProfileValues(member, "이름")[0];
+  const normalizedName = originalName === undefined
+    ? ""
+    : String(originalName).trim();
+  const parenthesisIndex = normalizedName.indexOf("(");
+
+  if (parenthesisIndex > 0) {
+    return {
+      primary: normalizedName.slice(0, parenthesisIndex).trimEnd(),
+      secondary: normalizedName.slice(parenthesisIndex).trim(),
+    };
+  }
+
+  return {
+    primary: normalizedName || String(member.name_kr || "").trim(),
+    secondary: String(member.name_en || "").trim(),
+  };
+}
+
 function renderProfessorProfile(members) {
   const container = document.querySelector("[data-professor-profile]");
   if (!container) {
@@ -616,24 +636,40 @@ function renderProfessorProfile(members) {
 
   const profile = document.createElement("article");
   profile.className = "professor-profile";
+  const introduction = document.createElement("div");
+  introduction.className = "professor-profile-intro";
   const photo = createMemberPhoto(professor, "professor-photo");
   const main = document.createElement("div");
   main.className = "professor-profile-main";
   const name = document.createElement("h4");
   name.className = "professor-profile-name";
-  const originalName = getProfessorProfileValues(professor, "이름")[0];
-  name.textContent = originalName === undefined
-    ? [professor.name_kr, professor.name_en].filter(Boolean).join(" ")
-    : String(originalName);
+  const nameParts = getProfessorDisplayNameParts(professor);
+  const primaryName = document.createElement("span");
+  primaryName.className = "professor-name-primary";
+  primaryName.textContent = nameParts.primary;
+  const secondaryName = document.createElement("span");
+  secondaryName.className = "professor-name-secondary";
+  secondaryName.textContent = nameParts.secondary;
+  name.append(primaryName);
+  if (nameParts.secondary) {
+    name.append(secondaryName);
+  }
 
   const mainSections = document.createElement("div");
   mainSections.className = "professor-main-sections";
   [
+    createProfessorProfileSection(professor, "학력", "Education"),
     createProfessorProfileSection(professor, "연구분야", "Research Areas"),
-    createProfessorProfileSection(professor, "사무실", "Office"),
-    createProfessorProfileSection(professor, "면담시간", "Office Hours"),
   ].filter(Boolean).forEach((section) => mainSections.append(section));
   main.append(name, mainSections);
+  introduction.append(photo, main);
+
+  const career = createProfessorProfileSection(
+    professor,
+    "경력",
+    "Career",
+    "professor-career-section"
+  );
 
   const more = document.createElement("details");
   more.className = "more-panel professor-more-panel";
@@ -648,19 +684,23 @@ function renderProfessorProfile(members) {
   const moreBody = document.createElement("div");
   moreBody.className = "more-panel-body professor-more-body";
   [
-    createProfessorProfileSection(professor, "학력", "Education"),
-    createProfessorProfileSection(professor, "경력", "Career"),
     createProfessorProfileSection(
       professor,
       "수상",
       "Awards",
       "professor-awards-section"
     ),
+    createProfessorProfileSection(professor, "사무실", "Office"),
+    createProfessorProfileSection(professor, "면담시간", "Office Hours"),
     createProfessorProfileSection(professor, "취미", "Hobbies"),
   ].filter(Boolean).forEach((section) => moreBody.append(section));
   more.append(summary, moreBody);
 
-  profile.append(photo, main, more);
+  profile.append(introduction);
+  if (career) {
+    profile.append(career);
+  }
+  profile.append(more);
   container.replaceChildren(profile);
 }
 
@@ -1059,6 +1099,24 @@ function compareCompletedProjects(first, second) {
   return Number(second.id || 0) - Number(first.id || 0);
 }
 
+function compareCurrentProjects(first, second) {
+  const firstStart = parseProjectDate(first.start)?.getTime() || 0;
+  const secondStart = parseProjectDate(second.start)?.getTime() || 0;
+
+  if (firstStart !== secondStart) {
+    return secondStart - firstStart;
+  }
+
+  const firstEnd = parseProjectDate(first.end)?.getTime() || 0;
+  const secondEnd = parseProjectDate(second.end)?.getTime() || 0;
+
+  if (firstEnd !== secondEnd) {
+    return secondEnd - firstEnd;
+  }
+
+  return Number(second.id || 0) - Number(first.id || 0);
+}
+
 function getProjectLocalizedValue(project, key) {
   const koreanValue = String(project[key + "_kr"] || "").trim();
   const englishValue = String(project[key + "_en"] || "").trim();
@@ -1091,9 +1149,7 @@ function createCurrentProjectCard(project, index) {
   label.className = "item-label";
   label.textContent =
     "CURRENT PROJECT " +
-    String(index + 1).padStart(2, "0") +
-    " · ID " +
-    String(project.id);
+    String(index + 1).padStart(2, "0");
   const title = document.createElement("h3");
   setLocalizedContent(title, titleValue.kr, titleValue.en);
   const date = document.createElement("time");
@@ -1114,7 +1170,7 @@ function createCompletedProjectItem(project) {
   item.className = "tl";
   const id = document.createElement("span");
   id.className = "item-label project-id";
-  id.textContent = "PROJECT ID " + String(project.id);
+  id.textContent = String(project.id);
   const date = document.createElement("time");
   date.className = "yr";
   date.dateTime = getProjectMachineDateRange(project);
@@ -1138,9 +1194,9 @@ function renderProjects(projects) {
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const currentProjects = projects.filter((project) =>
-    isCurrentProject(project, today)
-  );
+  const currentProjects = projects
+    .filter((project) => isCurrentProject(project, today))
+    .sort(compareCurrentProjects);
   const completedProjects = projects
     .filter((project) => !isCurrentProject(project, today))
     .sort(compareCompletedProjects);
